@@ -80,7 +80,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { notFound } from "next/navigation";
+import { unified } from "unified";
 import rehypeDocument from "rehype-document";
 import rehypeFormat from "rehype-format";
 import rehypeStringify from "rehype-stringify";
@@ -88,36 +88,29 @@ import remarkParse from "remark-parse";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
-import { unified } from "unified";
 import rehypePrettyCode from "rehype-pretty-code";
 import { transformerCopyButton } from "@rehype-pretty/transformers";
-import OnThisPage from "@/components/onthispage";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
+import OnThisPage from "@/components/onthispage";
 
+// Define the contents directory
 const contentDirectory = path.join(process.cwd(), "contents");
 
-export async function getStaticPaths() {
+// Generate the static paths for all available blog posts (equivalent to getStaticPaths)
+export async function generateStaticParams() {
   const filenames = fs.readdirSync(contentDirectory);
-
-  const paths = filenames.map((filename) => {
-    return {
-      params: {
-        slug: filename.replace(".md", ""), // Remove .md extension for slug
-      },
-    };
-  });
-
-  return {
-    paths,
-    fallback: false, // If false, non-matching slugs will show a 404
-  };
+  return filenames.map((filename) => ({
+    slug: filename.replace(".md", ""), // Remove the .md extension for the slug
+  }));
 }
 
-export async function getStaticProps({ params }) {
+// This function runs on the server and fetches the data
+export default async function BlogPostPage({ params }) {
   const { slug } = params;
   const filepath = path.join(contentDirectory, `${slug}.md`);
 
+  // If the file doesn't exist, return a 404
   if (!fs.existsSync(filepath)) {
     return {
       notFound: true,
@@ -125,13 +118,14 @@ export async function getStaticProps({ params }) {
   }
 
   const fileContent = fs.readFileSync(filepath, "utf-8");
-  const { content, data } = matter(fileContent);
+  const { content, data } = matter(fileContent); // Extract the front matter and content
 
+  // Use unified processor to convert markdown to HTML
   const processor = unified()
     .use(remarkParse)
     .use(remarkRehype)
     .use(remarkGfm)
-    .use(rehypeDocument, { title: "👋🌍" })
+    .use(rehypeDocument, { title: data.title })
     .use(rehypeFormat)
     .use(rehypeRaw)
     .use(rehypeStringify)
@@ -148,20 +142,6 @@ export async function getStaticProps({ params }) {
     });
 
   const htmlContent = (await processor.process(content)).toString();
-
-  return {
-    props: {
-      htmlContent,
-      data, // Front matter (title, link, etc.)
-    },
-  };
-}
-
-export default function BlogPostPage({ htmlContent, data }) {
-  if (!htmlContent) {
-    notFound();
-    return null;
-  }
 
   return (
     <div className="max-w-6xl mx-auto p-4">
