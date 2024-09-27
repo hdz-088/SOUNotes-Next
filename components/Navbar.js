@@ -40,7 +40,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="p-4 bg-navbar/75 sticky top-0 backdrop-blur z-10 border-b">
+    <nav className="p-4 bg-navbar sticky top-0 backdrop-blur z-10 border-b">
       <LoadingBar
         color="#c397b8"
         progress={progress}
@@ -51,8 +51,8 @@ const Navbar = () => {
           <img src="/favicon.png" alt="favicon" width={32} height={32} />
         </Link>
         <Link href={"/"}>
-          <h1 className="text-3xl font-bold drop-shadow-lg">
-            <font color="#b4befe">SOUNotes</font>
+          <h1 className="text-3xl font-bold">
+            <font color="#768afd">SOUNotes</font>
           </h1>
         </Link>
         <ModeToggle />

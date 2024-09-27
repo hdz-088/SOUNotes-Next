@@ -2,41 +2,17 @@
 title: Flutter-01 Introduction
 slug: flutter-01
 semester: 3
-image: https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+image: flutter/cover1.png
+link:
 ---
 
-### Introduction to Flutter
-
----
-
-Just a link: www.nasa.gov.
-
-- Lists
-- [ ] todo
-- [x] done
-
-A table:
-
-| a   | b   |
-| --- | --- |
-
-## Table
-
-| Left-Aligned  | Center Aligned  | Right Aligned |
-| :------------ | :-------------: | ------------: |
-| col 3 is      | some wordy text |         $1600 |
-| col 2 is      |    centered     |           $12 |
-| zebra stripes |    are neat     |            $1 |
+## Introduction to Flutter
 
 - Flutter is framework created by **Google**.
 - It is an Open-Source cross-platform framework used to develop application for Android, iOS, Web, Desktop
 - **Dart** Programming language is used for Flutter
 
-![](https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
-
-![Favicon](/favicon.png)
-
-### Why Flutter?
+## Why Flutter?
 
 - Flutter is Open-Source framework Therefore; anyone can use it for any given purpose.
 - Flutter is so fast that it takes less than 30 sec for first full compilation.
@@ -47,7 +23,7 @@ A table:
 - But Flutter is growing very fast then other framework.
 - Anyone who have basic knowledge of OOPS & UI Designing can easily learn Flutter.
 
-### Features of Flutter
+## Features of Flutter
 
 - **Open-Source:**
   - Flutter is a free and open-source framework for developing mobile applications.
@@ -70,7 +46,7 @@ A table:
   - The Flutter framework offers widgets, which are capable of developing customisable specific designs.
   - Most importantly, Flutter has two sets of widgets: Material Design and Cupertino widgets that help to provide a glitch-free experience on all platforms.
 
-### Advantages of Flutter
+## Advantages of Flutter
 
 - It makes the app development process extremely fast because of the **hot-reload** feature. This feature allows us to change or update the code are reflected as soon as the alterations are made.
 - It provides the smoother and seamless scrolling experiences of using the app without much hangs or cuts, which makes running applications faster in comparison to other mobile app development frameworks.
@@ -79,13 +55,13 @@ A table:
 - It is similar to a reactive framework where the developers do not need to update the UI content manually.
 - It is suitable for **MVP (Minimum Viable Product)** apps because of its speedy development process and cross-platform nature.
 
-### Disadvantages of Flutter
+## Disadvantages of Flutter
 
 - The Flutter is a comparatively **new language** that needs continuous integration support through the maintenance of scripts.
 - It provides very **limited access to SDK libraries**. It means a developer does not have a lot of functionalities to create a mobile application. Such types of functionalities need to be developed by the Flutter developer themselves.
 - It uses Dart programming for coding, so a developer needs to learn new technologies. However, it is easy to learn for developers.
 
-### Flutter Installation in Windows
+## Flutter Installation in Windows
 
 - **System Requirements:**
   - Operating System: Windows 7 or Later (You can also use Mac or Linux OS.).
@@ -123,7 +99,7 @@ A table:
     - **Step-09.02:** Now, search the `Flutter plugin`. If found, select Flutter plugin and click `install`. When you click on install, it will ask you to install Dart plugin, click yes to proceed.
     - **Step-09.03:** Restart the Android Studio.
 
-### Flutter Installation in macOS
+## Flutter Installation in macOS
 
 - **System Requirements:**
   - Operating System: macOS
@@ -141,7 +117,7 @@ A table:
   - **Step-10:** Again, set up an android emulator or connect an android device to the system for developing an android application.
   - **Step-11:** Now, install Flutter and Dart plugin for building Flutter application in Android Studio. These plugins provide a template to create a Flutter application, give an option to run and debug Flutter application in the Android Studio itself.
 
-### Architecture of Flutter Application
+## Architecture of Flutter Application
 
 - The Flutter architecture mainly comprises of 4 components:
 
@@ -164,20 +140,20 @@ A table:
    - It means the app is the **top-level widget**, and its UI is build using one or more **children widgets**, which again includes **sub child widgets**.
    - This feature helps you to create a complex user interface very easily.
 
-![Img](/20240723125829.png)
+![](flutter/1flutter01.png)
 
 4. **Design Specific Widgets:**
    - The Flutter framework has two sets of widgets that conform to specific design languages. These are **Material Design for Android** application and **Cupertino Style for IOS** application.
 
-### Gestures
+## Gestures
 
 - It is a widget that provides interaction (how to listen for and respond to) in Flutter using **GestureDetector**. GestureDetector is an invisible widget, which includes tapping, dragging, and scaling interaction of its child widget. We can also use other interactive features into the existing widgets by composing with the GestureDetector widget.
 
-### State Management
+## State Management
 
 - Flutter widget maintains its state by using a special widget, StatefulWidget. It is always auto re-rendered whenever its internal state is changed. The re-rendering is optimised by calculating the distance between old and new widget UI and render only necessary things that are changes.
 
-### Layers
+## Layers
 
 - Layers are an important concept of the Flutter framework, which are grouped into multiple categories in terms of complexity and arranged in the top-down approach.
 - The topmost layer is the **UI** of the application, which is specific to the Android and iOS platforms.
@@ -185,10 +161,9 @@ A table:
 - The next layer is the **rendering** layer, which renders everything in the Flutter app.
 - Then, the layers go down to Gestures, foundation library, engine, and finally, core platform-specific code. The following diagram specifies the layers in Flutter app development.
 
-![[flutter-architecture1.jpg]]
-(Flutter System Overview)
+![](flutter/1flutter02.jpg)
 
-### First Flutter Application
+## First Flutter Application
 
 - **Step-01:** Open Android Studio
 - **Step-02:** Create the Flutter project. To create a project, go to `File -> New -> New Flutter Project`.
@@ -202,7 +177,7 @@ A table:
 - **Step-06:** To run application, go to `Run->Run main.dart`
 - **Step-07:** Open the **main.dart** file and replace the code with the following code snippets.
 
-```Dart
+```dart showLineNumbers
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -243,11 +218,11 @@ class MyHomePage extends StatelessWidget {
     - **AppBar** render the header of the application, **Center** widget is used to center the child widget, and **Text** is the final widget used to show the text content and displays in the center of the screen.
 - **Step-09**: Now, run the application. To do this, go to `Run -> Run main.dart`
 
-![[Screenshot 2024-08-31 at 15.39.44.png]]
+![](flutter/1flutter03.png)
 
-### Flutter Folder Structure
+## Flutter Folder Structure
 
-![[flu02.jpeg|250]]
+![](flutter/1flutter04.jpeg)
 
 - `.idea` :
   - This folder is at the very top of the project structure, which holds the **configuration for Android Studio.**
@@ -289,11 +264,11 @@ We can also have some default files in the Flutter application. These files are:
 - `README.md` :
   - It is an auto-generated file that holds **information about the project**. We can edit this file if we want to share information with the developers.
 
-### Flutter Application Architecture With Layered Approach
+## Flutter Application Architecture With Layered Approach
 
 Flutter applications can benefit from a layered architecture, which separates concerns and promotes code maintainability.
 
-![[Pasted image 20240831154815.png|300]]
+![](flutter/1flutter05.png)
 
 1. **Presentation Layer (UI):**
 
@@ -321,7 +296,7 @@ Flutter applications can benefit from a layered architecture, which separates co
    - It retrieves and stores data based on requests from the domain layer.
    - This layer should strive for data abstraction, allowing switching between data sources without affecting the rest of the app.
 
-### Questions
+## Questions
 
 1. What is Flutter? Explain features of Flutter.
 2. Write advantages and disadvantages of Flutter.

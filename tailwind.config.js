@@ -23,6 +23,7 @@ module.exports = {
         foreground: "hsl(var(--foreground))",
         navbar: "hsl(var(--navbar))",
         lavender: "#323240",
+        // titlelight: "#"
         cardlight: "#ffffff",
         carddark: "#1e1e2b",
         card: {

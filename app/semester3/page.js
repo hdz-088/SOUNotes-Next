@@ -39,24 +39,28 @@ const Blog = () => {
             className="rounded-2xl shadow-md overflow-hidden  dark:border-2 bg-cardlight dark:bg-carddark"
           >
             {/* Blog post image */}
-            <img
-              src={blog.image}
-              alt={blog.title}
-              className="w-full h-48 object-cover"
-            />
+            <Link
+              href={`/blogpost/${blog.slug}`}
+              // className={buttonVariants({ variant: "outline" })}
+            >
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="w-full h-48 object-cover"
+              />
 
-            {/* Blog post content */}
-            <div className="p-4 text-center">
-              {/* Blog post title */}
-              <Link
+              {/* Blog post content */}
+              <div className="p-4 text-center">
+                {/* Blog post title */}
+                {/* <Link
                 href={`/blogpost/${blog.slug}`}
                 // className={buttonVariants({ variant: "outline" })}
-              >
+              > */}
                 <h2 className="text-2xl font-bold mb-2 text-blue-400">
                   {blog.title}
                 </h2>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
         ))}
       </div>
