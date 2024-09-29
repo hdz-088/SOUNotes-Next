@@ -3,7 +3,7 @@ title: Python Lab Manual
 slug: Python-LM
 semester: 3
 image: py/pycover.png
-link:
+link: https://drive.google.com/file/d/1mPT4opB9u9RKnJaLfRkJAA3h5fqj1DVC/view?usp=drive_link
 ---
 
 ## Experiment 01

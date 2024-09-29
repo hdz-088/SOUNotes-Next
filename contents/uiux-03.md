@@ -3,7 +3,7 @@ title: UIUX-03
 slug: uiux-03
 semester: 3
 image: uiuxcover.png
-link:
+link: https://drive.google.com/file/d/12bTmuO5zW8xrWE8ZlJA2rjIqHRLs5KhP/view?usp=drive_link
 ---
 
 ## Prototyping and User Testing

@@ -3,7 +3,7 @@ title: TMP-01
 slug: tmp-01
 semester: 3
 image: tmp/tmpcover.png
-link:
+link: https://drive.google.com/file/d/1ph35k8QEvyvmfB99latgnGi8cv1fpjFM/view?usp=drive_link
 ---
 
 - Time management is the process of **planning** and exercising **conscious** control of time spent on specific activities especially to increase **effectiveness**, **efficiency**, and **productivity**, Consciousness, at its simplest, is **awareness** of internal and external existence.

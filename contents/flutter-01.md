@@ -3,7 +3,7 @@ title: Flutter-01
 slug: flutter-01
 semester: 3
 image: flutter/fluttercover.png
-link:
+link: https://drive.google.com/file/d/1h6lxCNWBCHt78vUK2U6j5qWoaTsUAzk3/view?usp=drive_link
 ---
 
 ## Introduction to Flutter

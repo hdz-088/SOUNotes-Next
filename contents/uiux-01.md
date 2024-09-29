@@ -3,7 +3,7 @@ title: UIUX-01
 slug: uiux-01
 semester: 3
 image: uiuxcover.png
-link:
+link: https://drive.google.com/file/d/1rtjnCBHxZg8j7pM2Lvj0w2Hu3sJSjuPA/view?usp=drive_link
 ---
 
 ## Introduction

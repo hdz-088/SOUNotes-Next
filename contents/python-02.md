@@ -3,7 +3,7 @@ title: Python-02
 slug: python-02
 semester: 3
 image: py/pycover.png
-link:
+link: https://drive.google.com/file/d/1VYE6w4ZdSgrIpUqoPlyKdbVpobfC8eQe/view?usp=sharing
 ---
 
 ## String

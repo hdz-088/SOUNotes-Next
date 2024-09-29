@@ -3,7 +3,7 @@ title: UIUX-02
 slug: uiux-02
 semester: 3
 image: uiuxcover.png
-link:
+link: https://drive.google.com/file/d/1AcRoM6sVNbAEWvKufiYD5g5GyXXTQ6Jq/view?usp=drive_link
 ---
 
 ## Information Architecture & Wireframing

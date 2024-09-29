@@ -3,7 +3,7 @@ title: Python-03
 slug: python-03
 semester: 3
 image: py/pycover.png
-link:
+link: https://drive.google.com/file/d/1cHzLoS3_qw4HwccYgGroEFbZuB1oFznF/view?usp=sharing
 ---
 
 ## Dictionaries

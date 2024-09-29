@@ -3,7 +3,7 @@ title: TMP-02
 slug: tmp-02
 semester: 3
 image: tmp/tmpcover.png
-link:
+link: https://drive.google.com/file/d/1NHL2Gukcn1fSOMWYkk3cihkPrlcbgKNS/view?usp=drive_link
 ---
 
 ## Causes of Time Wasters
