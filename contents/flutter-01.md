@@ -1,8 +1,8 @@
 ---
-title: Flutter-01 Introduction
+title: Flutter-01
 slug: flutter-01
 semester: 3
-image: flutter/cover1.png
+image: flutter/fluttercover.png
 link:
 ---
 

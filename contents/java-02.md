@@ -1,5 +1,5 @@
 ---
-title: Java-02 Array, Inheritance and Interface
+title: Java-02
 slug: java-02
 semester: 3
 image: java/javacover.png

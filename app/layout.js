@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/components/footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "700"] });
 const syne = Syne({ subsets: ["latin"] });
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-p-20 scroll-smooth">
       <link rel="icon" href="/favicon.png" />
+      <Analytics />
       <body className={poppins.className}>
         <ThemeProvider
           attribute="class"

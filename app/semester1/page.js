@@ -43,12 +43,10 @@ const Blog = () => {
               className="w-full h-64 object-cover"
             />
             {/* Blog post content */}
-            <div className="p-4">
+            <div className="p-4 text-center">
               {/* Blog post title */}
               <Link href={`/blogpost/${blog.slug}`}>
-                <h2 className="text-2xl font-bold mb-2 text-blue-400">
-                  {blog.title}
-                </h2>
+                <h2 className="text-2xl font-bold mb-2">{blog.title}</h2>
               </Link>
             </div>
           </div>

@@ -56,9 +56,7 @@ const Blog = () => {
                 href={`/blogpost/${blog.slug}`}
                 // className={buttonVariants({ variant: "outline" })}
               > */}
-                <h2 className="text-2xl font-bold mb-2 text-blue-400">
-                  {blog.title}
-                </h2>
+                <h2 className="text-2xl font-bold mb-2">{blog.title}</h2>
               </div>
             </Link>
           </div>

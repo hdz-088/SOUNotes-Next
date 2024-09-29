@@ -1,5 +1,5 @@
 ---
-title: Java-01 Introduction
+title: Java-01
 slug: java-01
 semester: 3
 image: java/javacover.png

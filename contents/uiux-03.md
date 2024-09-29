@@ -2,7 +2,7 @@
 title: UIUX-03
 slug: uiux-03
 semester: 3
-image: https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+image: uiuxcover.png
 link:
 ---
 

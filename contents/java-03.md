@@ -1,5 +1,5 @@
 ---
-title: Java-03 Package, String, Exception
+title: Java-03
 slug: java-03
 semester: 3
 image: java/javacover.png
