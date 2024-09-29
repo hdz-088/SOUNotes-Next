@@ -3,6 +3,7 @@ title: Java Syllabus
 slug: java-syllabus
 semester: 3
 image: java/javacover.png
+link: https://drive.google.com/file/d/1dROVttnZAE-Hi-OlRRa5MtgnNR1-PS2m/view?usp=sharing
 ---
 
 ## Unit-01 Introduction (27%)

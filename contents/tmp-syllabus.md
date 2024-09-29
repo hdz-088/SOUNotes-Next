@@ -3,7 +3,7 @@ title: TMP SYllabus
 slug: tmp-syllabus
 semester: 3
 image: tmp/tmpcover.png
-link:
+link: https://drive.google.com/file/d/1BSAaX3LmIkwyBhpjoXoJX04TX-d4nYgv/view?usp=sharing
 ---
 
 ## Unit-01: Introduction (18%)
