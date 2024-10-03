@@ -82,6 +82,12 @@ flutter run
 
 - Choose the target platform if prompted.
 
+**MCQs:**
+
+1. B
+2. C
+3. D
+
 ---
 
 ## Experiment 02
@@ -156,6 +162,12 @@ class HelloWorldApp extends StatelessWidget {
 ```bash
 flutter run
 ```
+
+**MCQs:**
+
+1. A
+2. B
+3. A
 
 ---
 
@@ -289,6 +301,12 @@ class MyApp extends StatelessWidget {
 flutter run
 ```
 
+**MCQs:**
+
+1. B
+2. A
+3. C
+
 ---
 
 ## Experiment 04
@@ -377,6 +395,11 @@ class CustomWidget extends StatelessWidget {
 ```bash
 flutter run
 ```
+
+**MCQs:**
+
+1. B
+2. B
 
 ---
 
@@ -487,6 +510,12 @@ class _CounterWidgetState extends State<CounterWidget> {
 flutter run
 ```
 
+**MCQs:**
+
+1. B
+2. A
+3. B
+
 ---
 
 ## Experiment 06
@@ -555,6 +584,11 @@ flutter run
 
 **Conclusion:**
 This experiment demonstrates how to display images in a Flutter app, both from local assets and via a network URL.
+
+**MCQs:**
+
+1. A
+2. B
 
 ---
 
@@ -631,5 +665,836 @@ flutter run
 
 **Conclusion:**
 This experiment demonstrates how to display images in a Flutter app, both from local assets and via a network URL.
+
+**MCQs:**
+
+1. B
+2. A
+
+---
+
+## Experiment 08
+
+**Aim:** Create a basic form in Flutter with text input, a drop-down list, and simple validation.
+
+**Description:**  
+In this experiment, you will create a simple form in Flutter with a text input field for the user's name and a drop-down list for gender selection.
+
+**Steps:**
+
+1.  **Create a New Flutter Project:**
+
+    - Open your terminal and navigate to the directory where you want to create the project.
+    - Run the following command to create a new Flutter project:
+
+```bash
+flutter create simple_form
+```
+
+2.  **Navigate to the Project Directory:**
+
+    - Move into your project directory:
+
+```bash
+cd simple_form
+```
+
+3.  **Edit the Main Dart File:**
+
+    - Open the `lib/main.dart` file in your code editor.
+    - Replace the existing code with the following code to create a simple form:
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(SimpleFormApp());
+}
+
+class SimpleFormApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: SimpleFormPage(),
+    );
+  }
+}
+
+class SimpleFormPage extends StatefulWidget {
+  @override
+  _SimpleFormPageState createState() => _SimpleFormPageState();
+}
+
+class _SimpleFormPageState extends State<SimpleFormPage> {
+  final _formKey = GlobalKey<FormState>();
+  String? _name;
+  String? _selectedOption;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Experiment 08: Simple Form Example'),
+        backgroundColor: Colors.teal,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: [
+              TextFormField(
+                decoration: const InputDecoration(
+                  labelText: 'Enter your name',
+                  border: OutlineInputBorder(),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter your name';
+                  }
+                  return null;
+                },
+                onSaved: (value) => _name = value,
+              ),
+              const SizedBox(height: 16), // Space between fields
+              DropdownButtonFormField<String>(
+                decoration: const InputDecoration(
+                  labelText: 'Choose an option',
+                  border: OutlineInputBorder(),
+                ),
+                value: _selectedOption,
+                items: <String>['Male', 'Female', 'Other'].map((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(value),
+                  );
+                }).toList(),
+                onChanged: (value) {
+                  setState(() {
+                    _selectedOption = value;
+                  });
+                },
+                validator: (value) {
+                  if (value == null) {
+                    return 'Please select an option';
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(height: 16), // Space between fields
+              ElevatedButton(
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    _formKey.currentState!.save();
+                    // Display a message
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                          content: Text(
+                              'Hello, $_name! You are a $_selectedOption.')),
+                    );
+                  }
+                },
+                child: const Text('Submit'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+4. **Run the Application:**
+   - Ensure a device or emulator is running.
+   - Run the app using the Flutter CLI:
+
+```bash
+flutter run
+```
+
+**Conclusion:**
+In this experiment, you created a basic form in Flutter with a text input field and a drop-down list, including simple validation.
+
+**MCQs:**
+
+1. B
+2. A
+
+---
+
+## Experiment 09
+
+**Aim:** Create forms in Flutter for user input with validation.
+
+**Description:**
+In this experiment, you will create a Flutter form that captures multiple user inputs, such as name, email, password, and gender. You will implement validation to ensure that the user enters valid data in each field before submission.
+
+**Steps:**
+
+1. **Create a New Flutter Project:**
+
+   - Open your terminal and navigate to the directory where you want to create the project.
+   - Run the following command to create a new Flutter project:
+
+```bash
+flutter create user_input_form
+```
+
+2. **Navigate to the Project Directory:**
+
+   - Move into your project directory:
+
+```bash
+cd user_input_form
+```
+
+3. **Edit the Main Dart File:**
+
+   - Open the `lib/main.dart` file in your code editor.
+   - Replace the existing code with the following code to create a user input form with validation:
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(UserInputFormApp());
+}
+
+class UserInputFormApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: UserInputFormPage(),
+    );
+  }
+}
+
+class UserInputFormPage extends StatefulWidget {
+  @override
+  _UserInputFormPageState createState() => _UserInputFormPageState();
+}
+
+class _UserInputFormPageState extends State<UserInputFormPage> {
+  final _formKey = GlobalKey<FormState>();
+  String? _name;
+  String? _email;
+  String? _password;
+  String? _gender;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Experiment 09: User Input Form'),
+        backgroundColor: Colors.blue,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: ListView(
+            children: [
+              // Name field
+              TextFormField(
+                decoration: const InputDecoration(
+                  labelText: 'Enter your name',
+                  border: OutlineInputBorder(),
+                ),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter your name';
+                  }
+                  return null;
+                },
+                onSaved: (value) => _name = value,
+              ),
+              const SizedBox(height: 16),
+
+              // Email field
+              TextFormField(
+                decoration: const InputDecoration(
+                  labelText: 'Enter your email',
+                  border: OutlineInputBorder(),
+                ),
+                keyboardType: TextInputType.emailAddress,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter your email';
+                  } else if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value)) {
+                    return 'Please enter a valid email address';
+                  }
+                  return null;
+                },
+                onSaved: (value) => _email = value,
+              ),
+              const SizedBox(height: 16),
+
+              // Password field
+              TextFormField(
+                decoration: const InputDecoration(
+                  labelText: 'Enter your password',
+                  border: OutlineInputBorder(),
+                ),
+                obscureText: true,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter your password';
+                  } else if (value.length < 6) {
+                    return 'Password must be at least 6 characters';
+                  }
+                  return null;
+                },
+                onSaved: (value) => _password = value,
+              ),
+              const SizedBox(height: 16),
+
+              // Gender selection dropdown
+              DropdownButtonFormField<String>(
+                decoration: const InputDecoration(
+                  labelText: 'Select gender',
+                  border: OutlineInputBorder(),
+                ),
+                value: _gender,
+                items: <String>['Male', 'Female', 'Other'].map((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(value),
+                  );
+                }).toList(),
+                onChanged: (value) {
+                  setState(() {
+                    _gender = value;
+                  });
+                },
+                validator: (value) {
+                  if (value == null) {
+                    return 'Please select your gender';
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(height: 16),
+
+              // Submit button
+              ElevatedButton(
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    _formKey.currentState!.save();
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                            'Name: $_name\nEmail: $_email\nGender: $_gender'),
+                      ),
+                    );
+                  }
+                },
+                child: const Text('Submit'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+4. **Run the Application:**
+   - Ensure a device or emulator is running.
+   - Run the app using the Flutter CLI:
+
+```bash
+flutter run
+```
+
+**Conclusion:**
+In this experiment, you created a user input form in Flutter with multiple fields, including text input, email input, password, and gender selection, with validation applied to each field.
+
+**MCQs:**
+
+1. B
+2. A
+3. B
+
+---
+
+## Experiment 10
+
+**Aim:** Implement form submission and error handling in Flutter.
+
+**Description:**
+In this experiment, you will build a Flutter form that captures user input and handles errors during form submission. If the form is successfully submitted, the input will be processed; otherwise, appropriate error messages will be displayed.
+
+**Steps:**
+
+1. **Create a New Flutter Project:**
+
+   - Open your terminal and navigate to the directory where you want to create the project.
+   - Run the following command to create a new Flutter project:
+
+```bash
+flutter create form_submission_handling
+```
+
+2. **Navigate to the Project Directory:**
+
+   - Move into your project directory:
+
+```bash
+cd form_submission_handling
+```
+
+3. **Edit the Main Dart File:**
+
+   - Open the `lib/main.dart` file in your code editor.
+   - Replace the existing code with the following code to create a form with submission logic and error handling:
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(FormSubmissionApp());
+}
+
+class FormSubmissionApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: FormSubmissionPage(),
+    );
+  }
+}
+
+class FormSubmissionPage extends StatefulWidget {
+  @override
+  _FormSubmissionPageState createState() => _FormSubmissionPageState();
+}
+
+class _FormSubmissionPageState extends State<FormSubmissionPage> {
+  final _formKey = GlobalKey<FormState>();
+  String? _email;
+  String? _password;
+  bool _isSubmitting = false;
+  String? _errorMessage;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Experiment 10: Form Submission & Error Handling'),
+        backgroundColor: Colors.deepOrange,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: [
+              // Email field
+              TextFormField(
+                decoration: const InputDecoration(
+                  labelText: 'Enter your email',
+                  border: OutlineInputBorder(),
+                ),
+                keyboardType: TextInputType.emailAddress,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter your email';
+                  } else if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value)) {
+                    return 'Please enter a valid email address';
+                  }
+                  return null;
+                },
+                onSaved: (value) => _email = value,
+              ),
+              const SizedBox(height: 16),
+
+              // Password field
+              TextFormField(
+                decoration: const InputDecoration(
+                  labelText: 'Enter your password',
+                  border: OutlineInputBorder(),
+                ),
+                obscureText: true,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter your password';
+                  } else if (value.length < 6) {
+                    return 'Password must be at least 6 characters';
+                  }
+                  return null;
+                },
+                onSaved: (value) => _password = value,
+              ),
+              const SizedBox(height: 16),
+
+              // Error message display
+              if (_errorMessage != null)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 16.0),
+                  child: Text(
+                    _errorMessage!,
+                    style: const TextStyle(color: Colors.red),
+                  ),
+                ),
+
+              // Submit button
+              ElevatedButton(
+                onPressed: _isSubmitting
+                    ? null
+                    : () {
+                        if (_formKey.currentState!.validate()) {
+                          _submitForm();
+                        }
+                      },
+                child: _isSubmitting
+                    ? const CircularProgressIndicator(color: Colors.white)
+                    : const Text('Submit'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  void _submitForm() async {
+    setState(() {
+      _isSubmitting = true;
+      _errorMessage = null;
+    });
+
+    _formKey.currentState!.save();
+
+    // Simulate form submission delay and error handling
+    await Future.delayed(const Duration(seconds: 2));
+
+    if (_email == 'test@example.com' && _password == 'password123') {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Form submitted successfully!')),
+      );
+    } else {
+      setState(() {
+        _errorMessage = 'Invalid email or password';
+      });
+    }
+
+    setState(() {
+      _isSubmitting = false;
+    });
+  }
+}
+```
+
+4. **Run the Application:**
+   - Ensure a device or emulator is running.
+   - Run the app using the Flutter CLI:
+
+```bash
+flutter run
+```
+
+**Conclusion:**
+In this experiment, you implemented form submission with error handling in Flutter. The form includes email and password fields with validation. Upon submission, it checks if the input matches the expected values, and if not, an error message is displayed.
+
+**MCQs:**
+
+1. C
+2. C
+3. A
+
+---
+
+## Experiment 11
+
+**Aim:** Use local storage (SharedPreferences or SQLite) to persist data locally.
+
+**Description:**
+In this experiment, you will store data locally in Flutter using the `SharedPreferences` package, allowing the app to save user input on the device.
+
+**Steps:**
+
+1. **Set Up Flutter Project:**
+
+   - Create a new Flutter project:
+
+```bash
+flutter create local_storage
+```
+
+- Navigate to the project directory:
+
+```bash
+cd local_storage
+```
+
+2. **Add SharedPreferences Package:**
+
+   - Open `pubspec.yaml` and add `shared_preferences` under dependencies:
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+    shared_preferences: ^2.0.11
+```
+
+- Install the package:
+
+```bash
+flutter pub get
+```
+
+3. **Edit the Main Dart File:**
+
+   - Replace the existing code in `lib/main.dart` with the following:
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+void main() {
+  runApp(LocalStorageApp());
+}
+
+class LocalStorageApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: LocalStoragePage(),
+    );
+  }
+}
+
+class LocalStoragePage extends StatefulWidget {
+  @override
+  _LocalStoragePageState createState() => _LocalStoragePageState();
+}
+
+class _LocalStoragePageState extends State<LocalStoragePage> {
+  final TextEditingController _controller = TextEditingController();
+  String? _savedData;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadData();
+  }
+
+  Future<void> _loadData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _savedData = prefs.getString('userInput');
+    });
+  }
+
+  Future<void> _saveData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString('userInput', _controller.text);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Experiment 11: Local Storage Example'),
+        backgroundColor: Colors.teal,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            TextField(
+              controller: _controller,
+              decoration: const InputDecoration(
+                labelText: 'Enter data',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                _saveData();
+                setState(() {
+                  _savedData = _controller.text;
+                });
+              },
+              child: const Text('Save Data'),
+            ),
+            const SizedBox(height: 16),
+            Text(
+              _savedData == null ? 'No data saved' : 'Saved data: $_savedData',
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
+4. **Run the Application:**
+   - Ensure a device or emulator is running.
+   - Run the app:
+
+```bash
+flutter run
+```
+
+**MCQs:**
+
+1. B
+2. B
+
+---
+
+## Experiment 12
+
+**Aim:** Implement read and write operations to store and retrieve data.
+
+**Description:**
+In this experiment, you will implement functionality to read and write data using `SharedPreferences` in Flutter, allowing the app to persist data and retrieve it when needed.
+
+**Steps:**
+
+1.  **Set Up Flutter Project:**
+
+- Create a new Flutter project:
+
+```bash
+flutter create read_write_storage
+```
+
+- Navigate to the project directory:
+
+```bash
+cd read_write_storage
+```
+
+2.  **Add SharedPreferences Package:**
+
+- Open `pubspec.yaml` and add `shared_preferences` under dependencies:
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+shared_preferences: ^2.0.11
+```
+
+- Install the package:
+
+```bash
+flutter pub get
+```
+
+3.  **Edit the Main Dart File:**
+
+- Replace the existing code in `lib/main.dart` with the following:
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+void main() {
+  runApp(ReadWriteApp());
+}
+
+class ReadWriteApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: ReadWritePage(),
+    );
+  }
+}
+
+class ReadWritePage extends StatefulWidget {
+  @override
+  _ReadWritePageState createState() => _ReadWritePageState();
+}
+
+class _ReadWritePageState extends State<ReadWritePage> {
+  final TextEditingController _controller = TextEditingController();
+  String? _retrievedData;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadData();
+  }
+
+  Future<void> _loadData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _retrievedData = prefs.getString('storedData');
+    });
+  }
+
+  Future<void> _saveData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString('storedData', _controller.text);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Experiment 12: Read & Write Operations'),
+        backgroundColor: Colors.teal,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            TextField(
+              controller: _controller,
+              decoration: const InputDecoration(
+                labelText: 'Enter data',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                _saveData();
+              },
+              child: const Text('Save Data'),
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                _loadData();
+              },
+              child: const Text('Load Data'),
+            ),
+            const SizedBox(height: 16),
+            Text(
+              _retrievedData == null
+                  ? 'No data retrieved'
+                  : 'Retrieved data: $_retrievedData',
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
+4. **Run the Application:**
+   - Ensure a device or emulator is running.
+   - Run the app:
+
+```bash
+flutter run
+```
+
+**MCQs:**
+
+1. C
+2. A
+3. D
 
 ---
