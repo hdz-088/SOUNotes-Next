@@ -2,6 +2,16 @@
 import Link from "next/link";
 // import Typed from "typed.js";
 import React, { useRef, useEffect } from "react";
+// pages/_app.js
+import Script from "next/script";
+
+// export default function MyApp({ Component, pageProps }) {
+//   return (
+//     <>
+//       <Component {...pageProps} />
+//     </>
+//   )
+// }
 
 export default function Home() {
   return (
