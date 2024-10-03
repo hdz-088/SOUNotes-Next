@@ -3,7 +3,7 @@ title: Flutter Lab Manual
 slug: flutter-lm
 semester: 3
 image: flutter/fluttercover.png
-link:
+link: https://drive.google.com/file/d/1WZyrmrnHxcMsAb77zFjZh33CkFP3iLxc/view?usp=sharing
 ---
 
 ## Experiment 01
