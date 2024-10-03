@@ -148,12 +148,20 @@ export default async function BlogPostPage({ params }) {
       <p className="text-4xl font-bold mb-4">
         <font color="#ce9fc1">{data.title}</font>
       </p>
-      <a href={data.link} target="_blank">
-        <button className="flex gap-2 bg-carddark px-4 py-2 rounded-full text-white">
-          <img src="/pdf.png" width="20px" />
-          Download PDF
-        </button>
-      </a>
+      <div className="flex flex-row gap-5">
+        <a href={data.link} target="_blank">
+          <button className="flex gap-2 bg-carddark px-4 py-2 rounded-full text-white">
+            <img src="/pdf.png" width="20px" />
+            Download PDF
+          </button>
+        </a>
+        <a href={"https://forms.gle/XhAYp8GPS54D6TkRA"} target="_blank">
+          <button className="flex gap-2 bg-carddark px-4 py-2 rounded-full text-white">
+            <img src="/form.png" width="20px" />
+            Feedback
+          </button>
+        </a>
+      </div>
       <div
         dangerouslySetInnerHTML={{ __html: htmlContent }}
         className="prose dark:prose-invert"
