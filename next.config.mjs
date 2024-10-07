@@ -1,4 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+import withPWA from "next-pwa";
 
-export default nextConfig;
+const nextConfig = {
+  // Your Next.js configuration here
+};
+
+export default withPWA({
+  dest: "public",
+  register: true, // ensures that the service worker is registered
+  skipWaiting: true, // tells the new service worker to activate as soon as it's available
+})(nextConfig);
