@@ -14,6 +14,8 @@ const syne = Syne({ subsets: ["latin"] });
 export const metadata = {
   title: "SOUNotes",
   description: "",
+  manifest: "/manifest.json",
+  themeColor: "#12121c", // Set the theme color to match manifest
 };
 
 /**
@@ -27,6 +29,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-p-20 scroll-smooth">
       <link rel="icon" href="/favicon.png" />
+      <link rel="manifest" href="/manifest.json" />
+      <meta name="theme-color" content="#12121c" />
+      <meta name="description" content="A PWA for note-taking" />
       <Analytics />
       <body className={poppins.className}>
         <ThemeProvider
