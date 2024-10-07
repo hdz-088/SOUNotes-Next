@@ -21,6 +21,7 @@ module.exports = {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        cal: "hsl(var(--cal))",
         navbar: "hsl(var(--navbar))",
         lavender: "#323240",
         // titlelight: "#"
