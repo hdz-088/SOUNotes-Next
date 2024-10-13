@@ -1,8 +1,8 @@
 ---
 title: Java Syllabus
-slug: java-syllabus
+slug: Java-Syllabus
 semester: 3
-image: java/javacover.png
+image: /java.png
 link: https://drive.google.com/file/d/1dROVttnZAE-Hi-OlRRa5MtgnNR1-PS2m/view?usp=sharing
 ---
 

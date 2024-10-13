@@ -1,8 +1,8 @@
 ---
 title: Python-02
-slug: python-02
+slug: Python-02
 semester: 3
-image: py/pycover.png
+image: /python.jpg
 link: https://drive.google.com/file/d/1VYE6w4ZdSgrIpUqoPlyKdbVpobfC8eQe/view?usp=sharing
 ---
 

@@ -47,8 +47,8 @@ const events = [
   },
   {
     title: "Viva and Mid Remidial Exam",
-    from: "2024-10-14",
-    to: "2024-10-21",
+    from: "2024-10-18",
+    to: "2024-10-25",
     type: "exams",
     description:
       "Sem 3,5,7 Mid Semester Remidial Exam, Internal Submission and Viva",
@@ -59,6 +59,13 @@ const events = [
     to: "2024-10-24",
     type: "result",
     description: "Sem 3,5,7 Mid Semester Remidial Exam Result Declaration",
+  },
+  {
+    title: "Project Fair",
+    from: "2024-10-26",
+    to: "2024-10-26",
+    type: "celebration",
+    description: "Siver Oak University Project Fair",
   },
   {
     title: "Term End",

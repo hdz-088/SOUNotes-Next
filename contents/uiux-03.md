@@ -1,8 +1,8 @@
 ---
 title: UIUX-03
-slug: uiux-03
+slug: UIUX-03
 semester: 3
-image: uiuxcover.png
+image: /uiux.png
 link: https://drive.google.com/file/d/12bTmuO5zW8xrWE8ZlJA2rjIqHRLs5KhP/view?usp=drive_link
 ---
 
@@ -113,3 +113,18 @@ link: https://drive.google.com/file/d/12bTmuO5zW8xrWE8ZlJA2rjIqHRLs5KhP/view?usp
 - **Cons**:
   - **Complex Development**: Requires extensive planning and testing.
   - **Performance Challenges**: Ensuring fast and smooth performance on all devices can be difficult
+
+## Questions
+
+1. What are the key prototyping tools used in UI/UX design, and how do they
+   contribute to the design process?
+2. Explain the importance of usability testing techniques in refining a prototype.
+3. Describe the iterative design process and how feedback is incorporated into design
+   iterations.
+4. What are the core principles of responsive design, and why are they essential when
+   designing for multiple devices?
+5. Define a design system and explain how it helps in maintaining consistency across
+   digital products.
+6. How can design libraries be created and maintained as part of a design system?
+
+---

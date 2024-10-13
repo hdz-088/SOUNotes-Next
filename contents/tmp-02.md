@@ -1,8 +1,8 @@
 ---
 title: TMP-02
-slug: tmp-02
+slug: TMP-02
 semester: 3
-image: tmp/tmpcover.png
+image: /tmp.png
 link: https://drive.google.com/file/d/1NHL2Gukcn1fSOMWYkk3cihkPrlcbgKNS/view?usp=drive_link
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: Java-01
-slug: java-01
+slug: Java-01
 semester: 3
-image: java/javacover.png
+image: /java.png
 link: https://drive.google.com/file/d/19CvaV-MSA_kRrRuktkYSu0hNrV3YrXAb/view?usp=drive_link
 ---
 
@@ -94,7 +94,7 @@ link: https://drive.google.com/file/d/19CvaV-MSA_kRrRuktkYSu0hNrV3YrXAb/view?usp
 
 ## JAVA Compilation Process:
 
-![](java/1java01.png)
+![](/java/1java01.png)
 
 ### JAVA Virtual Machine
 
@@ -135,7 +135,7 @@ class FirstProgram
 - Every class definition in java begins with an opening brace `{` and ends with a matching closing brace `}`
 - The third line `public static void main(String args[])` defines a method named main. Conceptually, this is similar to the main() function in C/C++.
 
-![](java/1java02.png)
+![](/java/1java02.png)
 
 - Every java application program must include the `main()` method.
 - The keyword `public` is an access specifier that declares the main method as unprotected and therefore making it accessible to all other classes
@@ -152,7 +152,7 @@ class FirstProgram
 - Method may contain data type declarations and executable statements.
 - To write a java program, we first define classes and then put them together.
 
-![](java/1java03.png)
+![](/java/1java03.png)
 
 - **Documentation Section:**
   - The documentation section comprises a set of comment lines giving the name of the program, the author and other details.
@@ -210,7 +210,7 @@ class DynInit {
 
 ## Data Types
 
-![](java/1java04.png)
+![](/java/1java04.png)
 
 - **Primitive Data Types**:
   - Java defines eight simple (or elemental) types of data: byte, short, int, long, char, float, double, and Boolean. These can be put in four groups

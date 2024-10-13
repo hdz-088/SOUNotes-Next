@@ -2,8 +2,8 @@
 title: OA Syllabus
 slug: OA-Syllabus
 semester: 1
-image: flutter/cover1.png
-link:
+image:
+link: https://drive.google.com/file/d/1bYNcy-xZ-LZoT5mmrB59-v6sQMdVbMsv/view?usp=sharing
 ---
 
 ## Office Automation (3000103183)

@@ -2,8 +2,8 @@
 title: DM Syllabus
 slug: DM-Syllabus
 semester: 1
-image: flutter/cover1.png
-link:
+image:
+link: https://drive.google.com/file/d/12uRnDjTgop4kmvWsFbtczZPPRqUZ9nr7/view?usp=sharing
 ---
 
 ## Discrete Mathematics (4040003101)

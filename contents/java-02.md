@@ -1,8 +1,8 @@
 ---
 title: Java-02
-slug: java-02
+slug: Java-02
 semester: 3
-image: java/javacover.png
+image: /java.png
 link: https://drive.google.com/file/d/1No5lCx6gsuR_MZUMolgTMiDOKs6Jipui/view?usp=drive_link
 ---
 
@@ -184,7 +184,7 @@ class Test {
 
 ## Array
 
-![](java/02java01.png)
+![](/java/02java01.png)
 
 - Array is collection of related data items
 - **Declaring an Array**:
@@ -375,7 +375,7 @@ class derived-class extends base-class {
 
 ### Single Inheritance
 
-![](java/02java02.png)
+![](/java/02java02.png)
 
 - In single inheritance, a single subclass is extended from a single superclass and inherits its properties.
 
@@ -412,7 +412,7 @@ class Test {
 
 ### Multilevel Inheritance
 
-![](java/02java03.png)
+![](/java/02java03.png)
 
 - In multilevel inheritance, a child class is derived from a parent class and that child class further acts as a parent class and is used to derive another child class.
 
@@ -445,7 +445,7 @@ class one {
 
 ### Hierarchical Inheritance
 
-![](java/02java04.png)
+![](/java/02java04.png)
 
 - In Hierarchical Inheritance, one superclass is used to derive more than one subclass or we can say that multiple subclasses extend from a single superclass.
 
@@ -483,7 +483,7 @@ class Test {
 
 ### Multiple Inheritance
 
-![](java/02java05.png)
+![](/java/02java05.png)
 
 - In Multiple Inheritance, one subclass is derived from more than one superclass. Java **doesn't** support multiple inheritances because of high complexity and logic issues but as an alternative, we can implement multiple inheritances in Java using interfaces.
 
@@ -527,7 +527,7 @@ class Test {
 
 ### Hybrid Inheritance
 
-![](java/02java06.png)
+![](/java/02java06.png)
 
 - It is a mix of two or more of the above types of inheritance. Since java doesn’t support multiple inheritance with classes, the hybrid inheritance is also not possible with classes. In java, we can achieve hybrid inheritance only through Interfaces.
 
@@ -600,7 +600,7 @@ extends Animal class {
 }
 ```
 
-![](java/02java07.png)
+![](/java/02java07.png)
 
 **Why can’t we create the object of an abstract class?**
 

@@ -1,8 +1,8 @@
 ---
 title: Python-03
-slug: python-03
+slug: Python-03
 semester: 3
-image: py/pycover.png
+image: /python.jpg
 link: https://drive.google.com/file/d/1cHzLoS3_qw4HwccYgGroEFbZuB1oFznF/view?usp=sharing
 ---
 
@@ -300,3 +300,17 @@ for fruit in my_set:
 # banana
 # cherry
 ```
+
+## Questions
+
+1. How to create a dictionary in python? Explain operations of dictionary with example.
+2. what is dictionary ? explain any 5 methods of dictionary in python.
+3. difference between tuple and set.
+4. What is the difference between tuples and lists in Python? Can a tuple be converted into a list?
+5. what is tuple? Explain any three methods of tuple with example.
+6. what is set? Explain any three methods of set with example.
+7. Discuss the advantages and disadvantages of dictionaries in Python.
+8. explain list, tuple, set, and dictionary with example.
+9. write down any five built in method of dictioanry. Explain each method with example.
+
+---

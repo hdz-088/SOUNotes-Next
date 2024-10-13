@@ -1,8 +1,8 @@
 ---
 title: Flutter Syllabus
-slug: flutter-syllabus
+slug: Flutter-Syllabus
 semester: 3
-image: flutter/fluttercover.png
+image: /flutter.png
 link: https://drive.google.com/file/d/1sLOvccA4D_cTnCKQxu2ockQEamOaQnYZ/view?usp=sharing
 ---
 

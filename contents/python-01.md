@@ -1,8 +1,8 @@
 ---
 title: Python-01
-slug: python-01
+slug: Python-01
 semester: 3
-image: py/pycover.png
+image: /python.jpg
 link: https://drive.google.com/file/d/1IX0kTT-3BN9OiLwabyEO6cWHLifLUqF1/view?usp=drive_link
 ---
 
@@ -96,7 +96,7 @@ link: https://drive.google.com/file/d/1IX0kTT-3BN9OiLwabyEO6cWHLifLUqF1/view?usp
 - While Interpreting a code, an interpreter will report any error it finds in the code. If it does not find any error it will translate the code into Machine language.
 - The Python interpreter's name is **CPython**. It is written in C Language.
 
-![](py/1py01.png)
+![](/py/1py01.png)
 
 ## `print()` Function
 
@@ -315,7 +315,7 @@ print(age)
 
 ## Data Types
 
-![](py/1py02.png)
+![](/py/1py02.png)
 
 #### Int Data Type
 

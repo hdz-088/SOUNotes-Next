@@ -2,8 +2,8 @@
 title: LDP Syllabus
 slug: LDP-Syllabus
 semester: 1
-image: flutter/cover1.png
-link:
+image: /ldp.jpg
+link: https://drive.google.com/file/d/106uopjPx0zKqpCEctn4Z2qdyptu93iQ2/view?usp=sharing
 ---
 
 ## Logic Development Programming (4040233102)

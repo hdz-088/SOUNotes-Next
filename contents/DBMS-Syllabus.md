@@ -2,8 +2,8 @@
 title: DBMS Syllabus
 slug: DBMS-Syllabus
 semester: 1
-image: flutter/cover1.png
-link:
+image: /dbms.jpg
+link: https://drive.google.com/file/d/1aJDGzEiYli4anZ65Aqi-4fyA01DEbKoH/view?usp=sharing
 ---
 
 ## Database Management System (4040233101)

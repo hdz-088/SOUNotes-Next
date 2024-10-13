@@ -2,8 +2,8 @@
 title: ECS Syllabus
 slug: ECS-Syllabus
 semester: 1
-image: flutter/cover1.png
-link:
+image: /ecs.png
+link: https://drive.google.com/file/d/1FFYZrs0Ac6w-TQnYlGFrm7l-S_qrcLlk/view?usp=sharing
 ---
 
 ## English & Communication Skills (4040003161)

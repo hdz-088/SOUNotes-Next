@@ -1,12 +1,12 @@
 ---
 title: UIUX Lab Manual
-slug: uiux-lm
+slug: UIUX-LM
 semester: 3
-image: uiuxcover.png
+image: /uiux.png
 link: https://drive.google.com/file/d/14J9MRmeVWXiQoFdujDg6ZWhaUKl7AyLc/view?usp=sharing
 ---
 
-## Experiment-01 Introduction to Canva
+## Experiment-01
 
 **Aim:**
 
@@ -44,7 +44,7 @@ In conclusion, using Canva to create an **About Me presentation**, **fresher res
 
 ---
 
-## Experiment-02 Design Mobile UI Using Canva
+## Experiment-02
 
 **Aim:** Design marketing poster using Canva. Set up a mobile UI template using Canva
 
@@ -85,7 +85,7 @@ In conclusion, creating a marketing poster and a mobile UI template using Canva 
 
 ---
 
-## Experiment-03 Introduction to Responsive Design
+## Experiment-03
 
 **Aim:** Research and analysis responsive design principles. Setup a responsive layout template in Figma
 
@@ -114,7 +114,7 @@ In conclusion, setting up a responsive layout template in Figma enables you to c
 
 ---
 
-## Experiment-04 Designing the Basic Layout
+## Experiment-04
 
 **Aim**: Design a basic layout for the app. Apply UI style guides to the basic layout
 
@@ -145,7 +145,7 @@ By following these steps, you can effectively design a basic app layout in Figma
 
 ---
 
-## Experiment-05 Developing Wireflow Diagrams
+## Experiment-05
 
 **Aim:** Create wireflow diagrams for key user interactions in figma. Define user journey and flows.
 
@@ -175,7 +175,7 @@ By following these steps, you can effectively create wireflow diagrams in Figma 
 
 ---
 
-## Experiment-06 Implementing Navigation and Interaction
+## Experiment-06
 
 **Aim:** Design navigation elements, develop interactive prototypes for navigation
 
@@ -211,7 +211,7 @@ By following these steps, you can effectively design navigation elements and dev
 
 ---
 
-## Experiment-07 Enhancing with Content and Image
+## Experiment-07
 
 **Aim:** Add content and imagery to the layout. Optimize content for different screen size
 
@@ -245,7 +245,7 @@ By following these steps, you can effectively add content and imagery to your la
 
 ---
 
-## Experiment-08 Testing and Refining Layouts
+## Experiment-08
 
 **Aim:** Test the layout across multiple devices. Gather Feedback and refine design
 
@@ -276,7 +276,7 @@ By following these steps, you can effectively test your layout across multiple d
 
 ---
 
-## Experiment-09 Creating a Design System
+## Experiment-09
 
 **Aim:** Develop a design system for the app, integrate the design system into the layout
 
@@ -310,7 +310,7 @@ By following these steps, you can develop a comprehensive design system for your
 
 ---
 
-## Experiment-10 Finalizing and Presenting the App Layout
+## Experiment-10
 
 **Aim:** Prepare a final prototype and design presentation, conduct a usability review and final adjustments
 

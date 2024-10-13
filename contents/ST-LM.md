@@ -2,7 +2,7 @@
 title: ST Lab Manual
 slug: ST-LM
 semester: 3
-image: st/stcover.png
+image: /st.png
 link:
 ---
 

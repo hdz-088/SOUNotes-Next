@@ -1,8 +1,8 @@
 ---
-title: Flutter-01
-slug: flutter-01
+title: Flutter-01 Introduction
+slug: Flutter-01
 semester: 3
-image: flutter/fluttercover.png
+image: /flutter.png
 link: https://drive.google.com/file/d/1h6lxCNWBCHt78vUK2U6j5qWoaTsUAzk3/view?usp=drive_link
 ---
 
@@ -140,7 +140,7 @@ link: https://drive.google.com/file/d/1h6lxCNWBCHt78vUK2U6j5qWoaTsUAzk3/view?usp
    - It means the app is the **top-level widget**, and its UI is build using one or more **children widgets**, which again includes **sub child widgets**.
    - This feature helps you to create a complex user interface very easily.
 
-![](flutter/1flutter01.png)
+![](/flutter/1flutter01.png)
 
 4. **Design Specific Widgets:**
    - The Flutter framework has two sets of widgets that conform to specific design languages. These are **Material Design for Android** application and **Cupertino Style for IOS** application.
@@ -161,7 +161,7 @@ link: https://drive.google.com/file/d/1h6lxCNWBCHt78vUK2U6j5qWoaTsUAzk3/view?usp
 - The next layer is the **rendering** layer, which renders everything in the Flutter app.
 - Then, the layers go down to Gestures, foundation library, engine, and finally, core platform-specific code. The following diagram specifies the layers in Flutter app development.
 
-![](flutter/1flutter02.jpg)
+![](/flutter/1flutter02.jpg)
 
 ## First Flutter Application
 
@@ -218,11 +218,11 @@ class MyHomePage extends StatelessWidget {
     - **AppBar** render the header of the application, **Center** widget is used to center the child widget, and **Text** is the final widget used to show the text content and displays in the center of the screen.
 - **Step-09**: Now, run the application. To do this, go to `Run -> Run main.dart`
 
-![](flutter/1flutter03.png)
+![](/flutter/1flutter03.png)
 
 ## Flutter Folder Structure
 
-![](flutter/1flutter04.jpeg)
+![](/flutter/1flutter04.jpeg)
 
 - `.idea` :
   - This folder is at the very top of the project structure, which holds the **configuration for Android Studio.**
@@ -264,11 +264,11 @@ We can also have some default files in the Flutter application. These files are:
 - `README.md` :
   - It is an auto-generated file that holds **information about the project**. We can edit this file if we want to share information with the developers.
 
-## Flutter Application Architecture With Layered Approach
+## Flutter Application Architecture
 
 Flutter applications can benefit from a layered architecture, which separates concerns and promotes code maintainability.
 
-![](flutter/1flutter05.png)
+![](/flutter/1flutter05.png)
 
 1. **Presentation Layer (UI):**
 
