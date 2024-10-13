@@ -514,7 +514,7 @@ const chaptersData = [
   // },
   {
     title: "ST-01",
-    link: "/blogpost/st-01",
+    link: "/blogpost/ST-01",
     image: "/st.png",
     accent: "#8c75ea",
   },
