@@ -159,25 +159,25 @@
 // };
 // export default Blog;
 
-import React from "react";
-import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import Link from "next/link";
 
+// Define the path to the contents directory
 const contentDirectory = path.join(process.cwd(), "contents");
 
-// Get all blog posts
-export async function getStaticProps() {
-  const dirContent = fs.readdirSync(contentDirectory, "utf-8");
+// This function runs on the server and fetches the data
+export default async function BlogPage() {
+  // Read the contents of the directory
+  const dirContent = fs.readdirSync(contentDirectory);
 
   const blogs = dirContent
     .map((file) => {
-      const fileContent = fs.readFileSync(
-        path.join(contentDirectory, file),
-        "utf-8"
-      );
+      const filePath = path.join(contentDirectory, file);
+      const fileContent = fs.readFileSync(filePath, "utf-8");
       const { data } = matter(fileContent);
+
       // Check if the blog post belongs to semester 1
       if (data.semester === 1) {
         return { ...data, slug: file.replace(".md", "") }; // Include slug for links
@@ -186,32 +186,16 @@ export async function getStaticProps() {
     })
     .filter((blog) => blog !== null); // Filter out null entries
 
-  return {
-    props: {
-      blogs,
-    },
-  };
-}
-
-/**
- * Blog component that renders a list of blog posts.
- * Each blog post includes an image, title, description, author, date, and a link to the full post.
- *
- * @returns {JSX.Element} The rendered blog component.
- */
-const Blog = ({ blogs }) => {
   return (
     <div className="container mx-auto p-4">
-      {/* Main heading for the blog section */}
       <h1 className="text-4xl font-bold mb-8 text-center text-[#ce9fc1]">
         Semester-01
       </h1>
 
-      {/* Grid layout for blog posts */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-items-center">
-        {blogs.map((blog, index) => (
+        {blogs.map((blog) => (
           <Link href={`/blogpost/${blog.slug}`} key={blog.slug}>
-            <div className="h-80 w-60 bg-white rounded-l rounded-r-2xl drop-shadow-[5px_5px_5px_rgba(0,0,0,0.25)] border flex flex-col text-center px-2 py-4 items-center justify-between cursor-pointer transform transition-transform duration-300 hover:scale-110">
+            <div className="h-80 w-60 bg-white rounded-lg shadow-lg flex flex-col text-center px-2 py-4 items-center justify-between cursor-pointer transform transition-transform duration-300 hover:scale-110">
               <small
                 className="text-[9px] font-bold opacity-50"
                 style={{ color: blog.accent }}
@@ -237,6 +221,4 @@ const Blog = ({ blogs }) => {
       </div>
     </div>
   );
-};
-
-export default Blog;
+}
