@@ -1,6 +1,6 @@
 ---
 title: ECS-04 Significance of English Language Skills
-slug: ECS-04
+slug: ecs-04
 semester: 2
 image: /ecs.png
 link: https://drive.google.com/file/d/1XffEmAFz-wHQSdTZK4Hc_CP0snt7mmxI/view?usp=sharing

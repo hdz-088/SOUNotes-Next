@@ -1,6 +1,6 @@
 ---
 title: RDBMS-03 Cursor
-slug: RDBMS-03
+slug: rdbms-03
 semester: 2
 image: /rdbms.png
 link: https://drive.google.com/file/d/1J7kH0ouRT3lhllQ7KtAREvJRIelxJq9e/view?usp=sharing

@@ -1,6 +1,6 @@
 ---
 title: Python Lab Manual
-slug: Python-LM
+slug: python-lm
 semester: 3
 image: /python.jpg
 link: https://drive.google.com/file/d/1mPT4opB9u9RKnJaLfRkJAA3h5fqj1DVC/view?usp=drive_link

@@ -1,6 +1,6 @@
 ---
 title: UIUX-03
-slug: UIUX-03
+slug: uiux-03
 semester: 3
 image: /uiux.png
 link: https://drive.google.com/file/d/12bTmuO5zW8xrWE8ZlJA2rjIqHRLs5KhP/view?usp=drive_link

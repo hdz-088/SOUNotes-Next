@@ -1,6 +1,6 @@
 ---
 title: OOPC-03 Inheritance
-slug: OOPC-03
+slug: oopc-03
 semester: 2
 image: /oopc.png
 link: https://drive.google.com/file/d/18cvjJrvfBKteqX30UJnUsfKqUhJ3c8L3/view?usp=sharing

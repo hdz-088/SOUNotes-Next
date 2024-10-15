@@ -1,6 +1,6 @@
 ---
 title: Flutter-03 Layouts
-slug: Flutter-03
+slug: flutter-03
 semester: 3
 image: /flutter.png
 link: https://drive.google.com/file/d/1ctly0rVUnW2tXx9KGWnqWFSqTl-KmACn/view?usp=sharing

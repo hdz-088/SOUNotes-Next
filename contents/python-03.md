@@ -1,6 +1,6 @@
 ---
 title: Python-03
-slug: Python-03
+slug: python-03
 semester: 3
 image: /python.jpg
 link: https://drive.google.com/file/d/1cHzLoS3_qw4HwccYgGroEFbZuB1oFznF/view?usp=sharing

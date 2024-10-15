@@ -1,6 +1,6 @@
 ---
 title: Flutter Lab Manual
-slug: Flutter-LM
+slug: flutter-lm
 semester: 3
 image: /flutter.png
 link: https://drive.google.com/file/d/1WZyrmrnHxcMsAb77zFjZh33CkFP3iLxc/view?usp=sharing

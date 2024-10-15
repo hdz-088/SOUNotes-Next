@@ -1,6 +1,6 @@
 ---
 title: RDBMS-01 Introduction
-slug: RDBMS-01
+slug: rdbms-01
 semester: 2
 image: /rdbms.png
 link: https://drive.google.com/file/d/1J7kH0ouRT3lhllQ7KtAREvJRIelxJq9e/view?usp=sharing

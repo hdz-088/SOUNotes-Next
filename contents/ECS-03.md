@@ -1,6 +1,6 @@
 ---
 title: ECS-03 Professional Communication
-slug: ECS-03
+slug: ecs-03
 semester: 2
 image: /ecs.png
 link: https://drive.google.com/file/d/1XffEmAFz-wHQSdTZK4Hc_CP0snt7mmxI/view?usp=sharing

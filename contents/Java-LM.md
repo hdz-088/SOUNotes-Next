@@ -1,6 +1,6 @@
 ---
 title: Java Lab Manual
-slug: Java-LM
+slug: java-lm
 semester: 3
 image: /java.png
 link: https://drive.google.com/file/d/1_uW8_TmdUXp4oV3e_yBl5-se9CTdKMpk/view?usp=drive_link

@@ -1,6 +1,6 @@
 ---
 title: AWD-04 jQuery
-slug: AWD-04
+slug: awd-04
 semester: 2
 image: /awd.png
 link: https://drive.google.com/file/d/1VEfYt4r5Ah853fquHBfSUNE27J4yzez5/view?usp=sharing

@@ -1,6 +1,6 @@
 ---
 title: Flutter-02 Flutter Basics
-slug: Flutter-02
+slug: flutter-02
 semester: 3
 image: /flutter.png
 link: https://drive.google.com/file/d/1LK6-8OD1G_8OXz7YszMrB9axHNuVlzPQ/view?usp=sharing

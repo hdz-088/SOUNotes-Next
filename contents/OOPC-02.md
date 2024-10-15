@@ -1,6 +1,6 @@
 ---
 title: OOPC-02 Function & Constructor
-slug: OOPC-02
+slug: oopc-02
 semester: 2
 image: /oopc.png
 link: https://drive.google.com/file/d/18cvjJrvfBKteqX30UJnUsfKqUhJ3c8L3/view?usp=sharing

@@ -1,6 +1,6 @@
 ---
 title: LDP Syllabus
-slug: LDP-Syllabus
+slug: ldp-syllabus
 semester: 1
 image: /ldp.jpg
 link: https://drive.google.com/file/d/106uopjPx0zKqpCEctn4Z2qdyptu93iQ2/view?usp=sharing

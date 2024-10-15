@@ -1,6 +1,6 @@
 ---
 title: TMP SYllabus
-slug: TMP-Syllabus
+slug: tmp-syllabus
 semester: 3
 image: /tmp.png
 link: https://drive.google.com/file/d/1BSAaX3LmIkwyBhpjoXoJX04TX-d4nYgv/view?usp=sharing

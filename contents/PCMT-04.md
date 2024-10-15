@@ -1,6 +1,6 @@
 ---
 title: PCMT-04 Transmission Media & OSI Model
-slug: PCMT-04
+slug: pcmt-04
 semester: 2
 image: /pcmt.png
 link: https://drive.google.com/file/d/14dN4yc9ncv7AKXgOyZBRe13nquG3Mr7-/view?usp=sharing

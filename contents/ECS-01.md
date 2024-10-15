@@ -1,6 +1,6 @@
 ---
 title: ECS-01 Interpersonal, Intrapersonal and organizational Communication
-slug: ECS-01
+slug: ecs-01
 semester: 2
 image: /ecs.png
 link: https://drive.google.com/file/d/1XffEmAFz-wHQSdTZK4Hc_CP0snt7mmxI/view?usp=sharing

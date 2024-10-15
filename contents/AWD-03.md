@@ -1,6 +1,6 @@
 ---
 title: AWD-03 JavaScript
-slug: AWD-03
+slug: awd-03
 semester: 2
 image: /awd.png
 link: https://drive.google.com/file/d/1VEfYt4r5Ah853fquHBfSUNE27J4yzez5/view?usp=sharing

@@ -1,6 +1,6 @@
 ---
 title: ECS Syllabus
-slug: ECS-Syllabus
+slug: ecs-Syllabus
 semester: 1
 image: /ecs.png
 link: https://drive.google.com/file/d/1FFYZrs0Ac6w-TQnYlGFrm7l-S_qrcLlk/view?usp=sharing

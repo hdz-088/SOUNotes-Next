@@ -1,6 +1,6 @@
 ---
 title: Java-02
-slug: Java-02
+slug: java-02
 semester: 3
 image: /java.png
 link: https://drive.google.com/file/d/1No5lCx6gsuR_MZUMolgTMiDOKs6Jipui/view?usp=drive_link

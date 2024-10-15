@@ -1,6 +1,6 @@
 ---
 title: PCMT-01 PC Maintenance
-slug: PCMT-01
+slug: pcmt-01
 semester: 2
 image: /pcmt.png
 link: https://drive.google.com/file/d/14dN4yc9ncv7AKXgOyZBRe13nquG3Mr7-/view?usp=sharing

@@ -1,6 +1,6 @@
 ---
 title: Python Syllabus
-slug: Python-Syllabus
+slug: python-syllabus
 semester: 3
 image: /python.jpg
 link: https://drive.google.com/file/d/1c6_yJqyYLgynkHA027hTPTgjvzBRJN-4/view?usp=sharing

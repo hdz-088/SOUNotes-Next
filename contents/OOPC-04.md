@@ -1,6 +1,6 @@
 ---
 title: OOPC-04 Polymorphism
-slug: OOPC-04
+slug: oopc-04
 semester: 2
 image: /oopc.png
 link: https://drive.google.com/file/d/18cvjJrvfBKteqX30UJnUsfKqUhJ3c8L3/view?usp=sharing

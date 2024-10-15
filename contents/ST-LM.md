@@ -1,6 +1,6 @@
 ---
 title: ST Lab Manual
-slug: ST-LM
+slug: st-lm
 semester: 3
 image: /st.png
 link:
