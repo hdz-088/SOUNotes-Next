@@ -1,4 +1,5 @@
 ---
+header: TMP-SY
 title: TMP SYllabus
 slug: tmp-syllabus
 semester: 3

@@ -1,4 +1,5 @@
 ---
+header: JAVA-SY
 title: Java Syllabus
 slug: java-syllabus
 semester: 3

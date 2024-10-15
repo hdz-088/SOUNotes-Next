@@ -1,5 +1,6 @@
 ---
 header: LDP-SY
+header: LDP-SY
 title: LDP Syllabus
 slug: ldp-syllabus
 semester: 1

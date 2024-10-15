@@ -1,4 +1,5 @@
 ---
+header: ECS-02
 title: ECS-02 Vocal Skills
 slug: ecs-02
 semester: 2

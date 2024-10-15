@@ -1,4 +1,5 @@
 ---
+header: PYTHON-SY
 title: Python Syllabus
 slug: python-syllabus
 semester: 3

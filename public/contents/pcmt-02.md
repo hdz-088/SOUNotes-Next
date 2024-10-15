@@ -1,4 +1,5 @@
 ---
+header: PCMT-02
 title: PCMT-02 PC Troubleshooting
 slug: pcmt-02
 semester: 2

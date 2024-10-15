@@ -1,5 +1,6 @@
 ---
 header: OA-SY
+header: OA-SY
 title: OA Syllabus
 slug: oa-syllabus
 semester: 1

@@ -1,4 +1,5 @@
 ---
+header: UIUX-LM
 title: UIUX Lab Manual
 slug: uiux-lm
 semester: 3

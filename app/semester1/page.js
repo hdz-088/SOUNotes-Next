@@ -163,6 +163,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
+import Image from "next/image";
 
 // Define the path to the contents directory
 const contentDirectory = path.join(process.cwd(), "contents");
@@ -214,7 +215,12 @@ export default async function BlogPage() {
               >
                 SOUNotes
               </small>
-              <img src={blog.image} alt={blog.title} width={170} height={170} />
+              <Image
+                src={blog.image}
+                alt={blog.title}
+                width={170}
+                height={170}
+              />
             </div>
           </Link>
         ))}
