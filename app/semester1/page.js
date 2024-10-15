@@ -4,37 +4,37 @@ import Image from "next/image";
 const chaptersData = [
   {
     title: "DBMS-SY",
-    link: "/blogpost/DBMS-Syllabus",
+    link: "/blogpost/dbms-syllabus",
     image: "/dbms.jpg",
     accent: "#632db5",
   },
   {
     title: "DM-SY",
-    link: "/blogpost/DM-Syllabus",
+    link: "/blogpost/dm-syllabus",
     image: "/dm.jpg",
     accent: "#45b181",
   },
   {
     title: "ECS-SY",
-    link: "/blogpost/ECS-Syllabus",
+    link: "/blogpost/ecs-syllabus",
     image: "/ecs.png",
     accent: "#4364cf",
   },
   {
     title: "LDP-SY",
-    link: "/blogpost/LDP-Syllabus",
+    link: "/blogpost/ldp-syllabus",
     image: "/ldp.jpg",
     accent: "#385a64",
   },
   {
     title: "OA-SY",
-    link: "/blogpost/OA-Syllabus",
+    link: "/blogpost/oa-syllabus",
     image: "/oa.jpg",
     accent: "#ff735c",
   },
   {
     title: "WD-SY",
-    link: "/blogpost/WD-Syllabus",
+    link: "/blogpost/wd-syllabus",
     image: "/webdesign.jpg",
     accent: "#c3b134",
   },
