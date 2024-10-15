@@ -1,8 +1,9 @@
 ---
+header: OA-SY
 title: OA Syllabus
 slug: oa-syllabus
 semester: 1
-image:
+image: /oa.jpg
 link: https://drive.google.com/file/d/1bYNcy-xZ-LZoT5mmrB59-v6sQMdVbMsv/view?usp=sharing
 ---
 

@@ -1,4 +1,5 @@
 ---
+header: DBMS-SY
 title: DBMS Syllabus
 slug: dbms-syllabus
 semester: 1

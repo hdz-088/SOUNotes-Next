@@ -1,4 +1,5 @@
 ---
+header: ECS-SY
 title: ECS Syllabus
 slug: ecs-Syllabus
 semester: 1

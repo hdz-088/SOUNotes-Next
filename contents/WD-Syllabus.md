@@ -1,4 +1,5 @@
 ---
+header: WD-SY
 title: WD Syllabus
 slug: wd-syllabus
 semester: 1
