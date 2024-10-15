@@ -461,376 +461,470 @@ This practical exercise demonstrated the use of WinRunner for automating web app
 
 ---
 
-## Practical-09
+## Practical 09
 
-> This is generated via ChatGPT
+- **Aim:** Case study on types of software testing
+- **Description:** This practical case study explores the application of different software testing types, including functional, non-functional (performance, security), and usability testing. The goal is to understand how these testing types help in identifying and addressing potential issues in a software product to ensure it meets quality standards.
 
-### Introduction
+### 1. Introduction
 
-Software testing plays a critical role in ensuring the quality, reliability, and performance of a software product. It involves various methods to identify bugs, issues, and other defects that could negatively impact the user experience or system performance. In this case study, we will explore the different types of software testing—focusing on **Functional Testing**, **Non-functional Testing**, and **Usability Testing**—and their application in detecting and addressing potential issues within a software product. This comprehensive understanding will illustrate how a combination of these testing techniques ensures a robust and high-quality software solution.
+**Purpose:**
 
-### Overview of Software Testing Types
+- The purpose of this case study is to explore various types of software testing, such as functional, non-functional, and usability testing, to understand their role in ensuring software quality. Each testing type plays a critical role in validating specific aspects of a software product, ensuring it performs as expected under different conditions.
 
-Software testing is broadly categorized into two types:
+**Scope:**
 
-1. **Functional Testing**: Tests the functionality of the software based on requirements.
-2. **Non-functional Testing**: Examines aspects like performance, usability, and reliability.
+- This study focuses on key software testing types:
+  - **Functional Testing:** Verifies the software behaves according to the specified requirements.
+  - **Performance Testing:** Measures the software's responsiveness and stability under load.
+  - **Security Testing:** Ensures the software is protected against vulnerabilities and unauthorized access.
+  - **Usability Testing:** Evaluates the ease of use and user experience of the application.
 
-Below is a detailed examination of these types and their subcategories, along with a special focus on **Usability Testing** as part of non-functional testing.
+### 2. Background
 
-### 1. Functional Testing
+- Software testing is a critical process in the software development lifecycle (SDLC) to ensure the product meets functional and non-functional requirements. Functional testing ensures that the application works as intended, while non-functional testing (performance, security, etc.) ensures the product is reliable, secure, and user-friendly.
 
-Functional testing ensures that each feature of the software application operates in conformance with the required specifications. It primarily focuses on user-facing functionality and user interaction with the system.
+### 3. Objectives
 
-#### Types of Functional Testing:
+- **Functional Testing:** Validate core features and workflows of the software.
+- **Performance Testing:** Evaluate the software's behavior under various load conditions.
+- **Security Testing:** Identify vulnerabilities and assess the effectiveness of security controls.
+- **Usability Testing:** Analyze the user interface and user experience to ensure ease of use.
 
-1. **Unit Testing**:
+### 4. Advantages & Disadvantages
 
-   - **Definition**: Tests individual units or components of the software.
-   - **Application**: Unit testing is performed during the development phase to ensure each module works independently before integrating them. For instance, in an e-commerce platform, unit tests would validate if product search or shopping cart functions work as expected.
+**Advantages:**
 
-2. **Integration Testing**:
+- **Comprehensive Coverage:** Combines different types of testing to address all aspects of software quality.
+- **Risk Mitigation:** Helps identify and resolve issues before they impact end-users.
+- **Improved User Experience:** Usability testing helps create a user-friendly interface.
 
-   - **Definition**: Tests the interaction between different modules of a system.
-   - **Application**: After unit testing, integration testing ensures that modules work well when combined. In an e-commerce platform, integration testing would validate if the search, cart, and checkout processes work together without issues.
+**Disadvantages:**
 
-3. **System Testing**:
+- **Time-Consuming:** Thorough testing may require significant time and resources.
+- **Complex Setup:** Non-functional testing (especially performance and security) can be challenging to configure.
+- **Maintenance:** Frequent updates may require repeated testing efforts to maintain coverage.
 
-   - **Definition**: Tests the complete and integrated software system.
-   - **Application**: It ensures the entire software system works as a whole. For example, system testing ensures that all functionalities of the e-commerce platform, including user login, product search, payment gateway, etc., work seamlessly in combination.
+### 5. Implementation
 
-4. **Acceptance Testing**:
-   - **Definition**: Verifies if the system meets the business requirements and is ready for delivery.
-   - **Application**: Conducted before the software is handed over to the client. User Acceptance Testing (UAT) will be done on the e-commerce platform by stakeholders to validate it meets all specified business needs.
+**Functional Testing:**
 
-#### Benefits of Functional Testing:
+- Identify core functionalities such as login, form submission, and navigation.
+- Example functional test case:
+  ```plaintext
+  Test Case: Verify user login functionality
+  Steps:
+  1. Open the login page.
+  2. Enter valid credentials.
+  3. Click the login button.
+  Expected Result: User is successfully logged in.
+  ```
 
-- Ensures software performs expected actions and functions.
-- Helps catch issues early in the development phase.
-- Enhances software quality and customer satisfaction.
+**Performance Testing:**
 
-#### Case Application:
+- Use tools like JMeter to simulate multiple users accessing the software simultaneously and measure its response time.
+  ```plaintext
+  Scenario: Simulate 100 users accessing the login page.
+  Expected Result: The page should load within 3 seconds under the load.
+  ```
 
-In an e-commerce application, functional testing will validate whether the product search, checkout process, and payment gateway integrations are functioning according to business specifications. Unit tests will cover isolated pieces of code, integration testing will ensure interactions between modules, and system testing will validate the overall performance of the application.
+**Security Testing:**
 
-### 2. Non-Functional Testing
+- Perform vulnerability scans and penetration testing using tools like OWASP ZAP to identify potential security risks.
 
-Non-functional testing focuses on the operational aspects of the software, like performance, security, and reliability. These tests assess how well the software performs under varying conditions, and if it meets certain non-functional requirements (NFRs).
+**Usability Testing:**
 
-#### Types of Non-functional Testing:
+- Gather feedback from users about the interface, navigation, and overall user experience. Example task:
+  ```plaintext
+  Task: Ask users to perform a task, such as creating a new account.
+  Expected Result: Users should complete the task without confusion or difficulty.
+  ```
 
-1. **Performance Testing**:
+### 6. Conclusion
 
-   - **Definition**: Measures the responsiveness, speed, and stability of a system under a particular workload.
-   - **Application**: For an e-commerce site, performance testing would ensure that the application can handle thousands of concurrent users during peak hours (e.g., Black Friday sales) without significant slowdowns.
-   - **Subtypes**:
-     - **Load Testing**: Ensures the system can handle a specified load.
-     - **Stress Testing**: Tests the system under extreme conditions.
-     - **Endurance Testing**: Ensures the software can handle prolonged periods of activity without degradation.
+This practical case study highlights the importance of applying various software testing techniques to ensure the software product is of high quality. By combining functional, performance, security, and usability testing, the product can be evaluated from multiple perspectives, allowing potential issues to be identified and resolved before release. These testing types work together to create a robust and user-friendly product.
 
-2. **Security Testing**:
+### 7. References
 
-   - **Definition**: Assesses the security of the system to prevent attacks or unauthorized access.
-   - **Application**: In an e-commerce platform, this would involve testing the payment gateway for vulnerabilities, ensuring that sensitive user data (credit card information, personal details) is securely transmitted and stored.
-
-3. **Compatibility Testing**:
-
-   - **Definition**: Ensures the software works as intended across different devices, browsers, operating systems, and network environments.
-   - **Application**: An e-commerce platform must function seamlessly across different devices (mobile, desktop), operating systems (Windows, macOS, Android, iOS), and browsers (Chrome, Firefox, Safari).
-
-4. **Reliability Testing**:
-
-   - **Definition**: Ensures that the software operates consistently under specified conditions for an extended period.
-   - **Application**: Reliability testing will validate if an e-commerce website remains operational and error-free for hours, even after heavy transactions.
-
-5. **Compliance Testing**:
-   - **Definition**: Verifies that the software meets industry standards, legal, and regulatory requirements.
-   - **Application**: This could include testing the e-commerce platform's payment system for compliance with the Payment Card Industry Data Security Standard (PCI DSS).
-
-#### Benefits of Non-functional Testing:
-
-- Ensures a system is scalable, secure, and performs well under stress.
-- Helps maintain customer trust by ensuring reliability and compliance.
-- Prevents long-term operational failures.
-
-#### Case Application:
-
-For the e-commerce application, performance testing will validate its ability to support high traffic, while security testing ensures the protection of customer data. Compatibility testing ensures a uniform user experience across devices and platforms.
-
-### 3. Usability Testing
-
-Usability testing evaluates the user-friendliness and overall user experience of the software. This type of testing involves real users who test the software to identify potential issues in navigation, ease of use, and overall experience.
-
-#### Key Elements of Usability Testing:
-
-1. **Ease of Learning**: How easy is it for new users to navigate and use the system?
-2. **Efficiency of Use**: Can experienced users perform tasks quickly and efficiently?
-3. **Error Frequency and Severity**: How often do users encounter errors, and how severe are they?
-4. **Satisfaction**: Do users find the system enjoyable and satisfying to use?
-
-#### Application of Usability Testing:
-
-For an e-commerce platform, usability testing would focus on the following areas:
-
-- **Navigation**: Ensure users can quickly find products using intuitive search filters and categories.
-- **Checkout Process**: Verify that the checkout process is simple, with clear instructions and minimal steps.
-- **Responsiveness**: Ensure that the platform adapts to different screen sizes and provides a seamless user experience across devices (e.g., mobile-friendly design).
-
-#### Benefits of Usability Testing:
-
-- Improves user satisfaction by creating a smooth user experience.
-- Reduces user frustration and increases retention rates.
-- Helps identify interface or process flow issues early.
-
-#### Case Application:
-
-In usability testing for the e-commerce site, users may be asked to perform common tasks like searching for a product, adding it to the cart, and completing a purchase. The testers would record how easy these tasks are to perform, how intuitive the interface is, and whether users experience any frustrations. The results would help identify areas for improvement, such as streamlining the checkout process or enhancing search filters.
-
-### Conclusion
-
-Software testing is a comprehensive process that ensures the quality, performance, and reliability of a software product. Functional testing verifies that the software works according to business requirements, non-functional testing checks performance and other operational aspects, and usability testing ensures a seamless and satisfactory user experience.
-
-By applying a mix of these testing techniques, software teams can identify potential issues early in the development process and ensure that the final product meets customer expectations. For an e-commerce platform, these tests ensure a smooth, secure, and scalable shopping experience that can handle high volumes of traffic and transactions while maintaining user satisfaction.
-
-Effective software testing, therefore, plays a crucial role in delivering a product that is both functionally robust and user-friendly.
+- ISTQB Foundation Level Syllabus: [https://www.istqb.org/](https://www.istqb.org/)
+- JMeter Documentation: [https://jmeter.apache.org/](https://jmeter.apache.org/)
+- OWASP ZAP: [https://www.zaproxy.org/](https://www.zaproxy.org/)
+- Usability.gov: [https://www.usability.gov/](https://www.usability.gov/)
 
 ---
 
-## Practical-10
+## Practical 10
 
-### Introduction
+- **Aim:** Case study on bug tracking tool (Bugzilla)
+- **Description:** This practical case study explores Bugzilla, a popular bug tracking tool, focusing on its features for effective defect management. These features include defect reporting, prioritization, assignment, status tracking, and reporting. The objective is to enhance software quality by improving issue management through Bugzilla’s structured approach to handling bugs in the software development lifecycle.
 
-Bugzilla is a robust, featureful and mature defect-tracking system, or bug-tracking system. Defect-tracking systems allow teams of developers to keep track of outstanding bugs, problems, issues, enhancement and other change requests in their products effectively. Simple defect-tracking capabilities are often built into integrated source code management environments such as GitHub or other web-based or locally-installed equivalents. We find organizations turning to Bugzilla when they outgrow the capabilities of those systems - for example, because they want workflow management, or bug visibility control (security), or custom fields.
+### 1. Introduction
 
-Bugzilla is both free as in freedom and free as in price. Most commercial defect-tracking software vendors charge enormous licensing fees. Despite being free, Bugzilla has many features which are lacking in both its expensive and its free counterparts. Consequently, Bugzilla is used by hundreds or thousands of organizations across the globe.
+**Purpose:**
 
-Bugzilla is a web-based system but needs to be installed on your server for you to use it. However, installation is not complex.
+- Bug tracking is an essential component of software quality assurance. Bugzilla, an open-source tool, facilitates the reporting and management of defects in a systematic way. This case study aims to demonstrate how Bugzilla can be used to streamline bug tracking, ensuring efficient resolution of software issues and preventing potential problems in future releases.
 
-### Background
+**Scope:**
 
-When mozilla.org first came online in 1998, one of the first products that was released was Bugzilla, a bug system implemented using freely available open source tools. Bugzilla was originally written in TCL (Tool Command Language) by Terry Weissman for use at mozilla.org to replace the in-house system then in use at Netscape. The initial installation of Bugzilla was deployed to the public on a mozilla.org server on April 6, 1998.
+- This case study focuses on key Bugzilla features, including:
+  - **Defect Reporting:** Logging bugs with detailed descriptions.
+  - **Prioritization & Assignment:** Categorizing bugs by severity and assigning them to the appropriate developers.
+  - **Status Tracking:** Monitoring bug progress from reporting to resolution.
+  - **Reporting:** Generating summaries and detailed reports for analysis and decision-making.
 
-After a few months of testing and fixing on a public deployment, Bugzilla was finally released as open source via anonymous CVS and available for others to use on August 26, 1998. At this point. Terry decided to port Bugzilla to Perl, with the hopes that more people would be able to contribute to it, since Perl seemed to be a more popular language. The completion of the port to Perl was announced on September 15, 1998, and committed to CVS later that night.
+### 2. Background
 
-After a few days of bake time, this was released as Bugzilla 2.0 on September 19, 1998. Since then a large number of projects, both commercial and free have adapted it as their primary method of tracking software defects. In April of 2000, Terry handed off control of the Bugzilla project to Tara Hernandez. Under Tara’s leadership, some of the regular contributors were coerced into taking more responsibility, and Bugzilla began to truly become a group effort. In July of 2001, facing lots of distraction from her “real job,” Tara handed off control to Dave Miller, who is still in charge as of this writing.
+- Bugzilla was created by the Mozilla Foundation to handle bug tracking for its open-source projects. Today, Bugzilla is widely used by organizations for effective issue management. It offers a customizable and transparent way to track bugs, making it easier to manage software defects and ensure timely fixes.
 
-### Features
+### 3. Objectives
 
-**Advanced Search Capabilities**
+- **Defect Reporting:** Learn how to log bugs in Bugzilla with relevant details such as title, description, and steps to reproduce.
+- **Prioritization:** Understand how to classify bugs based on severity and impact.
+- **Assignment:** Explore how bugs are assigned to developers or teams based on expertise and workload.
+- **Status Tracking:** Monitor the lifecycle of a bug, from submission to resolution, through different states such as NEW, ASSIGNED, RESOLVED, and CLOSED.
+- **Reporting:** Generate reports to track progress, identify trends, and improve decision-making for future development cycles.
 
-- Bugzilla offers two forms of search:
-- A basic Google-like bug search that is simple for new users and searches the full text of a bug.
-- A very advanced search system where you can create any search you want, including time-based searches (such as “show me bugs where the priority has changed in the last 3 days”) and other very-specific queries.
+### 4. Advantages & Disadvantages
 
-**Email Notifications Controlled By User Preferences**
+**Advantages:**
 
-- You can get an email about any change made in Bugzilla, and which notifications you get on which bugs is fully controlled by your personal user preferences.
+- **Efficient Management:** Provides a centralized system for tracking and resolving issues.
+- **Transparency:** All team members have access to bug status and history, promoting transparency in issue management.
+- **Customizability:** Bugzilla can be tailored to suit various workflows and project needs.
+- **Powerful Reporting:** Offers detailed reports for better insight into the status of the project.
 
-**Bug Lists in Multiple Formats (Atom, iCal, etc.)**
+**Disadvantages:**
 
-- When you search for bugs, you can get the results in many different formats than just the basic HTML layout. Bug lists are available in Atom, if you want to subscribe to a search like it was a feed. They’re also available in iCalendar format, so if you’re using the time-tracking features of Bugzilla you can see where your bugs fit into your calendar!
-- There are even more formats available, such as a long, printable report format that contains all the details of every bug, a CSV format for importing into spreadsheets, and various XML formats.
+- **Steep Learning Curve:** Users may find it challenging to get familiar with all the features initially.
+- **Complex Interface:** The interface can be overwhelming for new users or small teams.
+- **Customization Overhead:** Although flexible, customizing Bugzilla can require considerable effort.
 
-**Scheduled Reports (Daily, Weekly, Hourly, etc.) by Email**
+### 5. Implementation
 
-- Bugzilla has a system that will send you, another user, or a group that you specify the results of a particular search on a schedule that you specify! It can be at any time of day, and it can happen as often as every fifteen minutes.
-- Access to this system is controlled by Bugzilla’s groups system, so you can limit who has access to it, and separately, who is able to send reports to users other than themselves.
+**Step 1: Logging into Bugzilla**
 
-**Reports and Charts**
+- Create an account and log into Bugzilla. Once logged in, navigate to the dashboard.
 
-- Bugzilla has a very advanced reporting systems. If you want to know how your bug database looks right now, you can create a table using any two fields as the X and Y axis, and using any search criteria to limit the bugs you want information on.
-- For example, you could pick Product as the X axis, and Status as the Y axis, and then you would see a report of how many bugs were in each Status, in each Product.
-- You can also view that same table as a line graph, bar graph, or pie chart.
-- You can also specify a “Z axis” to generate multiple tables or graphs.
-- You can even export these reports as CSV so that you can work with them in a spreadsheet.
-- Finally, to see how your Bugzilla installation has changed over time, Bugzilla also supports a charting system, which can create graphs that track changes in the system over time.
+**Step 2: Reporting a Bug**
 
-**Automatic Duplicate Bug Detection**
+- Click on the "File a Bug" button. Provide the following information:
+  - **Product/Component:** The part of the project where the bug is found.
+  - **Summary:** A brief title of the bug.
+  - **Description:** Detailed steps to reproduce the bug.
+  - **Severity:** Select the severity of the issue (e.g., minor, major, critical).
+  - **Attachment:** If necessary, attach screenshots or logs to support the bug report.
 
-- When filing a bug in Bugzilla, as soon as you start typing a short summary for it, Bugzilla will automatically look for similar bugs in the system and allow the user to add themselves to the CC list of one of those bugs instead of filing a new one.
+**Step 3: Prioritization and Assignment**
 
-**File/Modify Bugs By Email**
+- After logging the bug, assign it to the appropriate developer or team. You can also set the priority (e.g., P1 for critical issues) to ensure important bugs are addressed first.
 
-- In addition to the web interface, you can send Bugzilla an email that will create a new bug, or will modify an existing bug. You can also very easily attach files to bugs this way.
+**Step 4: Tracking the Bug’s Status**
 
-**Time Tracking**
+- Monitor the bug's status as it moves through different stages:
+  - **NEW:** The bug has just been reported.
+  - **ASSIGNED:** The bug has been assigned to a developer.
+  - **RESOLVED:** The developer has fixed the issue.
+  - **VERIFIED:** The fix has been tested and confirmed.
+  - **CLOSED:** The issue is fully resolved and no longer active.
 
-- You can estimate how many hours a bug will take to fix, and then keep track of the hours you spend working on it. You can also set a deadline that a bug must be complete by.
-- For installations that don’t need time-tracking, you can turn off these fields. You can also control who is able to see them. (Just modify the time tracking group parameter!)
+**Step 5: Generating Bug Reports**
 
-**Request System**
+- Bugzilla allows you to create detailed reports, which can provide insights into bug frequency, resolution times, and areas of the project that need more attention. These reports are helpful for decision-making and improving future product quality.
 
-- The Request System is a method of asking other users to do something with a particular bug or attachment. That other user can then grant (say “yes” to) your request, or deny (say “no” to) your request, and Bugzilla keeps track of their answer. You can use it for various purposes; whether you need to ask for code review, request information from a specific user, or get a sign-off from a manager, the system is extremely flexible and can do what you need.
+### 6. Conclusion
 
-**Private Attachments and Comments**
+This case study demonstrates the utility of Bugzilla as a bug tracking tool that streamlines defect management. By using Bugzilla for reporting, prioritizing, assigning, and tracking bugs, teams can ensure a more efficient and transparent process. The tool not only helps to resolve issues faster but also provides valuable data through its reporting features to improve the overall software development process. Efficient bug tracking enhances software quality and user satisfaction by addressing issues in a structured manner.
 
-- If you are in the “insider group,” you can mark certain attachments and comments as private, and then they will be invisible to users who are not in the insider group.
-- Users will know that a comment was hidden (because the comment numbering will look something like “1, 2, 3, 5” to them), but they will not be able to access its contents.
+### 7. References
 
-**Automatic Username Completion or Drop-Down User Lists**
-
-- For small Bugzilla installations, Bugzilla supports showing all users in a drop-down list to select from, when reassigning bugs to another user, adding a user to the CC list, or many other areas.
-- Administrators can control who appears in these drop-down lists for each user with “user visibility” controls, to prevent certain users from knowing about the existence of other users.
-- For larger installations, Bugzilla supports “autocomplete” when typing a username for the assignee, CC list, or other field that takes a username. After you type at least three characters into one of these fields, Bugzilla will suggest a list of users who have those letters in their username or their real name.
-
-**Patch Viewer**
-
-- Patch Viewer gives you a nice, colorful view of any patch attached to a bug. It also integrates with LXR, CVS, and Bonsai to provide you even more information about a patch.
-- In particular, it makes code review much easier.
-
-**“Watch” Other Users**
-
-- In Bugzilla, you can say that you want to “watch” another user. Then, you will get every email that user gets from Bugzilla, as though that user was you. This is particularly useful when one developer goes on vacation and another needs to handle that developer’s bugs while the other developer is on vacation.
-- This doesn’t allow you to bypass security–if you don’t have access to a bug, you won’t get notifications about it, no matter what.
-
-**Move Bugs Between Installations**
-
-- Bugzilla supports the ability to move a bug from one Bugzilla installation to another. This even works across versions–you can move a bug from a Bugzilla 2.16 installation to a Bugzilla 3.0 installation without having to do any manual work.
-
-### Disadvantages
-
-- **Difficulties in attaching files**: Large files cannot be attached in Bugzilla, which is a main concern.
-- **Customization**: It lacks the features of customization when compared with JIRA.
-- **User-interface**: The User-Interface is not so good and lacks mobile-based UI.
-- **Agile Project Development**: It does not support it which is the greatest disadvantage of Bugzilla.
-
-### Installation
-
-**Step-01: Install Perl**
-
-- For Bugzilla to be up and running, we need a number of Perl modules to be installed in our systems.
-
-**Mandatory Modules:**
-
-- AppConfig
-- CGI
-- Data-Dumper
-- DateTime
-- DBI
-- DBD-mysql
-- Digest-SHA
-- DateTime-Timezone
-- Template-Toolkit
-- Email-send
-- Email-MIME
-- URI
-- Math-Random-ISAAC
-- Win32
-- Win32-API
-
-**Step-02: Download BugZilla**
-
-- Download the stable release from their official website using the link [_https://www.bugzilla.org/download/_](https://www.bugzilla.org/download/)_._
-
-**Step-03: Database Configuration**
-
-- We have to create a new database in our MySQL database.
-- After that, we need to open the config file from our Bugzilla folder, in an editable mode to modify the given fields.
-
-**Step-04: Configure BugZilla**
-
-- To configure, we need to run the below given command in our command prompt. This will prepare a database to create the required tables. At the time of configuration, it will also ask a hostname for the mail server and an administrator email and password.
-
-**Step-05: Configure Apache Web Server**
-
-- The next step would be to configure our web server. We need to open our `httpd.conf` file, present in our Apache folder and enable CGI support by uncommenting the `AddHandler CGI-script .cgi` line.
-- On account of any error, such as 500 internal error, page load error or in case Bugzilla is not working, we could try replacing the first line from all `.cgi` files, i.e. replacing `#!/usr/bin/perl` to the `C:` a path of a bin of our Perl folder.
-
-### Conclusion
-
-Tracking, reporting bugs and issues will be easily possible with the Bugzilla tool. It provides a collaborative environment where we interact with our clients or employees. We easily report our bugs in Bugzilla and also set the deadline for the bugs when they will be resolved. As we already covered how to login in to bugzilla and how to report the bugs you can go through the steps that we provided
+- Bugzilla Official Documentation: [https://www.bugzilla.org/docs/](https://www.bugzilla.org/docs/)
+- Mozilla Bugzilla: [https://bugzilla.mozilla.org/](https://bugzilla.mozilla.org/)
+- Bugzilla User Guide: [https://www.bugzilla.org/docs/user.html](https://www.bugzilla.org/docs/user.html)
 
 ---
 
-## Practical-11
+## Practical 11
 
-```python
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-import time
+- **Aim:** Open a file in the C Drive using an automation script.
+- **Description:** In this practical, you will write a Python script to open a file that is located in the C Drive of your system using an automation method. The script will check if the file exists and then open it, otherwise, it will display a message stating that the file was not found.
 
-# Initialize the web driver
-driver = webdriver.Chrome()
+### Code & Steps:
 
-# Open File explorer
-driver.get("files:///c:/")
+1. **Install Python:**
 
-# wait for 100 seconds
-time.sleep(100)
+   - Ensure Python is installed on your system. If not, download and install it from [python.org](https://www.python.org/downloads/).
 
-# Assuming file is in the root directory
-file_path = 'file:///c:/test.doc'
-driver.get(file_path)
+2. **Create the Script:**
 
-# wait for a while before closing the browser
-time.sleep(100)
-driver.quit()
-```
+   - Open a text editor or Integrated Development Environment (IDE) such as Visual Studio Code.
+   - Write the following Python script to open a file from the C Drive:
 
-**Output:**
-The code uses Selenium to launch the Chrome web browser. The command `driver.get("files:///c:/")` attempts to open the local file system in the browser, specifically the root directory of the `C:` drive (`file:///c:/`). After attempting to open `C:/`, the script pauses for 100 seconds, keeping the browser open. After the 100-second pause, the browser will attempt to open the file. If the file does not exist, the browser will display an error (e.g., _"File not found"_). After another 100-second pause, the browser will close as `driver.quit()` is called, which terminates the Selenium session.
+   ```python
+   import os
+
+   file_path = r"C:\example\myfile.txt"
+
+   if os.path.exists(file_path):
+       os.startfile(file_path)
+       print(f"Opened: {file_path}")
+   else:
+       print(f"File not found: {file_path}")
+   ```
+
+   - This script uses Python's `os` module to check if the file exists at the given path. If the file is found, it opens the file using the `os.startfile()` method. If not, it prints an error message.
+
+3. **Save the Script:**
+
+   - Save the file with the name `open_file.py`.
+
+4. **Run the Script:**
+   - Open the terminal or command prompt.
+   - Navigate to the folder where you saved the script.
+   - Run the script using the following command:
+     ```bash
+     python open_file.py
+     ```
+
+### Output:
+
+- If the file is found at the specified path, the script will open the file and print:
+
+  ```
+  Opened: C:\example\myfile.txt
+  ```
+
+- If the file is not found, the output will be:
+
+  ```
+  File not found: C:\example\myfile.txt
+  ```
+
+### Conclusion:
+
+- In this practical, you learned how to automate file handling in Python using the `os` module. By writing a simple script, you were able to check if a file exists in the C Drive and open it if found. This exercise demonstrates how automation can be used to manage files efficiently in a system, which can be extended to other applications such as data processing and file management tasks in real-world scenarios.
 
 ---
 
-## Practical-12
+## Practical 12
 
-```python
-from selenium import webdriver
-from selenium.webdriver.common.by import By
+- **Aim:** Automate 'Facebook log-in page' using Selenium Python ChromeDriver.
+- **Description:** In this practical, you will use Selenium, a powerful web automation tool, to automate the process of logging into Facebook using Python and ChromeDriver. Selenium will be used to control the Chrome browser, fill in the login credentials, and click the login button.
 
-# Replace 'path/to/chromedriver' with the actual path
-driver = webdriver.Chrome()
+### Code & Steps:
 
-# Navigate to the Facebook login page
-driver.get('https://www.facebook.com/')
+1. **Install Selenium:**
 
-# Find the email/username field and enter credentials
-email_field = driver.find_element(By.ID, 'email')
-email_field.send_keys('your@email.com')
+   - Open your terminal or command prompt and install Selenium by running:
+     ```bash
+     pip install selenium
+     ```
 
-# Find the password field and enter credentials
-pass_field = driver.find_element(By.ID, 'pass')
-pass_field.send_keys('your_password')
+2. **Download ChromeDriver:**
 
-# Find and click login button
-login_btn = driver.find_element(By.NAME, 'login')
-login_btn.click()
-```
+   - Download the appropriate version of [ChromeDriver](https://sites.google.com/chromium.org/driver/) based on your browser version.
+   - Ensure the `chromedriver.exe` is placed in your project directory or in a location that is included in your system PATH.
 
-**Output:**
+3. **Write the Script:**
 
-- If the provided email and password are valid Facebook credentials, the script will successfully log you into Facebook, and the browser will navigate to the logged-in user’s Facebook homepage.
-- If the credentials are incorrect, Facebook will display an error message like "The email or mobile number you entered isn’t connected to an account." This message will appear in the browser, but the script won't capture it automatically unless additional code is written to handle such cases.
+   - Open a text editor or an IDE like VS Code, and write the following Python script:
+
+   ```python
+   from selenium import webdriver
+   from selenium.webdriver.common.by import By
+   from selenium.webdriver.common.keys import Keys
+   import time
+
+   # Set up ChromeDriver path
+   driver = webdriver.Chrome(executable_path="path_to_chromedriver")
+
+   # Open Facebook login page
+   driver.get("https://www.facebook.com/login")
+
+   # Enter email or phone number
+   email = driver.find_element(By.ID, "email")
+   email.send_keys("your_email_here")
+
+   # Enter password
+   password = driver.find_element(By.ID, "pass")
+   password.send_keys("your_password_here")
+
+   # Click the login button
+   login_button = driver.find_element(By.NAME, "login")
+   login_button.click()
+
+   # Wait for a few seconds to see if the login is successful
+   time.sleep(5)
+
+   # Close the browser
+   driver.quit()
+   ```
+
+   - This script opens the Facebook login page, enters the provided email and password, clicks the login button, and closes the browser after 5 seconds.
+
+4. **Run the Script:**
+   - In the terminal, navigate to your script’s directory and run the following command:
+     ```bash
+     python facebook_login.py
+     ```
+
+### Output:
+
+- The script will open Chrome and navigate to the Facebook login page. It will automatically fill in the login credentials and click the login button. If the credentials are correct, Facebook will log in successfully, and you will see your Facebook homepage.
+
+- After 5 seconds, the browser will close automatically. If there is an error in credentials or the login page doesn't load correctly, you might receive an error message in the terminal.
+
+### Conclusion:
+
+- This practical introduced you to web automation using Selenium. You learned how to control a web browser, automate the input of login credentials, and simulate the login process on Facebook. This is a foundational skill in web automation and testing, which can be applied to automate interactions with other web applications or to perform functional testing in web development projects.
 
 ---
 
-## Practical-13
+## Practical 13
 
-> This is generated via ChatGPT
+- **Aim:** Write a script to navigate to a webpage and capture a screenshot of the page, saving it to your local directory.
+- **Description:** In this practical, you will write a Python script using Selenium that will open a website in a browser, capture a screenshot of the page, and save it to a local file. This script can be useful for web testing or for capturing specific moments of a webpage.
 
-```python
-from selenium import webdriver
-import time
+### Code & Steps:
 
-# Initialize the Chrome WebDriver
-driver = webdriver.Chrome()
+1. **Install Selenium:**
 
-# Navigate to the desired webpage
-driver.get('https://www.example.com')
+   - Open the terminal and run the following command to install Selenium:
+     ```bash
+     pip install selenium
+     ```
 
-# Give the page time to load
-time.sleep(5)
+2. **Download ChromeDriver:**
 
-# Capture the screenshot and save it to your local directory
-screenshot_path = 'screenshot.png'
-driver.save_screenshot(screenshot_path)
-print(f"Screenshot saved to {screenshot_path}")
+   - Download the correct version of [ChromeDriver](https://sites.google.com/chromium.org/driver/).
+   - Ensure that the `chromedriver.exe` file is in your project directory or system PATH.
 
-# Close the browser
-driver.quit()
-```
+3. **Write the Script:**
 
-**Output:**
-The script initializes a Chrome WebDriver using `webdriver.Chrome()`, which opens a new Chrome browser window. The browser navigates to the specified URL. The script pauses for 5 seconds (`time.sleep(5)`) to allow the page to fully load before proceeding. The line `driver.save_screenshot(screenshot_path)` captures a screenshot of the loaded page and saves it to the specified path in your local directory (`screenshot.png`). A message confirming the screenshot is printed: `Screenshot saved to screenshot.png`. The `driver.quit()` command closes the browser window and terminates the WebDriver session.
+   - Open your text editor or IDE and create a file called `screenshot_capture.py` with the following content:
+
+   ```python
+   from selenium import webdriver
+   from selenium.webdriver.common.by import By
+   import time
+
+   # Set up ChromeDriver path
+   driver = webdriver.Chrome(executable_path="path_to_chromedriver")
+
+   # Navigate to the webpage
+   driver.get("https://www.example.com")
+
+   # Wait for the page to load completely
+   time.sleep(3)
+
+   # Capture the screenshot and save it to your local directory
+   screenshot_path = "screenshot.png"
+   driver.save_screenshot(screenshot_path)
+
+   # Close the browser
+   driver.quit()
+
+   print(f"Screenshot saved at {screenshot_path}")
+   ```
+
+   - This script opens the webpage `https://www.example.com`, waits for the page to load, captures a screenshot, saves it to the local directory, and then closes the browser.
+
+4. **Run the Script:**
+   - In your terminal, navigate to the directory where the script is located and run the command:
+     ```bash
+     python screenshot_capture.py
+     ```
+
+### Output:
+
+- A Chrome browser window will open, navigate to `https://www.example.com`, and take a screenshot.
+- The screenshot will be saved in the local directory as `screenshot.png`.
+- You will see the following message in the terminal:
+
+  ```
+  Screenshot saved at screenshot.png
+  ```
+
+- The browser will close automatically after the script runs.
+
+### Conclusion:
+
+- In this practical, you used Selenium to automate the opening of a webpage and capture a screenshot of the page. The ability to automate tasks such as screenshot capture is valuable for web testing and documentation purposes. This practical also helped you understand how Selenium can be used for automated browsing and basic interaction with web elements.
+
+---
+
+## Practical 14
+
+- **Aim:** Automate sending an email using Python and SMTP.
+- **Description:** In this practical, you will write a Python script that sends an email using SMTP (Simple Mail Transfer Protocol). This script will automate the process of logging into an SMTP server (like Gmail) and sending an email.
+
+### Code & Steps:
+
+1. **Install Required Libraries:**
+
+   - Install the necessary libraries by running:
+     ```bash
+     pip install secure-smtplib email-validator
+     ```
+
+2. **Write the Script:**
+
+   - Create a new Python file (e.g., `send_email.py`) and use the following code to send an email:
+
+   ```python
+   import smtplib
+   import ssl
+   from email.mime.multipart import MIMEMultipart
+   from email.mime.text import MIMEText
+
+   smtp_server = "smtp.gmail.com"
+   smtp_port = 465
+   sender_email = "your_email@gmail.com"
+   sender_password = "your_password"
+   recipient_email = "recipient_email@gmail.com"
+   subject = "Your Predefined Subject"
+   body = "This is the body content of the email."
+
+   msg = MIMEMultipart()
+   msg['From'] = sender_email
+   msg['To'] = recipient_email
+   msg['Subject'] = subject
+   msg.attach(MIMEText(body, 'plain'))
+
+   context = ssl.create_default_context()
+
+   try:
+       with smtplib.SMTP_SSL(smtp_server, smtp_port, context=context) as server:
+           server.login(sender_email, sender_password)
+           server.sendmail(sender_email, recipient_email, msg.as_string())
+           print("Email sent successfully")
+   except Exception as e:
+       print(f"Error: {e}")
+   ```
+
+   - This script uses the Gmail SMTP server to send an email. You need to provide your Gmail credentials and the recipient's email.
+
+3. **Run the Script:**
+   - In your terminal, navigate to the directory where the script is located and run:
+     ```bash
+     python send_email.py
+     ```
+
+### Output:
+
+- If the email is sent successfully, the output will be:
+
+  ```
+  Email sent successfully to recipient_email@gmail.com
+  ```
+
+- If there is an issue, you will receive an error message like:
+
+  ```
+  Error: [Error details]
+  ```
+
+### Conclusion:
+
+- In this practical, you learned how to send emails programmatically using Python’s `smtplib`. By automating the email sending process, you can streamline communication tasks, making it useful in scenarios like bulk email sending, notifications, and alerts. This practical is essential for tasks in automation and data-driven systems that require communication via email.
 
 ---

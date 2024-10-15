@@ -605,7 +605,7 @@ const Blog = () => {
                   className="text-[9px] font-bold opacity-50"
                   style={{ color: chapter.accent }}
                 >
-                  BCA-II
+                  BCA-III
                 </small>
                 <p
                   className="font-bold text-4xl text-[#632DB5]"
