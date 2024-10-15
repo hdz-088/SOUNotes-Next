@@ -66,10 +66,11 @@ const syne = Syne({ subsets: ["latin"] });
 
 export const metadata = {
   title: "SOUNotes",
-  description: "A PWA for note-taking",
+  description: "A notes website for Silver Oak University",
   manifest: "/manifest.json",
-  themeColor: "#12121c", // Set the theme color to match manifest
 };
+
+export const themeColor = "#12121c";
 
 export default function RootLayout({ children }) {
   return (

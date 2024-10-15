@@ -1,6 +1,6 @@
 ---
 title: UIUX Lab Manual
-slug: UIUX-LM
+slug: uiux-lm
 semester: 3
 image: /uiux.png
 link: https://drive.google.com/file/d/14J9MRmeVWXiQoFdujDg6ZWhaUKl7AyLc/view?usp=sharing
