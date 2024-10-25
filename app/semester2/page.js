@@ -425,7 +425,7 @@ export default async function BlogPage() {
                 className="text-[9px] font-bold opacity-50"
                 style={{ color: blog.accent }}
               >
-                BCA-I
+                BCA-II
               </small>
               <p
                 className="font-bold text-4xl text-[#632DB5]"
