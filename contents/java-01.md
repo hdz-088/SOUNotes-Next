@@ -4,6 +4,7 @@ title: Java-01
 slug: java-01
 semester: 3
 image: /java.png
+accent: "#db380e"
 link: https://drive.google.com/file/d/19CvaV-MSA_kRrRuktkYSu0hNrV3YrXAb/view?usp=drive_link
 ---
 

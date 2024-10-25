@@ -4,6 +4,7 @@ title: PCMT-03 Network
 slug: pcmt-03
 semester: 2
 image: /pcmt.png
+accent: "#e5adee"
 link: https://drive.google.com/file/d/14dN4yc9ncv7AKXgOyZBRe13nquG3Mr7-/view?usp=sharing
 ---
 

@@ -4,6 +4,7 @@ title: OA Syllabus
 slug: oa-syllabus
 semester: 1
 image: /oa.jpg
+accent: "#ff735c"
 link: https://drive.google.com/file/d/1bYNcy-xZ-LZoT5mmrB59-v6sQMdVbMsv/view?usp=sharing
 ---
 

@@ -4,6 +4,7 @@ title: DM Syllabus
 slug: dm-syllabus
 semester: 1
 image: /dm.jpg
+accent: "#45b181"
 link: https://drive.google.com/file/d/12uRnDjTgop4kmvWsFbtczZPPRqUZ9nr7/view?usp=sharing
 ---
 

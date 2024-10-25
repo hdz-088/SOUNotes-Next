@@ -4,6 +4,7 @@ title: Python-01
 slug: python-01
 semester: 3
 image: /python.jpg
+accent: "#eec52f"
 link: https://drive.google.com/file/d/1IX0kTT-3BN9OiLwabyEO6cWHLifLUqF1/view?usp=drive_link
 ---
 

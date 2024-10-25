@@ -423,19 +423,19 @@ export default async function BlogPage() {
             <div className="h-80 w-60 bg-white rounded-lg shadow-lg flex flex-col text-center px-2 py-4 items-center justify-between cursor-pointer transform transition-transform duration-300 hover:scale-110">
               <small
                 className="text-[9px] font-bold opacity-50"
-                style={{ color: blog.accent }}
+                style={{ color: blog.accent || "#ce9fc1" }}
               >
                 BCA-II
               </small>
               <p
                 className="font-bold text-4xl text-[#632DB5]"
-                style={{ color: blog.accent }}
+                style={{ color: blog.accent || "#ce9fc1" }}
               >
                 {blog.header}
               </p>
               <small
                 className="text-[9px] font-bold text-[#632DB5] opacity-50"
-                style={{ color: blog.accent }}
+                style={{ color: blog.accent || "#ce9fc1" }}
               >
                 SOUNotes
               </small>

@@ -4,6 +4,7 @@ title: UIUX Lab Manual
 slug: uiux-lm
 semester: 3
 image: /uiux.png
+accent: "#ec83d0"
 link: https://drive.google.com/file/d/14J9MRmeVWXiQoFdujDg6ZWhaUKl7AyLc/view?usp=sharing
 ---
 

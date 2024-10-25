@@ -4,6 +4,7 @@ title: WD Syllabus
 slug: wd-syllabus
 semester: 1
 image: /awd.png
+accent: "#c3b134"
 link: https://drive.google.com/file/d/1F5qH5Wd_ggUSXDgVa_2MacU-Dp7AqQii/view?usp=sharing
 ---
 

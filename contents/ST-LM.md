@@ -4,7 +4,8 @@ title: ST Lab Manual
 slug: st-lm
 semester: 3
 image: /st.png
-link:
+accent: "#8c75ea"
+link: https://drive.google.com/file/d/1purC9QIP0FZ_DuMRAsjG7turKQCKxvOS/view?usp=sharing
 ---
 
 ## Practical 01

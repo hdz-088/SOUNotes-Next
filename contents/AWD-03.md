@@ -4,6 +4,7 @@ title: AWD-03 JavaScript
 slug: awd-03
 semester: 2
 image: /awd.png
+accent: "#fd8773"
 link: https://drive.google.com/file/d/1VEfYt4r5Ah853fquHBfSUNE27J4yzez5/view?usp=sharing
 ---
 

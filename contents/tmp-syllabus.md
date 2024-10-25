@@ -4,6 +4,7 @@ title: TMP SYllabus
 slug: tmp-syllabus
 semester: 3
 image: /tmp.png
+accent: "#2c5c9a"
 link: https://drive.google.com/file/d/1BSAaX3LmIkwyBhpjoXoJX04TX-d4nYgv/view?usp=sharing
 ---
 

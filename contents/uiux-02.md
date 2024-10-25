@@ -4,6 +4,7 @@ title: UIUX-02
 slug: uiux-02
 semester: 3
 image: /uiux.png
+accent: "#ec83d0"
 link: https://drive.google.com/file/d/1AcRoM6sVNbAEWvKufiYD5g5GyXXTQ6Jq/view?usp=drive_link
 ---
 

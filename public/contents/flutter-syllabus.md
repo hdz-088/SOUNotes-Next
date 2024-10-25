@@ -1,5 +1,5 @@
 ---
-header: FLUTTER-LM
+header: FLUTTER-SY
 title: Flutter Syllabus
 slug: flutter-syllabus
 semester: 3

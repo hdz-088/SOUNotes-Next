@@ -4,6 +4,7 @@ title: OOPC-04 Polymorphism
 slug: oopc-04
 semester: 2
 image: /oopc.png
+accent: "#45b183"
 link: https://drive.google.com/file/d/18cvjJrvfBKteqX30UJnUsfKqUhJ3c8L3/view?usp=sharing
 ---
 

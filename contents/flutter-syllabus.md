@@ -1,9 +1,10 @@
 ---
-header: FLUTTER-LM
+header: FLUTTER-SY
 title: Flutter Syllabus
 slug: flutter-syllabus
 semester: 3
 image: /flutter.png
+accent: "#037bfd"
 link: https://drive.google.com/file/d/1sLOvccA4D_cTnCKQxu2ockQEamOaQnYZ/view?usp=sharing
 ---
 

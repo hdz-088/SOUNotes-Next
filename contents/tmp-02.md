@@ -4,6 +4,7 @@ title: TMP-02
 slug: tmp-02
 semester: 3
 image: /tmp.png
+accent: "#2c5c9a"
 link: https://drive.google.com/file/d/1NHL2Gukcn1fSOMWYkk3cihkPrlcbgKNS/view?usp=drive_link
 ---
 

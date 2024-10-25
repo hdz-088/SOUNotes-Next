@@ -4,6 +4,7 @@ title: ECS Syllabus
 slug: ecs-Syllabus
 semester: 1
 image: /ecs.png
+accent: "#4364cf"
 link: https://drive.google.com/file/d/1FFYZrs0Ac6w-TQnYlGFrm7l-S_qrcLlk/view?usp=sharing
 ---
 

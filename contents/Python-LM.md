@@ -4,6 +4,7 @@ title: Python Lab Manual
 slug: python-lm
 semester: 3
 image: /python.jpg
+accent: "#eec52f"
 link: https://drive.google.com/file/d/1mPT4opB9u9RKnJaLfRkJAA3h5fqj1DVC/view?usp=drive_link
 ---
 

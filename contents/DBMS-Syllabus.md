@@ -4,6 +4,7 @@ title: DBMS Syllabus
 slug: dbms-syllabus
 semester: 1
 image: /dbms.jpg
+accent: "#632db5"
 link: https://drive.google.com/file/d/1aJDGzEiYli4anZ65Aqi-4fyA01DEbKoH/view?usp=sharing
 ---
 
