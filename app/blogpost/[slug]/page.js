@@ -271,11 +271,13 @@ export default async function BlogPostPage({ params }) {
           </button>
         </a>
       </div>
-      <div
-        dangerouslySetInnerHTML={{ __html: htmlContent }}
-        className="prose dark:prose-invert"
-      />
-      <OnThisPage htmlContent={htmlContent} />
+      <div className="flex flex-col sm:flex-row-reverse sm:justify-end sm:gap-20">
+        <OnThisPage htmlContent={htmlContent} />
+        <div
+          dangerouslySetInnerHTML={{ __html: htmlContent }}
+          className="prose dark:prose-invert"
+        />
+      </div>
     </div>
   );
 }

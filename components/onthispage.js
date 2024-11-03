@@ -18,9 +18,9 @@ const OnThisPage = ({ htmlContent }) => {
   }, [htmlContent]);
 
   return (
-    <div className="on-this-page absolute top-32 md:right-48 lg:right-1/6 hidden lg:block">
-      <h2 className="text-md font-bold my-2 opacity-100">On This Page</h2>
-      <ul className="text-sm space-y-1">
+    <div className="on-this-page lg:right-1/6">
+      <h2 className="text-md font-bold my-2 opacity-100">Table of Contents</h2>
+      <ul className="text-sm space-y-1 list-decimal list-inside">
         {headings.map((heading, index) => (
           <li key={index} className="opacity-70 hover:opacity-100">
             <a href={`#${heading.id}`}>{heading.text}</a>
