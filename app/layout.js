@@ -57,7 +57,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/components/footer";
-import { Analytics } from "@vercel/analytics/react";
+// import { Analytics } from "@vercel/analytics/react";
 import InstallBanner from "@/components/InstallBanner"; // Import the InstallBanner component
 import Script from "next/script";
 
@@ -66,7 +66,8 @@ const syne = Syne({ subsets: ["latin"] });
 
 export const metadata = {
   title: "SOUNotes",
-  description: "A notes website for Silver Oak University",
+  description:
+    "This site contains BCA Study Materials of Silver Oak University. In More Beautiful and Reader Friendly Format",
   manifest: "/manifest.json",
 };
 
@@ -78,8 +79,11 @@ export default function RootLayout({ children }) {
       <link rel="icon" href="/favicon.png" />
       <link rel="manifest" href="/manifest.json" />
       <meta name="theme-color" content="#12121c" />
-      <meta name="description" content="A PWA for note-taking" />
-      <Analytics />
+      <meta
+        name="description"
+        content="This site contains BCA Study Materials of Silver Oak University. In More Beautiful and Reader Friendly Format"
+      />
+      {/* <Analytics /> */}
       <body className={poppins.className}>
         <ThemeProvider
           attribute="class"
