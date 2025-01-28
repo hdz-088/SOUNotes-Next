@@ -5,7 +5,7 @@ slug: vfx-sy
 semester: 4
 image: /vfx.jpg
 accent: "#ff735c"
-link: https://drive.google.com/file/d/1R6BQgFVfUOyLzzcA0dLVS5l2IgG0U3at/view?usp=sharing
+link: https://drive.google.com/file/d/1ENF8WH-blN7d_sai4yR70N_knu-J7w7k/view?usp=sharing
 ---
 
 ## Unit-01: Introduction to Multimedia and VFX (35%)

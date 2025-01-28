@@ -5,7 +5,7 @@ slug: iwsd-sy
 semester: 4
 image: /django.png
 accent: "#f26a22"
-link: https://drive.google.com/file/d/13ULhyGvp1G84p7YuCwV4CcxbKjgzdspA/view?usp=sharing
+link: https://drive.google.com/file/d/1fAuCFSDAYhRqSPNVXQb3Y1kAc8QfKDNh/view?usp=sharing
 ---
 
 ## Unit-01: Django Overview (24%)

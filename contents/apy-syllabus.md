@@ -5,7 +5,7 @@ slug: apy-syllabus
 semester: 4
 image: /python.jpg
 accent: "#eec52f"
-link: https://drive.google.com/file/d/1ZiBCwu5fBDkjlbE-VRfMk7EJYafYx-Dj/view?usp=sharing
+link: https://drive.google.com/file/d/1-HmjcMTVeQKac1f1NDxB3IdGEPLhtfiq/view?usp=sharing
 ---
 
 ## Unit-01: Introduction to Python (24%)

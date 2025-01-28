@@ -5,7 +5,7 @@ slug: mdb-sy
 semester: 4
 image: /mdb.jpg
 accent: "#55ad47"
-link: https://drive.google.com/file/d/16gAv9vIKJm5ZTyQ0z6W2rrHIuaEAUfVX/view?usp=sharing
+link: https://drive.google.com/file/d/1heqTa0nz21p-BUhAbHPC0KlUSIGAI94E/view?usp=sharing
 ---
 
 ## Unit-01: Introduction to Databases (19%)

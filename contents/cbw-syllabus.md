@@ -5,7 +5,7 @@ slug: cbw-syllabus
 semester: 4
 image: /cbw.jpg
 accent: "#385a64"
-link: https://drive.google.com/file/d/1xP9lITzlHIJzfs38664qS-tG5acCHNBR/view?usp=sharing
+link: https://drive.google.com/file/d/1sfjsyJo3PDZfZ1wurstwrreL3reARf74/view?usp=sharing
 ---
 
 ## Unit-01: Introduction to Content Writing and Blogging (25%)
