@@ -9,6 +9,13 @@ const events = [
     description: "Makarsankranti Holiday",
   },
   {
+    title: "Intermediate Assessment Exam",
+    from: "2025-02-03",
+    to: "2025-02-15",
+    type: "exams",
+    description: "Intermediate Assessment Exams Sem 4/6/8",
+  },
+  {
     title: "Maha Shivratri",
     from: "2025-02-26",
     to: "2025-02-26",
