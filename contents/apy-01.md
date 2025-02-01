@@ -3,8 +3,8 @@ header: APY-01
 title: APY-01 Introduction
 slug: apy-01
 semester: 4
-image: /apy.png
-accent: "#c09c0c"
+image: /python.jpg
+accent: "#eec52f"
 link: https://drive.google.com/file/d/1cOeAgX45Y7PKZjJ73Yez-7JYeHEO7LaS/view?usp=sharing
 ---
 
