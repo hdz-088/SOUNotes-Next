@@ -5,7 +5,7 @@ slug: iwsd-01
 semester: 4
 image: /django.png
 accent: "#f26a22"
-link: https://drive.google.com/file/d/1fCPMR5kjmK6qcSlJU57ATvSOH5LLUdw7/view?usp=sharing
+link: https://drive.google.com/file/d/13R0G04SfUj_cw1ccQ3O_0O7i43eSNOd9/view?usp=sharing
 ---
 
 ## What is Django?

@@ -5,7 +5,7 @@ slug: mdb-01
 semester: 4
 image: /mdb.jpg
 accent: "#55ad47"
-link: https://drive.google.com/file/d/1O1vePetyvWlPcA81GmASuMYRZAlKXkkH/view?usp=sharing
+link: https://drive.google.com/file/d/1H0rc7kR-SZxUN6mfEAkpoX_gF3B2DTwz/view?usp=sharing
 ---
 
 > A database is an organized collection of data that is stored electronically and can be accessed, managed, and updated efficiently.

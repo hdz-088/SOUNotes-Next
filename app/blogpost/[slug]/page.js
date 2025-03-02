@@ -228,6 +228,7 @@ export default async function BlogPostPage({ params }) {
     .use(remarkParse)
     .use(remarkGfm) // Ensure GFM support is before rehype
     .use(remarkRehype)
+    .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeDocument, { title: data.title })
     .use(rehypeFormat)
     .use(rehypeRaw)

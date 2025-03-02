@@ -5,7 +5,7 @@ slug: apy-01
 semester: 4
 image: /python.jpg
 accent: "#eec52f"
-link: https://drive.google.com/file/d/1cOeAgX45Y7PKZjJ73Yez-7JYeHEO7LaS/view?usp=sharing
+link: https://drive.google.com/file/d/1e-zXkkFHJlM-_ZtUwCqXgaBa_0djyb1e/view?usp=sharing
 ---
 
 ## Objects, Expression & Numerical Types

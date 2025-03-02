@@ -5,7 +5,7 @@ slug: cbw-01
 semester: 4
 image: /cbw.jpg
 accent: "#385a64"
-link: https://drive.google.com/file/d/1AYXmi9Oaf7zJM47CLo9XZ8U0xk7q4ALS/view?usp=sharing
+link: https://drive.google.com/file/d/1L1lF9BDQZrOFgJh_DcH6KdoHXT6cqXGs/view?usp=sharing
 ---
 
 - Content is generally described as **any type of text, graphic, image, video, form, or any other interactive element on the website, web page, or post**.
