@@ -8,8 +8,6 @@ accent: "#d572cf"
 link: https://drive.google.com/file/d/1kjoEnPg-RL0Di0K0wNVJrY0GRQQnZXIt/view?usp=sharing
 ---
 
-# Internet of Things (3040233240)
-
 ## Unit-01: Overview of the Internet of Things (28%)
 
 - Evolution of IoT, IoT Definition, characteristics, key components of IoT system, functioning of IoT system, M2M & End to End IoT Architecture, advantages & disadvantages, Integration between IoT and Cloud Computing.
