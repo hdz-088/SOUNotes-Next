@@ -229,7 +229,3 @@ button.pack()
 2. [Tkinter Documentation](https://tkdocs.com/tutorial/index.html)
 
 ---
-
-```python
-print("Hello World")
-```
