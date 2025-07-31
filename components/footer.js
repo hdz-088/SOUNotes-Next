@@ -10,7 +10,9 @@ const Footer = () => {
           Made By
           <Link href={"/about"}>
             {" "}
-            <u>SOU Student</u>{" "}
+            <u>
+              <b>SOU Student</b>
+            </u>{" "}
           </Link>
           for SOU Students
         </p>
