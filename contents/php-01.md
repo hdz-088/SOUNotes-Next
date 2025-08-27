@@ -1,5 +1,5 @@
 ---
-header: PHP 01
+header: PHP-01
 title: PHP-01 Introduction
 slug: php-01
 semester: 5
