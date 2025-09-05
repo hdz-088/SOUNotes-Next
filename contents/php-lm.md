@@ -8,6 +8,10 @@ accent: "#4D588E"
 link:
 ---
 
+> We’d like to inform you that the study material on our website will be updated as soon as we receive the latest content. Our team is continuously working to bring the best and most reliable resources for students.
+>
+> Thank you for your patience and support — stay tuned for regular updates!
+
 ## Practical 01
 
 **Aim:** (A) Write a PHP script to display a welcome message
@@ -25,7 +29,7 @@ echo "Welcome to PHP Programming!";
 
 **Output**:
 
-```
+```txt
 Welcome to PHP Programming!
 ```
 
@@ -81,7 +85,7 @@ echo "$a >> 1 = ".($a >> 1)."<br>";
 
 **Output**:
 
-```
+```txt
 Arithmetic:
 10 + 5 = 15
 10 - 5 = 5
@@ -113,24 +117,13 @@ We successfully demonstrated arithmetic, comparison, logical, and bitwise operat
 
 ### Post Practical Questions:
 
-1. **What will the output of `echo "Welcome to PHP Programming!";` be?**
-
-   - C) Welcome to PHP Programming!
-
-2. **What will `Sa + Sb` output if `Sa = 10` and `Sb = 57`?**
-
-   - D) 105
-
-3. **Which operator is used to compare two values for equality in PHP?**
-
-   - (c)==
-
-4. **What is the output of `10 % 3` in PHP?**
-
-   - A) 1
-
-5. **What does the `&&` operator do in PHP?**
-   - A) Logical AND
+| **Question**                                                         | **Answer**                     |
+| -------------------------------------------------------------------- | ------------------------------ |
+| 1. What will the output of `echo "Welcome to PHP Programming!";` be? | C) Welcome to PHP Programming! |
+| 2. What will `Sa + Sb` output if `Sa = 10` and `Sb = 57`?            | D) 105                         |
+| 3. Which operator is used to compare two values for equality in PHP? | (c)==                          |
+| 4. What is the output of `10 % 3` in PHP?                            | A) 1                           |
+| 5. What does the `&&` operator do in PHP?                            | A) Logical AND                 |
 
 ---
 
@@ -157,7 +150,7 @@ if ($num % 2 == 0) {
 
 **Output**:
 
-```
+```txt
 7 is Odd
 ```
 
@@ -197,7 +190,7 @@ if ($isPrime) {
 
 **Output**:
 
-```
+```txt
 13 is Prime
 ```
 
@@ -206,24 +199,13 @@ We learned how to check if a number is prime by testing divisibility from 2 to t
 
 ### Post Practical Questions
 
-1. **Which of the following conditions checks if a number is even?**
-
-   - C) $num % 2 == 0
-
-2. **Which is the correct way to check if a number is odd in PHP?**
-
-   - A) if ($num % 2 == 1)
-
-3. **What is the modulus operator used for in PHP?**
-
-   - C) Remainder
-
-4. **Which of the following is a prime number?**
-
-   - C) 11
-
-5. **What is the smallest prime number?**
-   - C) 2
+| **Question**                                                     | **Answer**            |
+| ---------------------------------------------------------------- | --------------------- |
+| 1. Which of the following conditions checks if a number is even? | C) $num % 2 == 0      |
+| 2. Which is the correct way to check if a number is odd in PHP?  | A) if ($num % 2 == 1) |
+| 3. What is the modulus operator used for in PHP?                 | C) Remainder          |
+| 4. Which of the following is a prime number?                     | C) 11                 |
+| 5. What is the smallest prime number?                            | C) 2                  |
 
 ---
 
@@ -254,7 +236,7 @@ for ($i = 0; $i < $n; $i++) {
 
 **Output**:
 
-```
+```txt
 Fibonacci Series: 0 1 1 2 3 5 8 13 21 34
 ```
 
@@ -295,7 +277,7 @@ echo "Grade: $grade";
 
 **Output**:
 
-```
+```txt
 Total Marks: 417
 Percentage: 83.4%
 Grade: A
@@ -306,24 +288,13 @@ We learned how to calculate the percentage and assign grades based on conditions
 
 ### Post Practical Questions
 
-1. **What are the first two numbers in the Fibonacci sequence?**
-
-   - B) 0 and 1
-
-2. **In a Fibonacci loop, which formula calculates the next term?**
-
-   - A) $f3 = $f1 + $f2
-
-3. **How many terms will this code print: `for ($i = 3; $i <= 10; $i++)`?**
-
-   - A) 7
-
-4. **What will be the output for `$marks = 45` (grade)?**
-
-   - C) F
-
-5. **Which control structure is used to assign grades in the result script?**
-   - C) if-else
+| **Question**                                                              | **Answer**         |
+| ------------------------------------------------------------------------- | ------------------ |
+| 1. What are the first two numbers in the Fibonacci sequence?              | B) 0 and 1         |
+| 2. In a Fibonacci loop, which formula calculates the next term?           | A) $f3 = $f1 + $f2 |
+| 3. How many terms will this code print: `for ($i = 3; $i <= 10; $i++)`?   | A) 7               |
+| 4. What will be the output for `$marks = 45` (grade)?                     | C) F               |
+| 5. Which control structure is used to assign grades in the result script? | C) if-else         |
 
 ---
 
@@ -357,7 +328,7 @@ echo "The maximum number among $a, $b, and $c is: $max";
 
 **Output**:
 
-```
+```txt
 The maximum number among 15, 25, and 10 is: 25
 ```
 
@@ -386,7 +357,7 @@ echo "Factorial of $num is: $fact";
 
 **Output**:
 
-```
+```txt
 Factorial of 5 is: 120
 ```
 
@@ -395,24 +366,13 @@ We learned how to calculate the factorial of a number using loops in PHP.
 
 ### Post Practical Questions
 
-1. **Which PHP function returns the largest number among multiple arguments?**
-
-   - A) max()
-
-2. **What is the value of 5 factorial (5!)?**
-
-   - C) 120
-
-3. **Which statement correctly initializes factorial in PHP before a loop?**
-
-   - B) $fact = 1;
-
-4. **Which built-in PHP extension is used for large factorials?**
-
-   - C) bcmath
-
-5. **What will happen if a factorial recursive function has no base condition?**
-   - C) It will cause infinite recursion
+| **Question**                                                                 | **Answer**                          |
+| ---------------------------------------------------------------------------- | ----------------------------------- |
+| 1. Which PHP function returns the largest number among multiple arguments?   | A) max()                            |
+| 2. What is the value of 5 factorial (5!)?                                    | C) 120                              |
+| 3. Which statement correctly initializes factorial in PHP before a loop?     | B) $fact = 1;                       |
+| 4. Which built-in PHP extension is used for large factorials?                | C) bcmath                           |
+| 5. What will happen if a factorial recursive function has no base condition? | C) It will cause infinite recursion |
 
 ---
 
@@ -438,7 +398,7 @@ for ($i = 1; $i <= 10; $i++) {
 
 **Output**:
 
-```
+```txt
 Multiplication Table of 5:
 5 x 1 = 5
 5 x 2 = 10
@@ -457,7 +417,7 @@ We learned how to use a `for` loop to generate a multiplication table in PHP.
 
 **Aim:** (B) Write a PHP script to print the following pattern for a given number:
 
-```
+```txt
 1
 12
 123
@@ -485,7 +445,7 @@ for ($i = 1; $i <= $n; $i++) {
 
 **Output**:
 
-```
+```txt
 1
 12
 123
@@ -498,24 +458,13 @@ We learned how to use nested loops in PHP to generate number patterns.
 
 ### Post Practical Questions
 
-1. **Which loop is used when the number of iterations is known in PHP?**
-
-   - C) for
-
-2. **Which keyword is used to exit a loop prematurely in PHP?**
-
-   - D) break
-
-3. **In nested loops for a triangle pattern, the outer loop controls:**
-
-   - C) Number of rows
-
-4. **What will be the first line of output of the given pattern code?**
-
-   - C) 1
-
-5. **What is the purpose of the inner loop in the pattern program?**
-   - C) It prints numbers in each row
+| **Question**                                                         | **Answer**                       |
+| -------------------------------------------------------------------- | -------------------------------- |
+| 1. Which loop is used when the number of iterations is known in PHP? | C) for                           |
+| 2. Which keyword is used to exit a loop prematurely in PHP?          | D) break                         |
+| 3. In nested loops for a triangle pattern, the outer loop controls:  | C) Number of rows                |
+| 4. What will be the first line of output of the given pattern code?  | C) 1                             |
+| 5. What is the purpose of the inner loop in the pattern program?     | C) It prints numbers in each row |
 
 ---
 
@@ -545,7 +494,7 @@ echo "The sum of $a and $b is: $sum";
 
 **Output**:
 
-```
+```txt
 The sum of 10 and 20 is: 30
 ```
 
@@ -593,7 +542,7 @@ switch ($day) {
 
 **Output**:
 
-```
+```txt
 Wednesday
 ```
 
@@ -602,24 +551,13 @@ We learned how to use the `switch` statement in PHP to select and execute code b
 
 ### Post Practical Questions
 
-1. **Which keyword is used to declare a user-defined function in PHP?**
-
-   - B) function
-
-2. **What is the correct syntax to define a function in PHP?**
-
-   - B) function myFunc() {}
-
-3. **How do you call a function named greetUser with one argument "John"?**
-
-   - D) greetUser("John")
-
-4. **What does a return statement do in a PHP function?**
-
-   - D) Sends back a value
-
-5. **What is the scope of a variable declared inside a PHP function?**
-   - C) Local
+| **Question**                                                            | **Answer**              |
+| ----------------------------------------------------------------------- | ----------------------- |
+| 1. Which keyword is used to declare a user-defined function in PHP?     | B) function             |
+| 2. What is the correct syntax to define a function in PHP?              | B) function myFunc() {} |
+| 3. How do you call a function named greetUser with one argument "John"? | D) greetUser("John")    |
+| 4. What does a return statement do in a PHP function?                   | D) Sends back a value   |
+| 5. What is the scope of a variable declared inside a PHP function?      | C) Local                |
 
 ---
 
@@ -647,7 +585,7 @@ echo "Substring (0-5): " . substr($str, 0, 5) . "<br>";
 
 **Output**:
 
-```
+```txt
 Original String: Hello PHP
 Length: 9
 Reverse: PHP olleH
@@ -676,7 +614,7 @@ echo "Current Time: " . date("h:i:s A") . "<br>";
 
 **Output**:
 
-```
+```txt
 Current Date: 08-08-2025
 Current Time: 10:45:30 AM
 ```
@@ -686,28 +624,14 @@ We learned how to use the `date()` function in PHP to display the current date a
 
 ### Post Practical Questions
 
-1. **Which function returns the length of a string?**
-
-   - C) strlen()
-
-2. **Which function is used to convert a string to uppercase in PHP?**
-
-   - B) strtoupper()
-
-3. **What does `strrev("PHP")` return?**
-
-   - A) PHP
-
-4. **Which function replaces a word in a string?**
-
-   - C) str_replace()
-
-5. **Which function is used to display the current date in PHP?**
-
-   - B) date()
-
-6. **Which format returns the year in 4 digits in `date()` function?**
-   - C) Y
+| **Question**                                                       | **Answer**       |
+| ------------------------------------------------------------------ | ---------------- |
+| 1. Which function returns the length of a string?                  | C) strlen()      |
+| 2. Which function is used to convert a string to uppercase in PHP? | B) strtoupper()  |
+| 3. What does `strrev("PHP")` return?                               | A) PHP           |
+| 4. Which function replaces a word in a string?                     | C) str_replace() |
+| 5. Which function is used to display the current date in PHP?      | B) date()        |
+| 6. Which format returns the year in 4 digits in `date()` function? | C) Y             |
 
 ---
 
@@ -735,7 +659,7 @@ echo "Floor: " . floor($num) . "<br>";
 
 **Output**:
 
-```
+```txt
 Absolute: 15.7
 Square Root of 16: 4
 2 power 5: 32
@@ -769,7 +693,7 @@ foreach ($numbers as $num) {
 
 **Output**:
 
-```
+```txt
 Sorted Array: 1 2 5 7 9
 ```
 
@@ -778,32 +702,15 @@ We learned how to use the `sort()` function in PHP to arrange array elements in 
 
 ### Post Practical Questions
 
-1. **What does `abs(-5)` return?**
-
-   - C) 5
-
-2. **Which PHP function returns the square root of a number?**
-
-   - B) sqrt()
-
-3. **What is the output of `pow(3, 2)`?**
-
-   - A) 9
-
-4. **What does `round(4.6)` return?**
-
-   - C) 5
-
-5. **Which function returns the lowest integer greater than or equal to the number?**
-
-   - A) ceil()
-
-6. **Which function generates a random number in PHP?**
-
-   - C) rand()
-
-7. **What does `floor(5.9)` return?**
-   - B) 5
+| **Question**                                                                      | **Answer** |
+| --------------------------------------------------------------------------------- | ---------- |
+| 1. What does `abs(-5)` return?                                                    | C) 5       |
+| 2. Which PHP function returns the square root of a number?                        | B) sqrt()  |
+| 3. What is the output of `pow(3, 2)`?                                             | C) 9       |
+| 4. What does `round(4.6)` return?                                                 | C) 5       |
+| 5. Which function returns the lowest integer greater than or equal to the number? | A) ceil()  |
+| 6. Which function generates a random number in PHP?                               | C) rand()  |
+| 7. What does `floor(5.9)` return?                                                 | B) 5       |
 
 ---
 
@@ -846,7 +753,7 @@ echo "Request Method: " . $_SERVER['REQUEST_METHOD'] . "<br>";
 
 **Output**:
 
-```
+```txt
 Hello (POST): [Name entered in form]
 Hello (GET): John
 Server Name: localhost
@@ -888,7 +795,7 @@ if (isset($_FILES['file'])) {
 
 **Output**:
 
-```
+```txt
 File Uploaded Successfully!
 File Name: example.jpg
 File Type: image/jpeg
@@ -900,24 +807,13 @@ We learned how to upload a file using `$_FILES` and display the file’s informa
 
 ### Post Practical Questions
 
-1. **Which PHP superglobal variable is used to collect form data sent with the GET method?**
-
-   - B) `$_GET `
-
-2. **Which PHP superglobal variable holds information about the current script and server environment?**
-
-   - C) `$_SERVER `
-
-3. **Which attribute must be added to a `<form>` tag to enable file uploads?**
-
-   - B) `enctype="multipart/form-data" `
-
-4. **What is the temporary location of an uploaded file accessible through PHP?**
-
-   - B) `$_FILES["file"]["tmp_name"]`
-
-5. **What will `$_SERVER['PHP_SELF']` return?**
-   - A) The current script's filename
+| **Question**                                                                                         | **Answer**                          |
+| ---------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| 1. Which PHP superglobal variable is used to collect form data sent with the GET method?             | B) `$_GET `                         |
+| 2. Which PHP superglobal variable holds information about the current script and server environment? | C) `$_SERVER `                      |
+| 3. Which attribute must be added to a `<form>` tag to enable file uploads?                           | B) `enctype="multipart/form-data" ` |
+| 4. What is the temporary location of an uploaded file accessible through PHP?                        | B) `$_FILES["file"]["tmp_name"]`    |
+| 5. What will `$_SERVER['PHP_SELF']` return?                                                          | A) The current script's filename    |
 
 ---
 
@@ -963,11 +859,11 @@ This program demonstrates how to collect data from an HTML form using the POST m
 - The browser will display a form asking for **Name** and **Email**.
 - After submission, it will show:
 
-  ```
+```txt
   User Input:
   Name: Nick
   Email: nick@example.com
-  ```
+```
 
 **Conclusion:**
 We successfully created a PHP script that processes a form using the POST method and displays the user’s input securely.
@@ -1005,11 +901,11 @@ setcookie("user", "Nick", time() + (86400 * 7), "/"); // expires in 7 days
 **Output**:
 
 - On the first load:
-  ```
+  ```txt
   Cookie is not set yet. Refresh the page to see it.
   ```
 - After refresh (or next visit within 7 days):
-  ```
+  ```txt
   Cookie Value: Nick
   ```
 
@@ -1018,23 +914,12 @@ We successfully created a PHP script to set a cookie and retrieve its value for 
 
 ### Post Practical Questions
 
-1. **Which method is used to send form data securely?**
-
-   - B) POST
-
-2. **Which function is used to prevent XSS in user inputs?**
-
-   - A) `htmlspecialchars()`
-
-3. **What will `$_SERVER["REQUEST_METHOD"]` return when a form is submitted via POST?**
-
-   - B) POST
-
-4. **Which function retrieves a cookie in PHP?**
-
-   - B) $\_COOKIE
-
-5. **What happens if a cookie is not found?**
-   - C) $\_COOKIE returns null or not set
+| **Question**                                                                        | **Answer**                           |
+| ----------------------------------------------------------------------------------- | ------------------------------------ |
+| 1. Which method is used to send form data securely?                                 | B) POST                              |
+| 2. Which function is used to prevent XSS in user inputs?                            | A) `htmlspecialchars()`              |
+| 3. What will `$_SERVER["REQUEST_METHOD"]` return when a form is submitted via POST? | B) POST                              |
+| 4. Which function retrieves a cookie in PHP?                                        | B) $\_COOKIE                         |
+| 5. What happens if a cookie is not found?                                           | C) $\_COOKIE returns null or not set |
 
 ---

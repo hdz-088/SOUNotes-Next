@@ -1,6 +1,6 @@
 ---
 header: DWDM-01
-title: DWDM 01 Inroduction
+title: DWDM-01 Inroduction
 slug: dwdm-01
 semester: 5
 image: /dwdm.jpg
@@ -13,12 +13,16 @@ link: https://drive.google.com/file/d/1OiOXBhIzOSN14mIhqvFynfwD-YinZlWK/view?usp
 - Data mining is the process of discovering interesting patterns and knowledge from large amounts of data. The data sources can include databases, data warehouses, the Web, other information repositories, or data that are streamed into the system dynamically.
 - Data mining is the process of discovering patterns, trends, and valuable insights from large datasets using statistical and computational techniques. It involves analyzing raw data to extract meaningful information that can be used for decision-making, predictive modelling, and understanding complex phenomena
 
+---
+
 ## Knowledge Discovery from Data (KDD)
 
 - Data mining is considered as knowledge discovery from data, or KDD
 - Data mining is also considered as merely an essential step in the process of knowledge discovery.
 
 ![](/dwdm/1dwdm01.png)
+
+---
 
 ## Knowledge Discovery Process
 
@@ -32,18 +36,26 @@ link: https://drive.google.com/file/d/1OiOXBhIzOSN14mIhqvFynfwD-YinZlWK/view?usp
 
 ![](/dwdm/1dwdm02.png)
 
+---
+
 ## Work Flow of Data Mining
 
 ![](/dwdm/1dwdm03.png)
+
+---
 
 ## Types of Data Mining
 
 ![](/dwdm/1dwdm04.png)
 
+---
+
 ## What Kind of Data is Mined?
 
 - Data mining can be applied to any kind of data as long as the data are meaningful for a target application.
 - The most basic forms of data for mining applications are database data, data warehouse data, and transactional data.
+
+---
 
 ## Database Data
 
@@ -55,6 +67,8 @@ link: https://drive.google.com/file/d/1OiOXBhIzOSN14mIhqvFynfwD-YinZlWK/view?usp
 - For example, data mining may discover that there has been a change in packaging of an item or a significant increase in price.
 - Relational databases are one of the most commonly available and richest information repositories, and thus they are a major data form in the study of data mining
 
+---
+
 ## Data Warehouse
 
 - A data warehouse is a repository of information collected from multiple sources, stored under a unified schema, and usually residing at a single site.
@@ -64,9 +78,13 @@ link: https://drive.google.com/file/d/1OiOXBhIzOSN14mIhqvFynfwD-YinZlWK/view?usp
 - For example, rather than storing the details of each sales transaction, the data warehouse may store a summary of the transactions per item type for each store or, summarized to a higher level, for each sales region.
 - A data warehouse is usually modeled by a multidimensional data structure, called a data cube, in which each dimension corresponds to an attribute or a set of attributes in the schema, and each cell stores the value of some aggregate measure such as count
 
+---
+
 ## Framework of Data Warehouse
 
 ![](/dwdm/1dwdm05.png)
+
+---
 
 ## Transactional Data
 
@@ -88,6 +106,8 @@ link: https://drive.google.com/file/d/1OiOXBhIzOSN14mIhqvFynfwD-YinZlWK/view?usp
 - A traditional database system is not able to perform market basket data analysis.
 - Fortunately, data mining on transactional data can do so by mining frequent item sets, that is, set
 
+---
+
 ## Other Kinds of Data
 
 - Besides relational database data, data warehouse data, and transaction data, there are many other kinds of data that have versatile forms and structures.
@@ -100,6 +120,8 @@ link: https://drive.google.com/file/d/1OiOXBhIzOSN14mIhqvFynfwD-YinZlWK/view?usp
   - Graph and networked data(e.g., social and information networks)
   - The Web (a huge, widely distributed information repository made available by the Internet).
 
+---
+
 ## What Kind of Patterns can be Mined?
 
 - There are a number of data mining functionalities.
@@ -111,13 +133,19 @@ link: https://drive.google.com/file/d/1OiOXBhIzOSN14mIhqvFynfwD-YinZlWK/view?usp
   - Outlier analysis.
 - Data mining functionalities are used to specify the kinds of patterns to be found in data mining tasks.
 
+---
+
 ## Association Rule Mining
 
 ![](/dwdm/1dwdm06.png)
 
+---
+
 ## Clustering
 
 ![](/dwdm/1dwdm07.png)
+
+---
 
 ## Classification
 
@@ -125,15 +153,21 @@ link: https://drive.google.com/file/d/1OiOXBhIzOSN14mIhqvFynfwD-YinZlWK/view?usp
 
 ![](/dwdm/1dwdm10.png)
 
+---
+
 ## Regression
 
 - Regression is a supervised learning technique used to predict a continuous output value based on input features.
+
+---
 
 ## What Kind of Patterns can be Mined?
 
 - In general, such tasks can be classified into two categories:
   - Descriptive mining tasks characterize properties of the data in a target data set.
   - Predictive mining tasks perform induction on the current data in order to make predictions
+
+---
 
 ## Class/Concept Description
 
@@ -150,6 +184,8 @@ link: https://drive.google.com/file/d/1OiOXBhIzOSN14mIhqvFynfwD-YinZlWK/view?usp
 - The data corresponding to the user-specified class are typically collected by a query.
 - For example, to study the characteristics of software products with sales that increased by 10% in the previous year, the data related to such products can be collected by executing an SQL query on the sales database.
 
+---
+
 ## Data Characterization
 
 - Data characterization in data mining involves summarizing the general features of a target class of data.
@@ -159,12 +195,16 @@ link: https://drive.google.com/file/d/1OiOXBhIzOSN14mIhqvFynfwD-YinZlWK/view?usp
 
 - In essence, data characterization is the first step in understanding data, providing a concise and informative overview before more complex analysis is undertaken.
 
+---
+
 ## Key Aspects of Data Characterization
 
 - **Summarization**: Data characterization aims to condense and summarize the main attributes and characteristics of a data set or a specific class within that data.
 - **Target Class**: It focuses on a particular group of data that is of interest to the user, like customers who spend a certain amount or products with specific features.
 - **Statistical Measures**: Characterization often involves using statistical methods like mean, median, mode, standard deviation, and frequency distributions to describe the data.
 - **Visualizations**: Graphs, charts, and multidimensional data cubes are commonly used to present the summarized data in an understandable format.
+
+---
 
 ## Data Discrimination
 
@@ -175,6 +215,8 @@ link: https://drive.google.com/file/d/1OiOXBhIzOSN14mIhqvFynfwD-YinZlWK/view?usp
 - "How are discrimination descriptions output?”
 - The forms of output presentation are similar to those for characteristic descriptions, although discrimination descriptions should include comparative measures that help to distinguish between the target and contrasting classes.
 - Discrimination descriptions expressed in the form of rules are referred to as discriminant rules
+
+---
 
 ## Mining Frequent Patterns, Associations, & Correlation
 
@@ -196,6 +238,8 @@ link: https://drive.google.com/file/d/1OiOXBhIzOSN14mIhqvFynfwD-YinZlWK/view?usp
 - If a substructure occurs frequently, it is called a (frequent) structured pattern.
 - Mining frequent patterns leads to the discovery of interesting associations and correlations within data.
 
+---
+
 ## Classification & Regression for Predictive Analysis
 
 - Classification is the process of finding a model (or function) that describes and distinguishes data classes or concepts.
@@ -205,15 +249,21 @@ link: https://drive.google.com/file/d/1OiOXBhIzOSN14mIhqvFynfwD-YinZlWK/view?usp
 - The derived model may be represented in various forms, such as classification rules (i.e., IF-THEN rules), decision trees, mathematical formulae, or neural networks.
 - A decision tree is a flowchart-like tree structure, where each node denotes a test on an attribute value, each branch represents an outcome of the test, and tree leaves represent classes or class distributions.
 
+---
+
 ## Decision Tree
 
 - A decision tree is a flowchart-like tree structure, where each node denotes a test on an attribute value, each branch represents an outcome of the test, and tree leaves represent classes or class distributions.
 - Decision trees can easily e converted to classification rules.
 
+---
+
 ## Neural Network
 
 - A neural network, when used for classification, is typically a collection of neuron-like processing units with weighted connections between the units.
 - There are many other methods for constructing classification models, such as naïve Bayesian classification, support vector machines, and k nearest-neighbour classification.
+
+---
 
 ## Regression
 
@@ -223,6 +273,8 @@ link: https://drive.google.com/file/d/1OiOXBhIzOSN14mIhqvFynfwD-YinZlWK/view?usp
 - Regression analysis is a statistical methodology that is most often used for numeric prediction, although other
 - Methods exist as well. Regression also encompasses the identification of distribution trends based on the available data.
 
+---
+
 ## Cluster Analysis
 
 - Clustering analyzes data objects without consulting class labels.
@@ -230,12 +282,16 @@ link: https://drive.google.com/file/d/1OiOXBhIzOSN14mIhqvFynfwD-YinZlWK/view?usp
 - Clustering can be used to generate class labels for a group of data.
 - The objects are clustered or grouped based on the principle of maximizing the intraclass similarity and minimizing the interclass similarity
 
+---
+
 ## Clustering
 
 ![](/dwdm/1dwdm11.png)
 
 - That is, clusters of objects are formed so that objects within a cluster have high similarity in comparison to one another, but are rather dissimilar to objects in other clusters.
 - Each cluster so formed can be viewed as a class of objects, from which rules can be derived.
+
+---
 
 ## Application of KDD
 

@@ -1,6 +1,6 @@
 ---
 header: AWS-01
-title: AWS 01
+title: AWS-01 Introduction
 slug: aws-01
 semester: 5
 image: /aws.jpg
@@ -15,6 +15,8 @@ link: https://drive.google.com/file/d/1Gj5YWfmCImhpVRyA-2tI5pshrsyD9gNL/view?usp
 - It allows you to access files and applications from any device that can connect to the internet.
 - Simple Example: Google Drive for file storage, Gmail for email, Netflix for video streaming
 
+---
+
 ## Benefits of Cloud Computing
 
 - **Cost Saving**: You don’t have to spend money on buying and maintaining hardware and software. Pay-as-you-go pricing helps save costs.
@@ -24,6 +26,8 @@ link: https://drive.google.com/file/d/1Gj5YWfmCImhpVRyA-2tI5pshrsyD9gNL/view?usp
 - **Security**: Many cloud providers offer a set of policies, technologies, and controls that strengthen security.
 - **Flexibility**: Cloud computing gives you the option to test and deploy new applications quickly.
 
+---
+
 ## Characteristics of Cloud Computing
 
 - **On-demand Self-Service**: Users can access computing resources as needed, without human interaction.
@@ -31,6 +35,8 @@ link: https://drive.google.com/file/d/1Gj5YWfmCImhpVRyA-2tI5pshrsyD9gNL/view?usp
 - **Resource Pooling**: The provider’s resources are pooled to serve multiple users using a multi-tenant model.
 - **Rapid Elasticity**: Capabilities can be scaled up or down quickly and efficiently.
 - **Measured Service**: Resource usage is monitored, controlled, and reported, providing transparency.
+
+---
 
 ## Cloud Service Model
 
@@ -48,6 +54,8 @@ link: https://drive.google.com/file/d/1Gj5YWfmCImhpVRyA-2tI5pshrsyD9gNL/view?usp
   - Managed by the provider including updates and security.
   - Example: Gmail, Microsoft Office 365, Dropbox
 
+---
+
 ## Cloud Deployment Model
 
 - **Public Cloud**
@@ -63,12 +71,16 @@ link: https://drive.google.com/file/d/1Gj5YWfmCImhpVRyA-2tI5pshrsyD9gNL/view?usp
   - Allows data and applications to move between the two environments.
   - Offers greater flexibility and optimization of existing infrastructure.
 
+---
+
 ## What is AWS?
 
 - AWS (Amazon Web Services) is a secure cloud services platform offered by Amazon.
 - Launched in 2006, AWS offers compute power, database storage, content delivery, and other functionality.
 - AWS is used by millions of customers including startups, enterprises, and public sector organizations.
 - AWS offers more than 200 fully featured services from data centers globally.
+
+---
 
 ## AWS Use Cases
 
@@ -79,12 +91,16 @@ link: https://drive.google.com/file/d/1Gj5YWfmCImhpVRyA-2tI5pshrsyD9gNL/view?usp
 - **Machine Learning and AI**: Use pre-trained AI models or build your own.
 - Gaming-Support game development with scalable infrastructure.
 
+---
+
 ## AWS Global Infrastructure
 
 - **Regions**: AWS divides the world into geographic areas called Regions. Each region has multiple data centers.
 - **Availability Zones (AZs)**: Each Region consists of several AZs that are physically separated.
 - **Edge Locations**: These are content delivery endpoints that help reduce latency. Used by Amazon CloudFront.
 - This structure ensures high availability, fault tolerance, and low latency.
+
+---
 
 ## AWS Free Tier
 

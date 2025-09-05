@@ -5,7 +5,7 @@ slug: dwdm-02
 semester: 5
 image: /dwdm.jpg
 accent: "#1f6ac7"
-link: https://drive.google.com/file/d/18pU_dXhT8NzczhSfIHGZlhoofo7ytog5/view?usp=sharing
+link:
 ---
 
 ## Why Pre-process the Data?
@@ -13,7 +13,7 @@ link: https://drive.google.com/file/d/18pU_dXhT8NzczhSfIHGZlhoofo7ytog5/view?usp
 - Data have quality if they satisfy the requirements of the intended use.
 - There are many factors comprising data quality, including: Accuracy, Completeness, Consistency Timeliness, Believability, Interpretability.
 - **The data you wish to analyse by data mining techniques are**:
-  - **Incomplete** (lacking attribute values or certain attributes of interest, or containing only aggregate data
+  - **Incomplete** (lacking attribute values or certain attributes of interest, or containing only aggregate data)
   - **Inaccurate or noisy** (containing errors, or values that deviate from the expected); and
   - **Inconsistent** (e.g., containing discrepancies in the department codes used to categorize items).
 - Inaccurate, incomplete, and inconsistent data are `common_place` properties of large real-world databases and data warehouses.
@@ -26,6 +26,8 @@ link: https://drive.google.com/file/d/18pU_dXhT8NzczhSfIHGZlhoofo7ytog5/view?usp
     - Incorrect data may also result from inconsistencies in naming conventions or data codes, or inconsistent formats for input fields (e.g., date).
     - Duplicate tuples also require data cleaning.
 
+---
+
 ## Major Tasks in Data Cleaning
 
 - **Data Cleaning**: Fill in the missing value, smooth noisy data, identify or remove outliers, and resolve inconsistencies.
@@ -33,6 +35,8 @@ link: https://drive.google.com/file/d/18pU_dXhT8NzczhSfIHGZlhoofo7ytog5/view?usp
 - **Data Transformation**: Normalization and Aggregation
 - **Data Reduction**: Obtains reduced representation in volume but produces the same or similar analytical results.
 - **Data Discretization**: Part of data reduction but with particular importance especially for numeric data
+
+---
 
 ## Data Cleaning
 
@@ -80,18 +84,18 @@ link: https://drive.google.com/file/d/18pU_dXhT8NzczhSfIHGZlhoofo7ytog5/view?usp
 
 ### How to Handle Noisy Data?
 
-![](/dwdm/2dwdm1.png)
+![](/dwdm/2dwdm01.png)
 
 - **Binning**:
   - Binning methods smooth a sorted data value by consulting its “neighborhood,” that is, the values around it.
   - The sorted values are distributed into a number of “buckets,” or bins.
   - Various methods for binning are smooth by bin means, smooth by bin median, smooth by bin boundaries etc.
 
-![](/dwdm/2dwdm2.png)
+![](/dwdm/2dwdm02.png)
 
 - **Regression**: Smooth by fitting the data into regression function
 
-![](/dwdm/2dwdm3.png)
+![](/dwdm/2dwdm03.png)
 
 - **Clustering**: Detect and remove outliers
 - Combined computer and Human inspection: Detect suspicious values and check by human
@@ -101,6 +105,8 @@ link: https://drive.google.com/file/d/18pU_dXhT8NzczhSfIHGZlhoofo7ytog5/view?usp
 - Duplicate records (omit Duplicate)
 - Incomplete data
 - Inconsistent Data(Decide which one is correct)
+
+---
 
 ## Steps in Data Cleaning
 
@@ -141,6 +147,8 @@ link: https://drive.google.com/file/d/18pU_dXhT8NzczhSfIHGZlhoofo7ytog5/view?usp
 - They are variants of data mining tools.
 - For example, they may employ statistical analysis to find correlations, or clustering to identify outliers.
 - Once we find discrepancies, we typically need to define and apply (a series of) transformations to correct them
+
+---
 
 ## Data Integration
 
