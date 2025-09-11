@@ -1,5 +1,5 @@
 ---
-header: AWS LM
+header: AWS-LM
 title: AWS-LM
 slug: aws-lm
 semester: 5
