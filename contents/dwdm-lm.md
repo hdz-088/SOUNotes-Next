@@ -12,6 +12,8 @@ link:
 >
 > Thank you for your patience and support — stay tuned for regular updates!
 
+## OUTPUT PDF: [Link](https://drive.google.com/file/d/1QIwHdU6J4Gg2RYK90yJ_OId41eQY3G2m/view?usp=sharing)
+
 ## Practical 01
 
 **Aim:** Installation of WEKA Tool.
