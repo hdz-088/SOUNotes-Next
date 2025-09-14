@@ -555,3 +555,269 @@ link:
 **Conclusion**: S3 provides an easy, scalable way to host static website without servers
 
 ---
+
+## Practical-14
+
+**Aim:** Create and Attach an EBS Volume
+
+**Description:**  
+Amazon Elastic Block Store (EBS) provides persistent block storage volumes for EC2 instances. These volumes can be created, attached, and used just like hard drives.
+
+**Steps:**
+
+1. **Login to AWS Console**
+   - Open AWS Management Console.
+   - Navigate to the **EC2 Dashboard**.
+2. **Create an EBS Volume**
+   - On the left panel, click **Volumes** → **Create Volume**.
+   - Select **Volume Type** (General Purpose SSD recommended).
+   - Enter **Size** (e.g., 8 GB).
+   - Choose the **Availability Zone** (must match the EC2 instance zone).
+   - Click **Create Volume**.
+3. **Attach the Volume to EC2 Instance**
+   - Select the created volume.
+   - Click **Actions → Attach Volume**.
+   - Select the **running EC2 instance** from the list.
+   - Click **Attach**.
+
+**Output:**
+
+- An EBS volume is created successfully.
+- The volume is now attached to the selected EC2 instance.
+
+**Post Practical Questions:**
+
+1. B. Elastic Block Store
+2. C. Amazon EC2
+3. B. Format and mount the volume
+4. C. Block-level storage for EC2
+5. C. It remains attached and retains data
+
+**Conclusion:**  
+We created an EBS volume and attached it to an EC2 instance. This helps provide persistent block storage for applications.
+
+---
+
+## Practical-15
+
+**Aim:** Format and Mount EBS Volume on EC2
+
+**Description:**  
+A new EBS volume must be formatted with a file system before use. Once formatted, it is mounted to a directory in EC2 for storing files.
+
+**Steps:**
+
+1. **Connect to EC2 Instance**
+   - Open terminal/command prompt.
+   - Run `ssh -i key.pem ec2-user@<public-ip>` to connect.
+2. **Check Attached Volumes**
+   - Run `lsblk` to list block devices.
+   - Confirm the new volume (e.g., `/dev/xvdf`).
+3. **Format the Volume**
+   - Run `sudo mkfs -t ext4 /dev/xvdf`.
+   - This will create an **ext4 file system**.
+4. **Create a Mount Directory**
+   - Run `sudo mkdir /mnt/data`.
+   - This creates a folder to mount the volume.
+5. **Mount the Volume**
+   - Run `sudo mount /dev/xvdf /mnt/data`.
+   - The volume is now accessible via `/mnt/data`.
+6. **Verify Mounting**
+   - Run `df -h` to confirm mount point and available storage.
+
+**Output:**
+
+- The new EBS volume is formatted successfully.It is mounted to `/mnt/data` and ready to store files.
+
+**Post Practical Questions:**
+
+1. B. lsblk
+2. B. Format it with a file system
+3. A. mkfs
+4. C. Mount the volume to a directory
+5. D. /mnt
+
+**Conclusion:**  
+We formatted and mounted the EBS volume on EC2. This allows the instance to store and access data on the new volume.
+
+---
+
+## Practical-16
+
+**Aim:** Take Snapshots and Resize EBS Volumes
+
+**Description:**  
+EBS snapshots allow point-in-time backups of volumes. Volumes can also be resized to increase storage capacity when needed.
+
+**Steps:**
+
+1. **Create Snapshot of EBS Volume**
+   - Go to **EC2 Dashboard → Volumes**.
+   - Select the volume and click **Actions → Create Snapshot**.
+   - Enter a **description** and click **Create Snapshot**.
+2. **Check Snapshot**
+   - Go to **Snapshots** section in EC2.
+   - Confirm the snapshot is created.
+3. **Resize EBS Volume**
+   - Go back to **Volumes**, select the volume.
+   - Click **Actions → Modify Volume**.
+   - Increase the **size** (e.g., from 8 GB to 20 GB).
+   - Click **Modify** → **Yes**.
+4. **Extend File System inside EC2**
+   - Connect to the instance via SSH.
+   - Run `lsblk` to confirm new size.
+   - Run `sudo resize2fs /dev/xvdf` to extend the file system.
+
+**Output:**
+
+- Snapshot of the EBS volume created successfully. Volume resized, and EC2 instance reflects the new storage capacity.
+
+**Post Practical Questions:**
+
+1. B. A point-in-time backup of an EBS volume
+2. C. S3 (internally by AWS)
+3. C. Create a snapshot
+4. C. Extend the file system
+5. C. EBS Lifecycle Manager
+
+**Conclusion:**  
+We created snapshots for backup and resized an EBS volume. This ensures data safety and scalability for applications.
+
+---
+
+## Practical-17
+
+**Aim:** Launch and Configure Amazon RDS (MySQL) Instance
+
+**Description:**  
+Amazon RDS provides a managed relational database service. In this practical, we launch and configure a MySQL RDS instance.
+
+**Steps:**
+
+1. **Open RDS Dashboard**
+   - Go to AWS Console → RDS → **Create Database**.
+2. **Select Database Engine**
+   - Choose **MySQL**.
+   - Select **Free Tier template** for cost-free use.
+3. **Configure Database Settings**
+   - Enter DB instance identifier (e.g., `mydb`).
+   - Set **master username** and **password**.
+4. **Choose Instance Size & Storage**
+   - Select **db.t3.micro** for free tier.
+   - Use default allocated storage (20 GB).
+5. **Configure Connectivity**
+   - Choose existing **VPC**.
+   - Ensure **Public access = Yes**.
+   - Select/create a **security group** that allows port **3306**.
+6. **Launch Database**
+   - Review settings and click **Create Database**.
+
+**Output:**
+
+- Amazon RDS MySQL instance launched successfully. Endpoint and connection details are available in RDS dashboard.
+
+**Post Practical Questions:**
+
+1. C. Managing relational databases
+2. C. MySQL
+3. B. Open port 3306 in RDS security group
+4. C. 3306
+5. B. Username, password, and DB instance identifier
+
+**Conclusion:**  
+We successfully launched and configured an RDS MySQL instance. This provides a managed environment for relational databases.
+
+---
+
+## Practical-18
+
+**Aim:** Connect RDS to MySQL Workbench
+
+**Description:**  
+MySQL Workbench is a GUI tool used to connect and manage MySQL RDS instances.
+
+**Steps:**
+
+1. **Open MySQL Workbench**
+   - Launch the MySQL Workbench application on your system.
+2. **Create a New Connection**
+   - Click **+ (New Connection)**.
+   - Enter a name (e.g., `AWS-RDS-MySQL`).
+3. **Enter RDS Connection Details**
+   - Hostname = **RDS Endpoint** (from AWS RDS console).
+   - Port = **3306**.
+   - Username = **master username**.
+   - Password = enter saved password.
+4. **Test the Connection**
+   - Click **Test Connection** to verify.
+5. **Connect to Database**
+   - Click **OK** → Open connection.
+
+**Output:**
+
+- Successfully connected MySQL Workbench with Amazon RDS. Able to run SQL queries on RDS from Workbench.
+
+**Post Practical Questions:**
+
+1. B. RDS endpoint, port, username, and password
+2. C. 3306
+3. B. It is used to connect to the database remotely
+4. C. RDS security group inbound rules
+5. D. TCP/IP
+
+**Conclusion:**  
+We connected RDS with MySQL Workbench using its endpoint. This allows easy remote database management and queries.
+
+---
+
+## Practical-19
+
+**Aim:** Perform SQL Operations on RDS
+
+**Description:**  
+SQL is used to create databases, tables, and manipulate data in RDS.
+
+**Steps:**
+
+1. **Connect MySQL Workbench to RDS**
+   - Use RDS endpoint, port, username, and password.
+2. **Create a New Database**
+   - Run: `CREATE DATABASE testdb;`
+3. **Switch to Database**
+   - Run: `USE testdb;`
+4. **Create a Table**
+   - Run:
+
+```sql
+CREATE TABLE students (
+	id INT PRIMARY KEY,
+	name VARCHAR(50)
+);
+```
+
+5. **Insert Records**
+   - Run:
+
+```sql
+INSERT INTO students VALUES (1,'Alex'),(2,'John'),(3,'Maria');
+```
+
+6. **Retrieve Records**
+   - Run: `SELECT * FROM students;`
+
+**Output:**
+
+- Database `testdb` created successfully. `students` table created with 3 records. Records retrieved and displayed in query results.
+
+**Post Practical Questions:**
+
+1. B. SQL
+2. C. CREATE TABLE
+3. B. INSERT INTO
+4. C. SELECT \* FROM students;
+5. A. UPDATE
+
+**Conclusion:**  
+We performed SQL operations like creating tables and inserting records on RDS. This demonstrated how to manage data on a cloud-hosted MySQL database.
+
+---
