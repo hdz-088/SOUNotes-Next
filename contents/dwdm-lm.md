@@ -8,11 +8,7 @@ accent: "#1f6ac7"
 link:
 ---
 
-> We’d like to inform you that the study material on our website will be updated as soon as we receive the latest content. Our team is continuously working to bring the best and most reliable resources for students.
->
-> Thank you for your patience and support — stay tuned for regular updates!
-
-## OUTPUT PDF: [Link](https://drive.google.com/file/d/1QIwHdU6J4Gg2RYK90yJ_OId41eQY3G2m/view?usp=sharing)
+## OUTPUT PDF: [Link](https://drive.google.com/file/d/1lYHRXZYoN1XZkmIg5tSzmRcvsatqF8_e/view?usp=sharing)
 
 ## Practical 01
 
@@ -21,6 +17,8 @@ link:
 **Description:** The installation of the WEKA tool ensures that users can perform various machine learning experiments and analyze datasets with a user-friendly graphical interface. It's widely used for data mining, data preprocessing, classification, clustering, regression, and visualization.
 
 **Code:**
+
+```txt
 
 1. Download the WEKA software from the official website: https://www.cs.waikato.ac.nz/ml/weka/
 
@@ -31,6 +29,9 @@ link:
 4. Run the installer or executable file.
 
 5. Launch WEKA GUI Chooser to start working with the tool.
+```
+
+**Output**: Successful installation of WEKA with GUI Chooser window displaying options like Explorer, Experimenter, KnowledgeFlow, and Simple CLI.
 
 ### Post Practical Questions:
 
@@ -62,7 +63,7 @@ link:
 3.  Save the file as **`weather.arff`**, making sure to use the `.arff` extension.
 4.  To load the dataset, open WEKA and navigate the following path: **Explorer → Preprocess → Open file... → select `weather.arff`**.
 
-```json
+```arff
 @relation weather
 
 @attribute outlook {sunny, overcast, rainy}
@@ -122,7 +123,7 @@ rainy, mild, high, TRUE, no
 3.  Save the file with the name **`employee.arff`**.
 4.  Load the file into WEKA by navigating the path: **Explorer → Preprocess → Open file... → select `employee.arff`**.
 
-```json
+```arff
 @relation employee
 
 @attribute EmployeeID numeric
@@ -185,7 +186,7 @@ rainy, mild, high, TRUE, no
 
 **Code:**
 
-```json
+```arff
 @relation weather
 
 @attribute outlook {sunny, overcast, rainy}
@@ -215,8 +216,7 @@ rainy, 71, 91, TRUE, no
 
 1. **What is the difference between Normalize and Standardize filters in WEKA?**
 
-   - **Ans:** Normalize scales numeric values into a fixed range (usually [0,1]),  
-     while Standardize transforms data to have mean 0 and standard deviation 1.
+   - **Ans:** Normalize scales numeric values into a fixed range (usually [0,1]), while Standardize transforms data to have mean 0 and standard deviation 1.
 
 2. **Which filter in WEKA is used to replace missing values?**
 
@@ -242,7 +242,7 @@ rainy, 71, 91, TRUE, no
 **Steps:**
 
 1. Open WEKA → Explorer → Preprocess.
-2. Load the `employee.arff` dataset (from Practical – 3).
+2. Load the `employee.arff`
 3. Apply filters one by one:
    - **Add attribute** → Adds a new attribute (e.g., Experience).
    - **Remove attribute** → Removes unwanted attributes (e.g., EmployeeID, Experience).
@@ -252,7 +252,7 @@ rainy, 71, 91, TRUE, no
 
 **Code:**
 
-```json
+```arff
 @relation employee
 
 @attribute EmployeeID numeric
@@ -314,7 +314,7 @@ rainy, 71, 91, TRUE, no
 
 **Code:**
 
-```json
+```arff
 @relation shopping
 
 @attribute milk {t, f}
@@ -363,7 +363,7 @@ Classification is the process of building a model to describe and predict data v
 
 **Code:**
 
-```json
+```arff
 @relation weather
 
 @attribute outlook {sunny, overcast, rainy}
@@ -418,7 +418,7 @@ Classification builds predictive models from data. A Decision Tree is widely use
 
 **Code:**
 
-```json
+```arff
 @relation customer
 
 @attribute age {young, middle, senior}
@@ -481,7 +481,7 @@ senior,medium,no,excellent,no
 
 **Code:**
 
-```json
+```arff
 @relation weather
 
 @attribute outlook {sunny, overcast, rainy}
@@ -540,15 +540,15 @@ rainy,mild,high,TRUE,no
 2. Open **Weka GUI Chooser → Explorer**.
 3. Load the dataset (**customer.arff**).
 4. In the **Preprocess** tab, apply filters one by one:
-   - `weka.filters.unsupervised.attribute.Remove` → removes the `credit_rating` attribute.
    - `weka.filters.unsupervised.attribute.ReplaceMissingValues` → handles missing entries (if any).
    - `weka.filters.unsupervised.attribute.Discretize` → converts numeric attributes to nominal (if present).
+   - `weka.filters.unsupervised.attribute.Remove` → removes the `credit_rating` attribute.
      Click **Apply** after each filter and observe the changes.
 5. After preprocessing, go to the **Classify** tab → Choose **trees → J48** → Click **Start** to build the model.
 
 **Code:**
 
-```json
+```arff
 @relation customer
 
 @attribute age {young, middle, senior}
@@ -592,5 +592,238 @@ senior,medium,no,excellent,no
    - **Ans:** Filters are applied to clean, transform, or modify the dataset to improve the quality of data and prepare it for better model performance.
 
 **Conclusion:** Pre-processing filters were successfully applied to the Customer dataset, including removal of unnecessary attributes and handling of missing values. The J48 Decision Tree classifier was built on the filtered data, demonstrating improved data quality and readiness for accurate classification.
+
+---
+
+## Practical 11
+
+**Aim:** Implementation of K-means algorithm.
+
+**Description:** K-Means is an unsupervised learning algorithm used to partition datasets into clusters based on similarity. In this practical, we will group customers using their age and income attributes. This helps in understanding customer segmentation and unsupervised learning concepts.
+
+**Steps:**
+
+1. Open WEKA → Explorer and go to **Preprocess** → Load **customer_kmeans.arff**.
+2. Run K-Means clustering:
+   - Go to **Cluster** tab → Click **Choose → SimpleKMeans**.
+   - Configure the number of clusters → Click **Start**.
+
+**Code:**
+
+```arff
+@relation customer
+
+@attribute name {x,y,z,u,v,l}
+@attribute age {youth,middle,senior}
+@attribute income {high,medium,low}
+@attribute class {A,B}
+
+@data
+x,youth,high,A
+y,youth,low,B
+z,middle,high,A
+u,middle,low,B
+v,senior,high,A
+l,senior,low,B
+```
+
+### Post Practical Questions:
+
+1. **What does the K in K-Means stand for?**
+
+   - b) Number of clusters
+
+2. **Which of the following is commonly used to measure distance in K-Means?**
+
+   - b) Euclidean Distance
+
+3. **The value of K can be automatically determined by the algorithm. True/False**
+
+   - **Ans:** False
+
+4. **What is the main purpose of the K-Means algorithm?**
+   - **Ans:** The main purpose of K-Means is to partition the dataset into K clusters such that data points in the same cluster are more similar to each other than to those in other clusters.
+
+**Conclusion:**
+The K-Means algorithm successfully grouped the customers into clusters based on age and income. This practical demonstrates unsupervised learning and customer segmentation effectively.
+
+---
+
+## Practical 12
+
+**Aim:** Apply k-Means clustering and visualize the results.
+
+**Description:**
+Cluster analysis assigns objects into groups (clusters) so that items in the same cluster are more similar to each other than to those in other clusters. In this practical, we apply **k-Means clustering** on a small customer dataset and visualize the results in WEKA.
+
+**Steps:**
+
+1. Open WEKA → **Explorer**.
+2. Go to **Preprocess** tab → Click **Open file** → Load **customer_kmeans_12.arff**.
+3. Run K-Means clustering:
+   - Go to **Cluster** tab → Click **Choose → SimpleKMeans**.
+   - Configure the number of clusters → Click **Start**.
+4. Right-click result → Select **Visualize cluster assignments** to see the scatter plot.
+
+**Code:**
+
+```arff
+@relation customer
+
+@attribute name {x,y,z,u,v,l}
+@attribute age {youth,middle,senior}
+@attribute income {high,medium,low}
+@attribute class {A,B}
+
+@data
+x,youth,high,A
+y,youth,low,B
+z,middle,high,A
+u,middle,low,B
+v,senior,high,A
+l,senior,low,B
+```
+
+### Post Practical Questions:
+
+1. **What type of machine learning does K-Means belong to?**
+
+   - b) Unsupervised Learning
+
+2. **Which type of visualization is best for showing K-Means clusters?**
+
+   - b) Scatter Plot
+
+3. **What is the effect of choosing the wrong K value?**
+   - **Ans:** Choosing the wrong K value can lead to poor clustering results — either too many small, fragmented clusters (over-segmentation) or too few large clusters that mix dissimilar data points (under-segmentation).
+
+**Conclusion:**
+k-Means clustering was successfully applied to the customer dataset. The algorithm grouped the customers into 2 distinct clusters, and visualization confirmed the natural groupings based on age and income.
+
+---
+
+## Practical 13
+
+**Aim:** Write a procedure for visualization of the weather dataset in WEKA.
+
+**Description:**
+Data visualization is a key step in preprocessing to explore attributes and patterns before applying machine learning. In this practical, we load the **weather dataset** in WEKA and visualize attribute distributions and relationships.
+
+**Steps:**
+
+1. Open **WEKA → Explorer**.
+2. Go to **Preprocess tab** → Click **Open file** → Load **weather.arff**.
+   - Attributes (Outlook, Temperature, Humidity, Windy, Play) will be displayed.
+3. Visualize dataset:
+   - Click **Visualize** button to see the default scatter plot matrix.
+   - Adjust **PointSize** and **Jitter** values to change visualization style.
+   - Select different attribute → Click **Update** to see output.
+   - Repeat with other attribute, adjust point size/jitter for clearer patterns.
+
+**Code:**
+
+```arff
+@relation weather
+
+@attribute outlook {sunny, overcast, rainy}
+@attribute temperature {hot, mild, cool}
+@attribute humidity {high, normal}
+@attribute windy {TRUE, FALSE}
+@attribute play {yes, no}
+
+@data
+sunny,hot,high,FALSE,no
+sunny,hot,high,TRUE,no
+overcast,hot,high,FALSE,yes
+rainy,mild,high,FALSE,yes
+rainy,cool,normal,FALSE,yes
+rainy,cool,normal,TRUE,no
+overcast,cool,normal,TRUE,yes
+sunny,mild,high,FALSE,no
+sunny,cool,normal,FALSE,yes
+rainy,mild,normal,FALSE,yes
+sunny,mild,normal,TRUE,yes
+overcast,mild,high,TRUE,yes
+overcast,hot,normal,FALSE,yes
+rainy,mild,high,TRUE,no
+```
+
+### Post Practical Questions:
+
+1. **What is the purpose of visualizing the Weather dataset in WEKA?**
+
+   - **Ans:** To understand patterns, relationships, and distributions of attributes in the dataset for better analysis.
+
+2. **The color of data points in the scatter plot indicates:**
+
+   - b) Class labels
+
+3. **Visualization helps in identifying ......... and ........ in the dataset.**
+
+   - **Ans:** Outliers and patterns
+
+4. **The Visualize panel in WEKA uses only bar charts. True/False**
+   - **Ans:** False
+
+**Conclusion:** We successfully visualized the weather dataset in WEKA. Visualization helped identify strong patterns such as the effect of weather conditions on the decision to play. Adjusting point size and jitter improved clarity, making trends easier to observe.
+
+---
+
+## Practical 14
+
+**Aim:** Write a procedure for visualization of the banking dataset in WEKA.
+
+**Description:**
+Visualization allows us to explore distributions and relationships in datasets before applying models. In this practical, we load the **banking dataset** in WEKA and visualize attributes like gender, bank name, location, and deposit behavior.
+
+**Steps:**
+
+1. Launch **WEKA GUI Chooser** → Click **Explorer**.
+2. Go to **Preprocess tab** → Click **Open file** → Load **banking.arff**.
+   - Attributes (cust, accno, bankname, location, deposit) will be displayed.
+3. Visualize dataset:
+   - Click **Visualize** button to see the default scatter plot matrix.
+   - Adjust **PointSize** and **Jitter** values to change visualization style.
+   - Select different attribute → Click **Update** to see output.
+   - Repeat with other attribute, adjust point size/jitter for clearer patterns.
+
+**Code:**
+
+```arff
+@relation bank
+
+@attribute cust {male, female}
+@attribute accno {0101, 0102, 0103, 0104, 0105, 0106, 0107, 0108, 0109}
+@attribute bankname {sbi, hdfc, sbh, abi}
+@attribute location {hyd, jmd, antr, pdt2, kdp}
+@attribute deposit {yes, no}
+
+@data
+male,0101,sbi,hyd,yes
+female,0102,hdfc,jmd,no
+male,0103,sbh,antr,yes
+female,0104,abi,pdt2,no
+male,0105,abi,kdp,yes
+female,0106,sbi,hyd,no
+male,0107,hdfc,jmd,yes
+female,0108,sbh,antr,no
+male,0109,abi,pdt2,yes
+
+```
+
+### Post Practical Questions:
+
+1. **Why is visualization important in data preprocessing?**
+
+   - **Ans:** Visualization helps detect errors, missing values, outliers, and relationships between attributes, making data cleaning and transformation more effective.
+
+2. **The Weather dataset is usually saved in ........... format in WEKA.**
+
+   - **Ans:** ARFF format
+
+3. **To inspect a specific plot in WEKA, ......... on it.**
+   - **Ans:** Double-click on it
+
+**Conclusion:** We successfully visualized the banking dataset in WEKA. The visualizations helped analyze deposit behavior across banks, genders, and locations. Adjusting jitter and point size improved readability of plots, making patterns and anomalies easier to identify.
 
 ---
