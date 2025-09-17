@@ -5,7 +5,7 @@ slug: php-lm
 semester: 5
 image: /php.png
 accent: "#4D588E"
-link:
+link: https://drive.google.com/file/d/1ATL3xvbD-Y3aUrIFQV6ogaLUMXBHDXue/view?usp=sharing
 ---
 
 ## Practical 01

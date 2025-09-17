@@ -5,7 +5,7 @@ slug: dwdm-lm
 semester: 5
 image: /dwdm.jpg
 accent: "#1f6ac7"
-link:
+link: https://drive.google.com/file/d/1qa4CWVdmmEiexuZO0GaWW11_5QDZm7Ot/view?usp=sharing
 ---
 
 ## OUTPUT PDF: [Link](https://drive.google.com/file/d/1lYHRXZYoN1XZkmIg5tSzmRcvsatqF8_e/view?usp=sharing)

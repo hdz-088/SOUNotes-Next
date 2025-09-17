@@ -5,7 +5,7 @@ slug: aws-lm
 semester: 5
 image: /aws.jpg
 accent: "#ff9c08"
-link:
+link: https://drive.google.com/file/d/1kbLMe_g-OzZ5JXTHEukrJoZRWvPiQmMq/view?usp=sharing
 ---
 
 ## Practical-01
@@ -587,11 +587,13 @@ Amazon Elastic Block Store (EBS) provides persistent block storage volumes for E
 
 **Post Practical Questions:**
 
-1. B. Elastic Block Store
-2. C. Amazon EC2
-3. B. Format and mount the volume
-4. C. Block-level storage for EC2
-5. C. It remains attached and retains data
+| Question | Answer |
+| -------- | ------ |
+| 1        | B      |
+| 2        | C      |
+| 3        | B      |
+| 4        | C      |
+| 5        | C      |
 
 **Conclusion:**  
 We created an EBS volume and attached it to an EC2 instance. This helps provide persistent block storage for applications.
@@ -627,15 +629,17 @@ A new EBS volume must be formatted with a file system before use. Once formatted
 
 **Output:**
 
-- The new EBS volume is formatted successfully.It is mounted to `/mnt/data` and ready to store files.
+- The new EBS volume is formatted successfully. It is mounted to `/mnt/data` and ready to store files.
 
 **Post Practical Questions:**
 
-1. B. lsblk
-2. B. Format it with a file system
-3. A. mkfs
-4. C. Mount the volume to a directory
-5. D. /mnt
+| Question | Answer |
+| -------- | ------ |
+| 1        | B      |
+| 2        | B      |
+| 3        | A      |
+| 4        | C      |
+| 5        | D      |
 
 **Conclusion:**  
 We formatted and mounted the EBS volume on EC2. This allows the instance to store and access data on the new volume.
@@ -674,11 +678,13 @@ EBS snapshots allow point-in-time backups of volumes. Volumes can also be resize
 
 **Post Practical Questions:**
 
-1. B. A point-in-time backup of an EBS volume
-2. C. S3 (internally by AWS)
-3. C. Create a snapshot
-4. C. Extend the file system
-5. C. EBS Lifecycle Manager
+| Question | Answer |
+| -------- | ------ |
+| 1        | B      |
+| 2        | C      |
+| 3        | C      |
+| 4        | C      |
+| 5        | C      |
 
 **Conclusion:**  
 We created snapshots for backup and resized an EBS volume. This ensures data safety and scalability for applications.
@@ -718,11 +724,13 @@ Amazon RDS provides a managed relational database service. In this practical, we
 
 **Post Practical Questions:**
 
-1. C. Managing relational databases
-2. C. MySQL
-3. B. Open port 3306 in RDS security group
-4. C. 3306
-5. B. Username, password, and DB instance identifier
+| Question | Answer |
+| -------- | ------ |
+| 1        | C      |
+| 2        | C      |
+| 3        | B      |
+| 4        | C      |
+| 5        | B      |
 
 **Conclusion:**  
 We successfully launched and configured an RDS MySQL instance. This provides a managed environment for relational databases.
@@ -759,11 +767,13 @@ MySQL Workbench is a GUI tool used to connect and manage MySQL RDS instances.
 
 **Post Practical Questions:**
 
-1. B. RDS endpoint, port, username, and password
-2. C. 3306
-3. B. It is used to connect to the database remotely
-4. C. RDS security group inbound rules
-5. D. TCP/IP
+| Question | Answer |
+| -------- | ------ |
+| 1        | B      |
+| 2        | C      |
+| 3        | B      |
+| 4        | C      |
+| 5        | D      |
 
 **Conclusion:**  
 We connected RDS with MySQL Workbench using its endpoint. This allows easy remote database management and queries.
@@ -811,13 +821,367 @@ INSERT INTO students VALUES (1,'Alex'),(2,'John'),(3,'Maria');
 
 **Post Practical Questions:**
 
-1. B. SQL
-2. C. CREATE TABLE
-3. B. INSERT INTO
-4. C. SELECT \* FROM students;
-5. A. UPDATE
+| Question | Answer |
+| -------- | ------ |
+| 1        | B      |
+| 2        | C      |
+| 3        | B      |
+| 4        | C      |
+| 5        | A      |
 
 **Conclusion:**  
 We performed SQL operations like creating tables and inserting records on RDS. This demonstrated how to manage data on a cloud-hosted MySQL database.
+
+---
+
+## Practical-20
+
+**Aim:** Create a NoSQL database using DynamoDB
+
+**Description:** Amazon DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability. It stores data as key-value pairs or documents, making it ideal for applications that require high throughput and low-latency responses.
+
+**Steps:**
+
+1. Log in to AWS Console
+2. Open DynamoDB: In the AWS Management Console, search for "DynamoDB" and click to open it.
+3. Create a Table:
+   - Click on Create Table.
+   - Enter a Table Name (e.g., `Students`).
+   - Specify the Primary Key (e.g., `StudentID` as Partition Key).
+   - Optionally, configure settings like sort key, encryption, or throughput capacity.
+4. Review and Create: Review the settings and click Create Table.
+5. Insert Data:
+   - Go to your table, click Explore items.
+   - Click Create Item, fill in the attributes, and save.
+6. Query or Scan Data:
+   - Use Query to retrieve items by primary key.
+   - Use Scan to retrieve all items in the table.
+
+**Output:** The table is created with specified keys, data is added as items, and queries or scans retrieve the stored data efficiently.
+
+**Post Practical Questions:**
+
+| Question | Answer |
+| -------- | ------ |
+| 1        | C      |
+| 2        | B      |
+| 3        | C      |
+| 4        | C      |
+| 5        | D      |
+
+**Conclusion:** In this lab, a NoSQL database was created using Amazon DynamoDB. The table was configured with a primary key, data was added manually, and basic queries were performed. DynamoDB provides a flexible and scalable solution for managing unstructured or semi-structured data efficiently in cloud environments.
+
+---
+
+## Practical-21
+
+**Aim:** Add and retrieve items from DynamoDB
+
+**Description:** This practical demonstrates how to insert (add) items into a DynamoDB table and retrieve them using query and scan operations. It helps in understanding how data is stored and accessed in a NoSQL database.
+
+**Steps:**
+
+1. Log in to AWS Console
+2. Open DynamoDB in AWS Console and select the table you created earlier
+3. Add an Item:
+   - Click on Explore items.
+   - Click Create item.
+   - Enter values for attributes like `StudentID`, `Name`, `Age`, etc.
+   - Click Save.
+4. Retrieve Items using Query:
+   - Click on Query.
+   - Enter the partition key value (`StudentID`).
+   - Click Run to view the specific item.
+5. Retrieve Items using Scan:
+   - Click on Scan.
+   - Click Run to view all items in the table.
+
+**Output:** The added item is shown in the table with all attributes. The query retrieves a specific item by key, while the scan displays all items stored in the table.
+
+**Post Practical Questions:**
+
+| Question | Answer |
+| -------- | ------ |
+| 1        | B      |
+| 2        | C      |
+| 3        | B      |
+| 4        | C      |
+| 5        | C      |
+
+**Conclusion:** This practical helped in learning how to insert and retrieve data in DynamoDB. The table stores data as items with attributes, and both query and scan operations are used to access the data efficiently, which is essential for NoSQL-based applications.
+
+---
+
+## Practical-22
+
+**Aim:** Build a use case with RDS
+
+**Description:** This practical explains how to create and use a relational database with Amazon RDS (Relational Database Service). It demonstrates how structured data can be stored, managed, and accessed for real-world applications.
+
+**Steps:**
+
+1. Log in to AWS Console
+2. Open AWS Console and search for RDS, then click to open it.
+3. Create a Database Instance:
+   - Click Create database.
+   - Select Standard Create and choose a database engine
+   - Enter the database name, master username, and password.
+   - Configure instance size, storage, and connectivity options.
+   - Click Create database.
+4. Connect to the Database:
+   - Get the database endpoint from the RDS dashboard.
+   - Use a client tool (like MySQL Workbench) or application code to connect using the endpoint, username, and password.
+5. Create Tables and Insert Data:
+   - Insert sample records into the table.
+6. Retrieve Data:
+   - Run SQL queries to fetch data from the table based on conditions or retrieve all records.
+
+**Output:** The database instance is created and becomes available for use. Tables are structured with columns and data types, and inserted data can be queried and retrieved using SQL commands. The output shows organized and accessible data for application use.
+
+**Post Practical Questions:**
+
+| Question | Answer |
+| -------- | ------ |
+| 1        | B      |
+| 2        | C      |
+| 3        | B      |
+| 4        | C      |
+| 5        | D      |
+
+**Conclusion:** This practical demonstrated the process of creating, connecting, and using a relational database in AWS with RDS. It provided hands-on experience in managing structured data, performing queries, and using RDS for scalable and secure data storage in cloud applications.
+
+---
+
+## Practical-23
+
+**Aim:** Build a use case with DynamoDB
+
+**Description:** This practical shows how to create and use a NoSQL database with Amazon DynamoDB for a real-world scenario. It demonstrates how data can be structured as items and accessed efficiently using DynamoDB's flexible schema.
+
+**Steps:**
+
+1. Open AWS Console and go to DynamoDB.
+2. Create a Table:
+   - Click Create table.
+   - Enter a table name
+   - Set the partition key
+   - Configure optional settings if needed and click Create.
+3. Add Items:
+   - Go to the table and click Explore items.
+   - Click Create item -> Enter attributes -> Save the item.
+4. Retrieve Items:
+   - Use Query by entering the partition key value to find specific orders.
+   - Use Scan to view all orders in the table.
+5. Test the Use Case:
+   - Add multiple orders.
+   - Retrieve orders by customer name or date using filters.
+
+**Output:** The table stores orders as items with attributes. The data can be quickly accessed by querying with the key or scanning all records. The output shows structured order data that can be easily managed and retrieved.
+
+**Post Practical Questions:**
+
+| Question | Answer |
+| -------- | ------ |
+| 1        | C      |
+| 2        | C      |
+| 3        | B      |
+| 4        | C      |
+| 5        | B      |
+
+**Conclusion:** This practical helped in building a use case for a real application using DynamoDB. It illustrated how unstructured or semi-structured data can be stored, retrieved, and managed efficiently, making DynamoDB suitable for applications requiring high performance and scalability.
+
+---
+
+## Practical-24
+
+**Aim:** Create IAM users, groups and policies
+
+**Description:** This practical demonstrates how to manage access and permissions in AWS using IAM (Identity and Access Management). It covers creating users, organizing them into groups, and applying policies to control access to AWS resources securely.
+
+**Steps:**
+
+1. Open AWS Console and search for IAM, then open it.
+2. Create a Group:
+   - Click User groups and then Create group.
+   - Enter a group name
+   - Attach existing policies or create a custom policy.
+   - Click Create group.
+3. Create a User:
+   - Click Users and then Add users.
+   - Enter a user name
+   - Select Access type
+   - Click Next.
+4. Assign User to Group:
+   - On the permissions page, add the user to the `Developers` group.
+   - Review and click Create user.
+5. Create a Custom Policy (Optional):
+   - Click Policies and then Create policy.
+   - Use the visual editor or JSON to define permissions (e.g., allow EC2 access).
+   - Save and attach the policy to a group or user.
+
+**Output:** IAM users are created and organized into groups with defined permissions. Users are granted access to AWS services according to the attached policies. The output confirms successful user creation, group association, and policy enforcement.
+
+**Post Practical Questions:**
+
+| Question | Answer |
+| -------- | ------ |
+| 1        | C      |
+| 2        | B      |
+| 3        | C      |
+| 4        | C      |
+| 5        | C      |
+
+**Conclusion:** This practical demonstrated how to securely manage access in AWS using IAM. By creating users, grouping them, and assigning appropriate policies, permissions are controlled efficiently, ensuring secure access to AWS resources based on user roles.
+
+---
+
+## Practical-25
+
+**Aim:** Assign IAM roles to services
+
+**Description:** This practical explains how to assign IAM roles to AWS services, allowing them to securely access other AWS resources without using long-term credentials. It demonstrates how permissions are granted through roles to services like EC2 or Lambda.
+
+**Steps:**
+
+1. Open AWS Console and search for IAM, then open it.
+2. Create a Role:
+   - Click Roles and then Create role.
+   - Select the trusted entity type.
+   - Choose the service that will use this role.
+3. Attach Permissions:
+   - Select existing policies or create a custom policy defining permissions.
+   - Attach the policy to the role.
+4. Name and Create Role:
+   - Enter a role name.
+   - Review and click Create role.
+5. Assign Role to Service:
+   - For EC2: Go to the EC2 dashboard, select an instance, click Actions → Security → Modify IAM role, and assign the created role.
+   - For Lambda: Go to the Lambda dashboard, select a function, and under Configuration → Permissions, attach the role.
+
+**Output:** The service (EC2 or Lambda) is assigned the IAM role with the specified permissions. The output confirms that the service can now securely access other AWS resources without needing direct credentials.
+
+**Post Practical Questions:**
+
+| Question | Answer |
+| -------- | ------ |
+| 1        | B      |
+| 2        | C      |
+| 3        | B      |
+| 4        | B      |
+| 5        | C      |
+
+**Conclusion:** This practical demonstrated how IAM roles are used to grant temporary, secure access to AWS resources for services like EC2 or Lambda. Assigning roles ensures best practices for security by minimizing the use of long-term credentials and defining permissions based on the principle of least privilege.
+
+---
+
+## Practical-26
+
+**Aim:** Use CloudWatch to monitor EC2/S3
+
+**Description:** This practical demonstrates how to use Amazon CloudWatch to monitor the performance and health of AWS services like EC2 and S3. CloudWatch collects metrics and logs, helping to track resource usage, set alarms, and ensure operational health.
+
+**Steps:**
+
+1. Open AWS Console and search for CloudWatch, then open it.
+2. Monitor EC2 Instances:
+   - Go to Metrics → EC2.
+   - Select the instance to view metrics like CPU utilization, network traffic, and disk activity.
+   - Create an alarm by selecting a metric and clicking Create alarm.
+   - Set the threshold and notification settings.
+3. Monitor S3 Buckets:
+   - Go to Metrics → S3.
+   - Select the bucket to view metrics like number of objects, bytes downloaded/uploaded, and request counts.
+
+**Output:** CloudWatch displays real-time and historical metrics for EC2 instances and S3 buckets. Alarms notify users when thresholds are crossed, and logs provide insights into system performance and errors.
+
+**Post Practical Questions:**
+
+| Question | Answer |
+| -------- | ------ |
+| 1        | B      |
+| 2        | A      |
+| 3        | B      |
+| 4        | C      |
+| 5        | C      |
+
+**Conclusion:** This practical showed how CloudWatch is used to monitor AWS services like EC2 and S3. It helps ensure system health by tracking metrics and setting alarms, providing visibility into resource usage and enabling quick responses to issues.
+
+---
+
+## Practical-27
+
+**Aim:** Visualize logs using CloudWatch logs
+
+**Description:** This practical explains how to use Amazon CloudWatch Logs to view and analyze logs generated by AWS services like EC2, Lambda, or others. It helps in troubleshooting, identifying issues, and gaining insights from application and system logs.
+
+**Steps:**
+
+1. Open AWS Console and search for CloudWatch, then open it.
+2. Access CloudWatch Logs:
+   - Click on Logs → Log groups.
+   - Select the log group
+3. View Logs:
+   - Click on a Log stream to see recorded events.
+   - Review log entries like error messages, access logs, or performance data.
+4. Visualize Logs with Insights:
+   - Go to Logs Insights.
+   - Select the log group.
+   - Write queries to analyze logs (e.g., count of errors, requests over time).
+   - Run the query and visualize the results in charts or tables.
+
+**Output:** Logs are displayed in chronological order with detailed entries. Using metric filters and Insights queries, logs can be searched, aggregated, and visualized through graphs and tables, helping in monitoring and debugging applications.
+
+**Post Practical Questions:**
+
+| Question | Answer |
+| -------- | ------ |
+| 1        | B      |
+| 2        | C      |
+| 3        | B      |
+| 4        | B      |
+| 5        | C      |
+
+**Conclusion:** This practical demonstrated how CloudWatch Logs can be used to access, search, and visualize logs from AWS services. It enables better monitoring and troubleshooting by providing structured insights from raw log data.
+
+---
+
+## Practical-28
+
+**Aim:** Use AWS Budgets and Cost explorer
+
+**Description:** This practical explains how to monitor and manage AWS costs using AWS Budgets and Cost Explorer. It helps in tracking spending, analyzing usage patterns, and setting alerts to control expenses effectively.
+
+**Steps:**
+
+1. Open AWS Console and search for Billing, then open it.
+2. Use Cost Explorer:
+   - Click on Cost Explorer.
+   - Enable it if not already activated.
+   - View cost and usage reports over time.
+   - Filter by services like EC2, S3, etc., to analyze spending patterns.
+   - Create custom reports based on time period, region, or usage type.
+3. Create a Budget:
+   - Click on Budgets → Create budget.
+   - Select a budget type
+   - Enter budget details like amount, period, and services.
+   - Set up notifications to receive alerts when spending exceeds thresholds.
+   - Review and create the budget.
+4. Monitor and Analyze:
+   - Check daily or monthly spending.
+   - Review alerts and adjust budgets as needed.
+
+**Output:** Cost Explorer shows detailed reports with charts and filters to analyze AWS usage. Budgets track expenses, and alerts notify users when costs approach or exceed the defined limits, helping in financial planning.
+
+**Post Practical Questions:**
+
+| Question | Answer |
+| -------- | ------ |
+| 1        | B      |
+| 2        | B      |
+| 3        | B      |
+| 4        | B      |
+| 5        | C      |
+
+**Conclusion:** This practical demonstrated how to use AWS Budgets and Cost Explorer to manage cloud expenses. It enables users to track spending, understand usage trends, and receive alerts to prevent unexpected costs, promoting efficient resource management.
 
 ---

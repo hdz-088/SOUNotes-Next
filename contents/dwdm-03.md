@@ -5,7 +5,7 @@ slug: dwdm-03
 semester: 5
 image: /dwdm.jpg
 accent: "#1f6ac7"
-link:
+link: https://drive.google.com/file/d/1VK0quuaBuvqKotRzCPWzvCvETfgC06eW/view?usp=sharing
 ---
 
 ## Data Warehouse

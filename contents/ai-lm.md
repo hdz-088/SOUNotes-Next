@@ -5,7 +5,7 @@ slug: ai-lm
 semester: 5
 image: /ai.jpg
 accent: "#185bcc"
-link:
+link: https://drive.google.com/file/d/1Fx3TjRQJOE6QLerx-SAJ1KwDG3-bJIKo/view?usp=sharing
 ---
 
 ## Practical 01
