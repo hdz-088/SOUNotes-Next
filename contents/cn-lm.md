@@ -5,12 +5,8 @@ slug: cn-lm
 semester: 5
 image: /cn.jpg
 accent: "#355765"
-link:
+link: https://drive.google.com/file/d/1nHAZHLHi5P2_RRYRuuEQyZp01fmueORq/view?usp=sharing
 ---
-
-> We’d like to inform you that the study material on our website will be updated as soon as we receive the latest content. Our team is continuously working to bring the best and most reliable resources for students.
->
-> Thank you for your patience and support — stay tuned for regular updates!
 
 ## Practical 01
 
@@ -104,6 +100,48 @@ Study of networking devices
 
 ## Practical 04
 
+**Aim:** Introduction/installation of CISCO packet tracer, understanding of point to point network with net map, create network topology with HUB/Switch and simulate it.
+
+**Transfer PDU and view scenario graphically.**
+
+**1. Which protocol is used to test scenario while simulation?**
+
+- The protocol used is ICMP (Internet Control Message Protocol). It is mainly used by the ping command to check connectivity between devices in a network. When one PC sends an ICMP Echo Request, the other PC replies with an ICMP Echo Reply. If the reply is received successfully, it confirms that the network connection is working properly.
+
+**Exercise: Create and Simulate a Network Topology Using a Hub**
+
+**Objective:** Create a network topology with more than two devices connected using a hub. Simulate the topology using any network simulation software (e.g., Cisco Packet Tracer). Take a screenshot of your network setup, print it, and paste the printed screenshot as required.
+
+![](/cn/ln2.jpg)
+
+**Steps:**
+
+1. Open Packet Tracer → Add **1 Hub** & **3 PCs**.
+2. Connect each PC to Hub using **Copper Straight cable**.
+3. Assign IP addresses:
+   - Right-click PC → **Desktop → IP Configuration**
+   - Set IPs: 10.0.0.2, 10.0.0.3, 10.0.0.4 (Subnet: 255.0.0.0).
+4. Test connectivity using **ping command** in Command Prompt.
+5. Transfer PDU → View results in Simulation.
+
+**Exercise: Create and Simulate a Network Topology Using a Switch**
+
+**Objective:** Create a network topology with more than two devices connected using a switch. Simulate the topology using any network simulation software (e.g., Cisco Packet Tracer). Take a screenshot of your network setup, print it, and paste the printed screenshot as required.
+
+![](/cn/ln1.jpg)
+
+**Steps:**
+
+1. Open Packet Tracer → Add **1 Switch** & **3 PCs**.
+2. Connect each PC to Switch using **Copper Straight cable**.
+3. Assign IP addresses:
+   - Right-click PC → **Desktop → IP Configuration**
+   - Set IPs: 192.168.1.2, 192.168.1.3, 192.168.1.4 (Subnet: 255.255.255.0).
+4. Test connectivity using **ping command** in Command Prompt.
+5. Transfer PDU → View results in Simulation.
+
+**Conclusion:** In this practical, we created and simulated point-to-point, hub, and switch-based networks using Cisco Packet Tracer. IP addresses were assigned, and connectivity was successfully tested using the ping (ICMP) protocol.
+
 ---
 
 ## Practical 05
@@ -178,5 +216,287 @@ Introduction to different types of wired transmission media
 | **Applications** | LANs, telephone, cable TV, fiber internet      | Wi-Fi, Bluetooth, cellular, satellite          |
 
 **Conclusion:** This experiment helps understand different types of wired transmission media, their characteristics, applications, and the key differences between various cables and communication methods, which are essential for designing and maintaining efficient networks.
+
+---
+
+## Practical 06
+
+**Aim:** Implementation of Dynamic Routing (Using RIP)
+
+**Exercise: Connect Two Networks Using Three Routers with RIP**
+
+**Router1:**
+
+1. Open CLI → `enable` → `configure terminal`
+2. Set hostname → `hostname Router1`
+3. Configure interfaces:
+   - `interface fastethernet 0/0` → `ip address 10.1.1.100 255.0.0.0` → `no shutdown`
+   - `interface fastethernet 1/0` → `ip address 20.1.1.100 255.0.0.0` → `no shutdown`
+4. Enable RIP →
+   - `router rip`
+   - `network 10.0.0.0`
+   - `network 20.0.0.0`
+
+**Router2:**
+
+1. Open CLI → `enable` → `configure terminal`
+2. Set hostname → `hostname Router2`
+3. Configure interfaces:
+   - `interface fastethernet 0/0` → `ip address 20.1.1.200 255.0.0.0` → `no shutdown`
+   - `interface fastethernet 1/0` → `ip address 30.1.1.100 255.0.0.0` → `no shutdown`
+4. Enable RIP →
+   - `router rip`
+   - `network 20.0.0.0`
+   - `network 30.0.0.0`
+
+**Router3:**
+
+1. Open CLI → `enable` → `configure terminal`
+2. Set hostname → `hostname Router3`
+3. Configure interfaces:
+   - `interface fastethernet 0/0` → `ip address 30.1.1.200 255.0.0.0` → `no shutdown`
+   - `interface fastethernet 1/0` → `ip address 40.1.1.100 255.0.0.0` → `no shutdown`
+4. Enable RIP →
+   - `router rip`
+   - `network 30.0.0.0`
+   - `network 40.0.0.0`
+
+**Verification:**
+
+- Use `ping <destination IP>` from PCs connected to the network to ensure connectivity.
+- Check routing table with `show ip route` to confirm RIP routes are learned.
+
+**Conclusion:** In this practical, three routers were successfully configured to connect two different networks using **RIP dynamic routing**. IP addresses and RIP networks were correctly set, allowing communication between all networks. The routing tables updated automatically, demonstrating the functionality of the **distance vector protocol**.
+
+---
+
+## Practical 07
+
+**Aim: Study of subnetting with an examples.**
+
+**1. If your client needs three groups, how will you create the groups? Find the IP range, host range, network ID, and broadcast ID of each group. (IP: 200.1.2.0)**
+
+**Ans.**
+
+- IP 200.1.2.0 is a **Class C** network.
+- Required groups = 3 → Use formula $2^n \ge \text{groups}$ → $2^2 = 4 \ge 3$ → 2 bits needed for subnetting.
+- New subnet mask = /26 → 255.255.255.192
+- Each subnet has 2^(8–2) = 64 addresses → 62 usable hosts
+
+| Group | Network ID  | Host Range                | Broadcast ID |
+| ----- | ----------- | ------------------------- | ------------ |
+| 1     | 200.1.2.0   | 200.1.2.1 – 200.1.2.62    | 200.1.2.63   |
+| 2     | 200.1.2.64  | 200.1.2.65 – 200.1.2.126  | 200.1.2.127  |
+| 3     | 200.1.2.128 | 200.1.2.129 – 200.1.2.190 | 200.1.2.191  |
+
+**2. In a Class B network on the internet has a subnet mask 255.255.240.0. What is the max. number of hosts per subnet?**
+
+**Ans.**
+
+- Given subnet mask = 255.255.240.0 → /20 (because 255.255.240.0 = 11111111.11111111.11110000.00000000 → 20 network bits)
+- Number of host bits = 32 – 20 = 12
+- Maximum addresses per subnet = 2^12 = 4096
+- Usable hosts per subnet = 2^12 – 2 = 4094
+- So, 4094 usable hosts per subnet
+
+**3. Given IP Address 172.16.0.0/25, find the number of subnets and the number of hosts per subnet. Also, for the first subnet block, find the subnet address, first host ID, last host ID and broadcast address.**
+
+**Ans.**
+
+- IP 172.16.0.0 is a **Class B** network.
+- Given subnet mask = /25 → 255.255.255.128
+- Number of subnet bits = 25 – 16 = 9 bits (because Class B default mask is /16)
+- Number of subnets = 2^9 = 512 subnets
+- Number of host bits = 32 – 25 = 7 bits
+- Number of hosts per subnet = 2^7 – 2 = 126 usable hosts
+
+**First Subnet Block:**
+
+| Parameter         | Address      |
+| ----------------- | ------------ |
+| Subnet Address    | 172.16.0.0   |
+| First Host ID     | 172.16.0.1   |
+| Last Host ID      | 172.16.0.126 |
+| Broadcast Address | 172.16.0.127 |
+
+**4. In the network 200.10.11.144/27, the fourth octet (in decimal) of the last IP address of the network which can be assigned to a host is:**
+
+- **Ans:** (A) 158
+
+**5. In the IPv4 addressing format, the number of networks allowed under Class C addresses is:**
+
+- **Ans:** (C) 2²¹
+
+**6. Suppose computers A and B have IP addresses 10.105.1.113 and 10.105.1.91 respectively and they both use the same net mask N. Which of the values of N given below should not be used if A and B should belong to the same network?**
+
+- **Ans:** (D) 255.255.255.224
+
+**7. If a Class B network on the Internet has a subnet mask of 255.255.248.0, what is the maximum number of hosts per subnet?**
+
+- **Ans:** (C) 2046
+
+**8. What is the broadcast address of the network 172.31.180.131/25 OR 172.31.180.128/25?**
+
+**Ans.**
+
+- **Case 1:** 172.31.180.131/25
+
+  - Subnet mask = 255.255.255.128 → /25 → 128 addresses per subnet
+  - Subnet range: 172.31.180.128 – 172.31.180.255
+  - Broadcast address = **172.31.180.255**
+  - Usable host range = 172.31.180.129 – 172.31.180.254
+
+- **Case 2:** 172.31.180.128/25
+  - Subnet mask = 255.255.255.128 → /25 → 128 addresses per subnet
+  - Subnet range: 172.31.180.128 – 172.31.180.255
+  - Broadcast address = **172.31.180.255**
+  - Usable host range = 172.31.180.129 – 172.31.180.254
+
+**9. What valid host range is the IP address 10.254.201.56/20 a part of?**
+
+**Ans.**
+
+- /20 → 255.255.240.0 → 4096 addresses per subnet
+- Network address: 10.254.192.0 (because 201 falls in 192–207 range for fourth octet)
+- Broadcast address: 10.254.207.255
+- Usable host range: **10.254.192.1 – 10.254.207.254**
+
+**10. How many subnets and hosts per subnet can you get from the network 172.28.0.0/23?**
+
+**Ans.**
+
+- IP 172.28.0.0 is a **Class B** network.
+- Given subnet mask = /23 → 255.255.254.0
+- Default Class B mask = /16 → Subnet bits = 23 – 16 = 7 bits
+- Number of subnets = 2^7 = 128 subnets
+- Host bits = 32 – 23 = 9 bits
+- Number of hosts per subnet = 2^9 – 2 = 510 usable hosts
+- So, Number of subnets: 128 and Hosts per subnet: 510
+
+**11. What is the last valid host on the subnetwork 172.19.156.0/23?**
+
+**Ans.**
+
+- IP 172.19.156.0 is a **Class B** network.
+- Subnet mask = /23 → 255.255.254.0
+- Number of host bits = 32 – 23 = 9 bits → 2^9 = 512 addresses per subnet
+- Network range: 172.19.156.0 – 172.19.157.255
+- Broadcast address = 172.19.157.255
+- **Last valid host** = broadcast – 1 = **172.19.157.254**
+
+**12. What valid host range is the IP address 192.168.206.28 and subnet mask 255.255.255.248 a part of?**
+
+**Ans.**
+
+- IP 192.168.206.28 is a **Class C** network.
+- Subnet mask = 255.255.255.248 → /29 → 8 addresses per subnet (2^3 = 8)
+- Network address = 192.168.206.24 (because 28 falls in 24–31 range)
+- Broadcast address = 192.168.206.31
+- Usable host range = 192.168.206.25 – 192.168.206.30
+
+**Conclusion:** In this practical, we studied subnetting by dividing larger networks into smaller subnets. We learned how to calculate network ID, broadcast ID, usable host range, number of subnets, and hosts per subnet for Class B and Class C networks. Subnetting helps efficiently utilize IP addresses, reduces broadcast traffic, and improves network management.
+
+---
+
+## Practical 08
+
+**Aim:** Understanding NAT (Network Address Translation) with example.
+
+**Exercise :**
+
+1. **What do you mean by NAT?**
+
+   - Network Address Translation (NAT) is a technique used in computer networks to **translate private IP addresses into public IP addresses** so that devices within a private network can communicate with external networks like the Internet. NAT helps conserve public IP addresses and provides a layer of security by hiding internal IP addresses.
+
+   - **Types of NAT:**
+
+     1. **Static NAT:** One-to-one mapping between a private IP and a public IP.
+     2. **Dynamic NAT:** Private IPs are mapped to a pool of public IPs dynamically.
+     3. **PAT (Port Address Translation) / NAT Overload:** Multiple private IPs share a single public IP using different ports.
+
+   - **Example:**
+     - Private IP: 192.168.1.10 → Public IP: 203.1.1.5 (Static NAT)
+     - This allows a device in the private network to access the Internet.
+
+**Conclusion:**
+
+- NAT allows multiple devices in a private network to **share a single public IP**.
+- It provides **security** by hiding internal IP addresses.
+- NAT is widely used in **home, office, and enterprise networks** to connect private networks to the Internet.
+
+---
+
+## Practical 09
+
+**Aim:** Perform routing using OSPF in packet tracer
+
+**Exercise:**
+
+1. **Which kind of protocol can be used by OSPF?**
+
+   - OSPF (Open Shortest Path First) is a **link-state routing protocol** that operates within an Autonomous System (AS). It uses the **Dijkstra algorithm** to calculate the shortest path to each network and exchanges routing information with other OSPF routers.
+
+2. **Differentiate OSPF with other protocols (RIP, IGRP, EIGRP, OSPF).**
+
+| Feature            | RIP             | IGRP              | EIGRP                           | OSPF                      |
+| ------------------ | --------------- | ----------------- | ------------------------------- | ------------------------- |
+| Protocol Type      | Distance Vector | Distance Vector   | Advanced DV / Hybrid            | Link-State                |
+| Metric             | Hop Count       | Bandwidth + Delay | Bandwidth + Delay + Reliability | Cost (based on bandwidth) |
+| Convergence Speed  | Slow            | Moderate          | Fast                            | Fast                      |
+| Scalability        | Small networks  | Medium networks   | Large networks                  | Large networks            |
+| Classful/Classless | Classful        | Classful          | Classless                       | Classless                 |
+
+**Conclusion:** In this practical, we learned how OSPF works as a link-state routing protocol. OSPF provides faster convergence, better scalability, and efficient routing compared to distance vector protocols like RIP and IGRP, making it suitable for large networks.
+
+---
+
+## Practical 10
+
+**Aim**: Configuration of DHCP server in packet tracer
+
+**Exercise**:
+
+- **IP Range**: 192.168.0.100 to 192.168.0.124
+- **Network ID**: 192.168.0.0
+- **Gateway and its subnet**: 192.168.0.1 and 255.255.255.0
+- **Excluded IP range from DHCP**: 192.168.0.1
+- **IP range for DHCP**: 192.168.0.100 to 192.168.0.124
+
+1. **What is scope?**
+
+   - **Scope in computer networks** means the **range where an address, message, or protocol is valid or can be used**. For example:
+   - **Link-local scope** → only within the same network segment.
+   - **Global scope** → across the internet.
+
+1. **List types of IP address allocation methods with its brief**
+
+   - Static Allocation:
+     - IP address is manually assigned to a device.
+     - It doesn’t change unless configured again.
+     - Used for servers, printers, or devices needing a fixed address.
+   - Dynamic Allocation (via DHCP):
+     - IP addresses are automatically assigned from a pool.
+     - The address can change over time.
+     - Used in most networks for client devices like laptops and smartphones.
+   - Automatic Allocation:
+     - Device generates its own IP address (e.g., using APIPA in Windows).
+     - Used when a DHCP server is unavailable.
+   - Manual Allocation:
+     - Similar to static allocation, but done by network administrators with specific planning.
+     - Ensures organized address management.
+   - Public vs Private Allocation:
+     - Public IP: Assigned by ISPs, reachable over the internet.
+     - Private IP: Used within local networks, not directly accessible from the internet.
+   - Reserved Allocation:
+     - Certain IP ranges are reserved for special purposes (e.g., loopback, multicast).
+     - Not assigned to typical devices.
+
+1. **What is IP reservation?**
+   - IP Reservation is a method where a specific IP address is permanently assigned to a particular device within a network, but the assignment is done through the Dynamic Host Configuration Protocol (DHCP) rather than manually configuring the device.
+   - The device requests an IP from the DHCP server.
+   - The DHCP server always assigns the same IP to that device based on its MAC address.
+   - It combines the flexibility of DHCP with the stability of a static IP.
+
+**Conclusion**: The practical successfully demonstrated the configuration of DHCP and its function in a network.
 
 ---
