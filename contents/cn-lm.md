@@ -279,7 +279,7 @@ Introduction to different types of wired transmission media
 **Ans.**
 
 - IP 200.1.2.0 is a **Class C** network.
-- Required groups = 3 → Use formula $2^n \ge \text{groups}$ → $2^2 = 4 \ge 3$ → 2 bits needed for subnetting.
+- Required groups = 3 → Use formula 2ⁿ ≥ groups → 2² = 4 ≥ 3 → 2 bits needed for subnetting.
 - New subnet mask = /26 → 255.255.255.192
 - Each subnet has 2^(8–2) = 64 addresses → 62 usable hosts
 
