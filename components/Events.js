@@ -2,55 +2,6 @@ import { useEffect, useState } from "react";
 
 const events = [
   {
-    title: "Silver Oak Foundation Day",
-    from: "2025-07-26",
-    to: "2025-07-26",
-    type: "event",
-    description: "Silver Oak Foundation Day",
-  },
-  {
-    title: "Rakshabandhan",
-    from: "2025-08-09",
-    to: "2025-08-09",
-    type: "holiday",
-    description: "Rakshabandhan Holiday",
-  },
-  {
-    title: "Independecne Day",
-    from: "2025-08-15",
-    to: "2025-08-15",
-    type: "holiday",
-    description: "Independence Day",
-  },
-  {
-    title: "Janmasthami",
-    from: "2025-08-16",
-    to: "2025-08-16",
-    type: "holiday",
-    description: "Janmasthami",
-  },
-  {
-    title: "Intermediate Exams",
-    from: "2025-08-18",
-    to: "2025-08-26",
-    type: "exams",
-    description: "Intermediate Exams",
-  },
-  {
-    title: "Ganesh Chaturthi",
-    from: "2025-08-27",
-    to: "2025-08-27",
-    type: "holiday",
-    description: "Ganesh Chaturthi",
-  },
-  {
-    title: "Result Declaration",
-    from: "2025-08-30",
-    to: "2025-08-30",
-    type: "result",
-    description: "Inermediate Exam Result Declaration",
-  },
-  {
     title: "Navratri Celebration",
     from: "2025-09-30",
     to: "2025-10-01",
@@ -86,11 +37,18 @@ const events = [
     description: "Diwali Vacation",
   },
   {
-    title: "Various Exams",
+    title: "Mid-Sem Remedial Exams",
     from: "2025-10-30",
     to: "2025-11-08",
     type: "exams",
-    description: "Mid-Sem Remedial | Internal Viva",
+    description: "Mid-Sem Remedial Exams",
+  },
+  {
+    title: "Internal Viva Exam",
+    from: "2025-10-30",
+    to: "2025-11-08",
+    type: "exams",
+    description: "Internal Viva Exam",
   },
   {
     title: "Term End",
@@ -104,7 +62,7 @@ const events = [
     from: "2025-11-13",
     to: "2025-11-13",
     type: "exams",
-    description: "End Semester Exam",
+    description: "End Semester Exam Theory & Practical",
   },
   {
     title: "Christmans",

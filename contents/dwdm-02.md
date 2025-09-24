@@ -5,7 +5,7 @@ slug: dwdm-02
 semester: 5
 image: /dwdm.jpg
 accent: "#1f6ac7"
-link:
+link: https://drive.google.com/file/d/1OvvVB9givg5wPnGEf4rtzobzzJpekLcK/view?usp=sharing
 ---
 
 ## Why Pre-process the Data?
