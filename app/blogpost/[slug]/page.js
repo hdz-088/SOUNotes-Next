@@ -194,6 +194,7 @@ import { transformerCopyButton } from "@rehype-pretty/transformers";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import OnThisPage from "@/components/onthispage";
+import { MessageCircle } from "lucide-react";
 
 const contentDirectory = path.join(process.cwd(), "contents");
 
@@ -269,6 +270,18 @@ export default async function BlogPostPage({ params }) {
           <button className="flex gap-2 bg-carddark px-4 py-2 rounded-full text-white">
             <img src="/form.png" width="20px" alt="Feedback" />
             Feedback
+          </button>
+        </a>
+        <a
+          href={`https://chatgpt.com/?hints=search&prompt=Read+'https%3A%2F%2Fsounotes.vercel.app%2Fblogpost/${encodeURIComponent(
+            data.slug
+          )}'+%20I+want+to+ask+questions+about+it.`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="flex gap-2 bg-carddark px-4 py-2 rounded-full text-white">
+            <MessageCircle />
+            Open with chatgpt
           </button>
         </a>
       </div>
