@@ -253,12 +253,12 @@ export default async function BlogPostPage({ params }) {
       <h1 className="text-4xl font-bold mb-4" style={{ color: "#ce9fc1" }}>
         {data.title}
       </h1>
-      <div className="flex flex-row gap-5 mb-4">
+      <div className="flex flex-row gap-5 mb-4 justify-center sm:justify-start">
         {data.link && (
           <a href={data.link} target="_blank" rel="noopener noreferrer">
             <button className="flex gap-2 bg-carddark px-4 py-2 rounded-full text-white">
-              <img src="/pdf.png" width="20px" alt="Download PDF" />
-              Download PDF
+              <img src="/pdf.png" width="30px" alt="Download PDF" />
+              <p className="hidden md:block">Download PDF</p>
             </button>
           </a>
         )}
@@ -268,8 +268,8 @@ export default async function BlogPostPage({ params }) {
           rel="noopener noreferrer"
         >
           <button className="flex gap-2 bg-carddark px-4 py-2 rounded-full text-white">
-            <img src="/form.png" width="20px" alt="Feedback" />
-            Feedback
+            <img src="/form.png" width="30px" alt="Feedback" />
+            <p className="hidden md:block">Feedback</p>
           </button>
         </a>
         <a
@@ -280,8 +280,8 @@ export default async function BlogPostPage({ params }) {
           rel="noopener noreferrer"
         >
           <button className="flex gap-2 bg-carddark px-4 py-2 rounded-full text-white">
-            <MessageCircle />
-            Open with chatgpt
+            <img src="/cyan.png" width="30px" alt="ChatGPT" />
+            <p className="hidden md:block">Open with ChatGPT</p>
           </button>
         </a>
       </div>
