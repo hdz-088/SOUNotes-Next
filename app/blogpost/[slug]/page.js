@@ -272,6 +272,7 @@ export default async function BlogPostPage({ params }) {
             <p className="hidden md:block">Feedback</p>
           </button>
         </a>
+        {/* Contribution by @Dhvanitmonpara */}
         <a
           href={`https://chatgpt.com/?hints=search&prompt=Read+'https%3A%2F%2Fsounotes.vercel.app%2Fblogpost/${encodeURIComponent(
             data.slug
