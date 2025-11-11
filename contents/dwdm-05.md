@@ -7,3 +7,5 @@ image: /dwdm.jpg
 accent: "#1f6ac7"
 link: https://drive.google.com/file/d/1xLXp9cOPTTwEq_PBuqF7XMIILAKNsk7W/view?usp=sharing
 ---
+
+This chapter is only available in PDF format.
