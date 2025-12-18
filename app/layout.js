@@ -22,7 +22,7 @@ export const themeColor = "#12121c";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-p-20 scroll-smooth">
+    <html lang="en" className="scroll-p-20 scroll-smooth" suppressHydrationWarning>
       <link rel="icon" href="/favicon.png" />
       <link rel="manifest" href="/manifest.json" />
       <meta name="theme-color" content="#12121c" />

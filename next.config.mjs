@@ -1,14 +1,48 @@
 import withPWA from "next-pwa";
+import fs from 'fs';
+import path from 'path';
 
 const nextConfig = {
   // Your Next.js configuration here
 };
 
+// Generate entries for all content files
+const contentsDir = path.join(process.cwd(), 'contents');
+const getAllFiles = (dirPath, arrayOfFiles) => {
+  const files = fs.readdirSync(dirPath);
+  arrayOfFiles = arrayOfFiles || [];
+  files.forEach((file) => {
+    if (fs.statSync(dirPath + "/" + file).isDirectory()) {
+      arrayOfFiles = getAllFiles(dirPath + "/" + file, arrayOfFiles);
+    } else if (file.endsWith('.md')) {
+      arrayOfFiles.push(path.basename(file, '.md'));
+    }
+  });
+  return arrayOfFiles;
+};
+
+const contentSlugs = getAllFiles(contentsDir);
+const contentRoutes = contentSlugs.map(slug => ({ url: `/blogpost/${slug}`, revision: null }));
+
+// Static routes
+const staticRoutes = [
+  { url: '/', revision: null },
+  { url: '/about', revision: null },
+  { url: '/semester1', revision: null },
+  { url: '/semester2', revision: null },
+  { url: '/semester3', revision: null },
+  { url: '/semester4', revision: null },
+  { url: '/semester5', revision: null },
+  { url: '/~offline', revision: null },
+];
+
 export default withPWA({
   dest: "public",
+  disable: process.env.NODE_ENV === "development",
   register: true,
   skipWaiting: true,
   buildExcludes: [/app-build-manifest.json$/],
+  additionalManifestEntries: [...staticRoutes, ...contentRoutes],
   runtimeCaching: [
     {
       urlPattern: /^https:\/\/fonts\.(?:gstatic)\.com\/.*/i,
@@ -122,14 +156,13 @@ export default withPWA({
     },
     {
       urlPattern: /\/api\/.*/i,
-      handler: 'NetworkFirst',
+      handler: 'StaleWhileRevalidate',
       options: {
         cacheName: 'apis',
         expiration: {
-          maxEntries: 16,
-          maxAgeSeconds: 24 * 60 * 60 // 24 hours
+          maxEntries: 50,
+          maxAgeSeconds: 7 * 24 * 60 * 60 // 7 days
         },
-        networkTimeoutSeconds: 10 // fall back to cache if api does not response within 10 seconds
       }
     },
     {
@@ -138,8 +171,8 @@ export default withPWA({
       options: {
         cacheName: "others",
         expiration: {
-          maxEntries: 32,
-          maxAgeSeconds: 24 * 60 * 60, // 24 hours
+          maxEntries: 500,
+          maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
         },
         networkTimeoutSeconds: 10,
       },
