@@ -5,17 +5,13 @@ import { useRouter } from "next/navigation";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import {
     Command,
+    CommandDialog,
     CommandEmpty,
     CommandGroup,
     CommandInput,
     CommandItem,
     CommandList,
 } from "@/components/ui/command";
-import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
-} from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 
 export function Search({ ...props }) {
@@ -64,50 +60,52 @@ export function Search({ ...props }) {
     }, []);
 
     return (
-        <Popover open={open} onOpenChange={setOpen}>
-            <PopoverTrigger asChild>
-                <button
-                    className={cn(
-                        "relative flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:ring-offset-1",
-                    )}
-                    {...props}
-                >
-                    <MagnifyingGlassIcon className="h-5 w-5" />
-                    <span className="sr-only">Search</span>
-                </button>
-            </PopoverTrigger>
-            <PopoverContent className="ml-4 mr-6 w-[94vw] sm:w-[300px] p-0" align="center">
-                <Command className="rounded-lg border shadow-md bg-navbar">
-                    <CommandInput
-                        placeholder="Search doc..."
-                        value={query}
-                        onValueChange={setQuery}
-                        autoFocus
-                    />
-                    <CommandList>
-                        <CommandEmpty>No results found.</CommandEmpty>
-                        <CommandGroup heading="Results">
-                            {filteredData.map((item) => (
-                                <CommandItem
-                                    key={item.slug}
-                                    value={item.title}
-                                    onSelect={() => {
-                                        runCommand(() => router.push(`/blogpost/${item.slug}`));
-                                    }}
-                                >
-                                    <div className="flex flex-col">
-                                        <span>{item.title}</span>
-                                        <span className="text-xs text-muted-foreground truncate max-w-[250px]">
-                                            {item.subject ? `${item.subject} • ` : ''}
-                                            {item.content.substring(0, 40) + "..."}
-                                        </span>
-                                    </div>
-                                </CommandItem>
-                            ))}
-                        </CommandGroup>
-                    </CommandList>
-                </Command>
-            </PopoverContent>
-        </Popover>
+        <>
+            <button
+                onClick={() => setOpen(true)}
+                className={cn(
+                    "relative flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:ring-offset-1",
+                )}
+                {...props}
+            >
+                <MagnifyingGlassIcon className="h-5 w-5" />
+                <span className="sr-only">Search</span>
+            </button>
+            <CommandDialog
+                open={open}
+                onOpenChange={setOpen}
+                className="fixed top-[15%] left-1/2 -translate-x-1/2 translate-y-0 bg-navbar text-white rounded-xl shadow-2xl max-w-[600px] w-[90vw]"
+            >
+                <CommandInput
+                    placeholder="Search doc..."
+                    value={query}
+                    onValueChange={setQuery}
+                    className="text-white placeholder:text-white/50 border-none focus:ring-0"
+                />
+                <CommandList className="text-white">
+                    {/* <CommandEmpty className="text-blue-100">No results found.</CommandEmpty> */}
+                    <CommandGroup heading="Results" className="text-white/80 [&_[cmdk-learning-heading]]:text-white/80">
+                        {filteredData.map((item) => (
+                            <CommandItem
+                                key={item.slug}
+                                value={item.title}
+                                onSelect={() => {
+                                    runCommand(() => router.push(`/blogpost/${item.slug}`));
+                                }}
+                                className="aria-selected:bg-background aria-selected:text-white"
+                            >
+                                <div className="flex flex-col">
+                                    <span className="font-medium text-white">{item.title}</span>
+                                    <span className="text-xs text-white/50 truncate max-w-[500px]">
+                                        {item.subject ? `${item.subject} • ` : ''}
+                                        {item.content.substring(0, 40) + "..."}
+                                    </span>
+                                </div>
+                            </CommandItem>
+                        ))}
+                    </CommandGroup>
+                </CommandList>
+            </CommandDialog>
+        </>
     );
 }
