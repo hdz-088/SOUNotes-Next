@@ -1,62 +1,6 @@
 import { useEffect, useState } from "react";
 
-const events = [
-  {
-    title: "Navratri Celebration",
-    from: "2025-09-30",
-    to: "2025-10-01",
-    type: "event",
-    description: "Navratri Celebration",
-  },
-  {
-    title: "Gandhi Jayanti",
-    from: "2025-10-02",
-    to: "2025-10-02",
-    type: "holiday",
-    description: "Gandhi Jayanti",
-  },
-  {
-    title: "Mid Sem Exam",
-    from: "2025-10-03",
-    to: "2025-10-11",
-    type: "exams",
-    description: "Mid Semester Exams",
-  },
-  {
-    title: "Result Declaration",
-    from: "2025-10-15",
-    to: "2025-10-15",
-    type: "result",
-    description: "Mid-Semester Exam Results",
-  },
-  {
-    title: "Diwali Vacation",
-    from: "2025-10-18",
-    to: "2025-10-26",
-    type: "holiday",
-    description: "Diwali Vacation",
-  },
-  {
-    title: "Mid-Sem Remedial Exams",
-    from: "2025-10-30",
-    to: "2025-11-08",
-    type: "exams",
-    description: "Mid-Sem Remedial Exams",
-  },
-  {
-    title: "Internal Viva Exam",
-    from: "2025-10-30",
-    to: "2025-11-08",
-    type: "exams",
-    description: "Internal Viva Exam",
-  },
-  {
-    title: "Term End",
-    from: "2025-11-08",
-    to: "2025-11-08",
-    type: "term",
-    description: "Term End",
-  },
+export const events = [
   {
     title: "End Semester Exams",
     from: "2025-11-13",
@@ -72,9 +16,16 @@ const events = [
     description: "Christmas",
   },
   {
+    title: "Semester 6",
+    from: "2025-12-22",
+    to: "2025-12-22",
+    type: "term",
+    description: "Semester 6",
+  },
+  {
     title: "End Sem Result",
     from: "2026-01-02",
-    to: "2026-01-002",
+    to: "2026-01-02",
     type: "result",
     description: "End Sem Result",
   },
@@ -109,21 +60,39 @@ export default function EventList() {
   };
 
   return (
-    <div className="flex flex-col gap-2 mt-4 items-center overflow-y-auto">
-      {filteredEvents.map((event, index) => (
-        <div
-          key={index}
-          className="bg-cardlight dark:bg-carddark shadow-lg w-[83%] p-4 rounded-md mb-4"
-        >
-          <h2 className={`text-xl font-semibold ${getTitleColor(event.type)}`}>
-            {event.title}
-          </h2>
-          <small>
-            {event.from} to {event.to}
-          </small>
-          <p>{event.description}</p>
-        </div>
-      ))}
+    <div className="flex flex-col gap-3 mt-4 w-full h-full overflow-y-auto pr-2">
+      {filteredEvents.length === 0 ? (
+        <div className="text-center text-muted-foreground p-4">No upcoming events</div>
+      ) : (
+        filteredEvents.map((event, index) => (
+          <div
+            key={index}
+            className="flex flex-col gap-1 p-3 rounded-lg border bg-cardlight dark:bg-carddark text-card-foreground shadow-sm transition-colors hover:bg-accent/50"
+          >
+            <div className="flex justify-between items-start">
+              <h3 className={`font-semibold leading-none ${getTitleColor(event.type)}`}>
+                {event.title}
+              </h3>
+              <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-sm">
+                {event.type.toUpperCase()}
+              </span>
+            </div>
+
+            <div className="text-sm text-foreground/80 mt-1">
+              {event.description}
+            </div>
+
+            <div className="flex items-center gap-2 mt-2 text-xs text-muted-foreground">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
+              {event.from === event.to ? (
+                <span>{new Date(event.from).toLocaleDateString()}</span>
+              ) : (
+                <span>{new Date(event.from).toLocaleDateString()} - {new Date(event.to).toLocaleDateString()}</span>
+              )}
+            </div>
+          </div>
+        ))
+      )}
     </div>
   );
 }

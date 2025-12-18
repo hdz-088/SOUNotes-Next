@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function About() {
   return (
     <main>
-      <section className="py-12 bg-gray-100 dark:bg-lavender">
+      <section className="py-12 bg-background">
         <div className="container px-4 mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-200 font-syne">
@@ -30,7 +30,7 @@ export default function About() {
                 <div className="flex-col justify-center p-6 rounded-3xl shadow-lg transform transition duration-500 hover:scale-105 text-center bg-cardlight dark:bg-carddark">
                   <img src="/feedback.png" className="p-4" />
                   <div className="mt-4">
-                    <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                    <h3 className="text-xl font-semibold text-foreground">
                       Feedback
                     </h3>
                   </div>
@@ -43,7 +43,7 @@ export default function About() {
                 <div className="flex-col justify-center p-6 rounded-3xl shadow-lg transform transition duration-500 hover:scale-105 text-center bg-cardlight dark:bg-carddark">
                   <img src="/github.png" className="p-4" />
                   <div className="mt-4">
-                    <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                    <h3 className="text-xl font-semibold text-foreground">
                       GitHub
                     </h3>
                   </div>
@@ -56,7 +56,7 @@ export default function About() {
                 <div className="flex-col justify-center p-6 rounded-3xl shadow-lg transform transition duration-500 hover:scale-105 text-center bg-cardlight dark:bg-carddark">
                   <img src="/telegram.png" className="p-4" />
                   <div className="mt-4">
-                    <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                    <h3 className="text-xl font-semibold text-foreground">
                       Telegram
                     </h3>
                   </div>

@@ -286,7 +286,7 @@ export default async function BlogPostPage({ params }) {
           </button>
         </a>
       </div>
-      <div className="flex flex-col sm:flex-row-reverse sm:justify-end sm:gap-20">
+      <div className="flex flex-col sm:flex-row-reverse sm:justify-between sm:gap-14">
         <OnThisPage htmlContent={htmlContent} />
         <div
           dangerouslySetInnerHTML={{ __html: htmlContent }}

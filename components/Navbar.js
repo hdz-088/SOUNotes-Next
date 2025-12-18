@@ -6,6 +6,7 @@ import LoadingBar from "react-top-loading-bar";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { SheetDemo } from "./side-btn";
+import { Search } from "./Search";
 // import { sidebar-btn } from "lucide-react";
 
 const Navbar = () => {
@@ -31,7 +32,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="p-4 bg-navbar sticky top-0 backdrop-blur z-10 border-b">
+    <nav className="p-4 bg-navbar sticky top-0 z-10 border-b">
       <LoadingBar
         color="#c397b8"
         progress={progress}
@@ -49,6 +50,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex flex-row gap-3 items-center">
+          <Search />
           <SheetDemo />
           <ModeToggle />
         </div>
