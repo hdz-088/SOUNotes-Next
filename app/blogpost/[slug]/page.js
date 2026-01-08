@@ -28,7 +28,7 @@ export async function generateStaticParams() {
 
 // This function runs on the server and fetches the data
 export default async function BlogPostPage({ params }) {
-  const { slug } = params; // Destructure slug from params
+  const { slug } = await params; // Destructure slug from params
   const filePath = path.join(contentDirectory, `${slug}.md`);
 
   // Check if the file exists

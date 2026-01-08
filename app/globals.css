@@ -23,7 +23,8 @@
     text-wrap: balance;
   }
 
-  h1 {
+  h1,
+  .heading {
     font-family: "Syne";
   }
 }

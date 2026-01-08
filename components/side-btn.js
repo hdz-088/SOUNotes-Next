@@ -64,9 +64,9 @@ export function SheetDemo() {
       <SheetContent>
         <SheetHeader>
           <SheetTitle>
-            <h1 className="text-xl text-[#ce9fc1] font-bold text-center">
+            <p className=" heading text-xl text-[#ce9fc1] font-bold text-center">
               Academic Calendar
-            </h1>
+            </p>
           </SheetTitle>
         </SheetHeader>
         <div className="flex flex-col gap-4 py-4 items-center">

@@ -64,7 +64,7 @@ export function Search({ ...props }) {
             <button
                 onClick={() => setOpen(true)}
                 className={cn(
-                    "relative flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:ring-offset-1",
+                    "relative flex h-10 w-10 items-center justify-center rounded-full  transition-colors hover:bg-muted focus:outline-none focus:ring-1 focus:ring-primary focus:ring-offset-1",
                 )}
                 {...props}
             >
@@ -74,17 +74,17 @@ export function Search({ ...props }) {
             <CommandDialog
                 open={open}
                 onOpenChange={setOpen}
-                className="fixed top-[15%] left-1/2 -translate-x-1/2 translate-y-0 bg-navbar text-white rounded-xl shadow-2xl max-w-[600px] w-[90vw]"
+                className="fixed top-[15%] left-1/2 -translate-x-1/2 translate-y-0 bg-navbar rounded-xl shadow-2xl max-w-[600px] w-[90vw]"
             >
                 <CommandInput
                     placeholder="Search doc..."
                     value={query}
                     onValueChange={setQuery}
-                    className="text-white placeholder:text-white/50 border-none focus:ring-0"
+                    className="border-none focus:ring-0"
                 />
-                <CommandList className="text-white">
+                <CommandList>
                     {/* <CommandEmpty className="text-blue-100">No results found.</CommandEmpty> */}
-                    <CommandGroup heading="Results" className="text-white/80 [&_[cmdk-learning-heading]]:text-white/80">
+                    <CommandGroup heading="Results">
                         {filteredData.map((item) => (
                             <CommandItem
                                 key={item.slug}
@@ -92,11 +92,11 @@ export function Search({ ...props }) {
                                 onSelect={() => {
                                     runCommand(() => router.push(`/blogpost/${item.slug}`));
                                 }}
-                                className="aria-selected:bg-background aria-selected:text-white"
+                                className="aria-selected:bg-background"
                             >
                                 <div className="flex flex-col">
-                                    <span className="font-medium text-white">{item.title}</span>
-                                    <span className="text-xs text-white/50 truncate max-w-[500px]">
+                                    <span className="font-medium">{item.title}</span>
+                                    <span className="text-xs truncate max-w-[500px]">
                                         {item.subject ? `${item.subject} • ` : ''}
                                         {item.content.substring(0, 40) + "..."}
                                     </span>

@@ -1,39 +1,44 @@
 import withPWA from "next-pwa";
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 const nextConfig = {
   // Your Next.js configuration here
+  // turbopack: {},
 };
 
 // Generate entries for all content files
-const contentsDir = path.join(process.cwd(), 'contents');
+const contentsDir = path.join(process.cwd(), "contents");
 const getAllFiles = (dirPath, arrayOfFiles) => {
   const files = fs.readdirSync(dirPath);
   arrayOfFiles = arrayOfFiles || [];
   files.forEach((file) => {
     if (fs.statSync(dirPath + "/" + file).isDirectory()) {
       arrayOfFiles = getAllFiles(dirPath + "/" + file, arrayOfFiles);
-    } else if (file.endsWith('.md')) {
-      arrayOfFiles.push(path.basename(file, '.md'));
+    } else if (file.endsWith(".md")) {
+      arrayOfFiles.push(path.basename(file, ".md"));
     }
   });
   return arrayOfFiles;
 };
 
 const contentSlugs = getAllFiles(contentsDir);
-const contentRoutes = contentSlugs.map(slug => ({ url: `/blogpost/${slug}`, revision: null }));
+const contentRoutes = contentSlugs.map((slug) => ({
+  url: `/blogpost/${slug}`,
+  revision: null,
+}));
 
 // Static routes
 const staticRoutes = [
-  { url: '/', revision: null },
-  { url: '/about', revision: null },
-  { url: '/semester1', revision: null },
-  { url: '/semester2', revision: null },
-  { url: '/semester3', revision: null },
-  { url: '/semester4', revision: null },
-  { url: '/semester5', revision: null },
-  { url: '/~offline', revision: null },
+  { url: "/", revision: null },
+  { url: "/about", revision: null },
+  { url: "/semester1", revision: null },
+  { url: "/semester2", revision: null },
+  { url: "/semester3", revision: null },
+  { url: "/semester4", revision: null },
+  { url: "/semester5", revision: null },
+  { url: "/semester6", revision: null },
+  { url: "/~offline", revision: null },
 ];
 
 export default withPWA({
@@ -145,25 +150,25 @@ export default withPWA({
     },
     {
       urlPattern: /\/(?:blogpost)\/.*/i,
-      handler: 'StaleWhileRevalidate',
+      handler: "StaleWhileRevalidate",
       options: {
-        cacheName: 'blog-posts',
+        cacheName: "blog-posts",
         expiration: {
           maxEntries: 50,
-          maxAgeSeconds: 24 * 60 * 60 // 24 hours
-        }
-      }
+          maxAgeSeconds: 24 * 60 * 60, // 24 hours
+        },
+      },
     },
     {
       urlPattern: /\/api\/.*/i,
-      handler: 'StaleWhileRevalidate',
+      handler: "StaleWhileRevalidate",
       options: {
-        cacheName: 'apis',
+        cacheName: "apis",
         expiration: {
           maxEntries: 50,
-          maxAgeSeconds: 7 * 24 * 60 * 60 // 7 days
+          maxAgeSeconds: 7 * 24 * 60 * 60, // 7 days
         },
-      }
+      },
     },
     {
       urlPattern: /.*/i,
