@@ -1,6 +1,6 @@
 ---
 header: DMBS-01
-title: DMBS Fundamentals of Digital Marketing & E-Business
+title: DMBS-01 Fundamentals of Digital Marketing & E-Business
 slug: dmbs-01
 semester: 6
 image: /dmbs.jpg
@@ -63,8 +63,9 @@ You search “Best shoes under ₹2000” on Google
 - You see ads
 - You watch YouTube reviews
 - You get Instagram ads
-- You buy online  
-  This complete process is Digital Marketing
+- You buy online
+
+This complete process is Digital Marketing
 
 ## Digital Marketing Platforms
 
@@ -300,9 +301,9 @@ You search “Best shoes under ₹2000” on Google
 - Measurable results such as clicks, views, and conversions.
 - Global reach and faster communication.
 
-## Limitations
-
 ![](/dmbs/1dmbs13.jpg)
+
+## Limitations
 
 - Requires internet access.
 - Technical knowledge is needed.
