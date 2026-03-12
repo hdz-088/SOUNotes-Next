@@ -8,6 +8,8 @@ accent: "#2d3a64"
 link:
 ---
 
+## Output PDF: [Link](https://drive.google.com/file/d/1gaIG8za_SxbCeTD7qAJNqay8RigUDlzd/view?usp=sharing)
+
 ## Practical 01
 
 **Aim:** Install Python and Jupyter Notebook and write a simple Python program to display a welcome message and perform basic arithmetic operations.
@@ -67,6 +69,13 @@ Multiplication = 50
 Division = 2.0
 ```
 
+**MCQs**
+
+1. C
+2. C
+3. C
+4. B
+
 **Conclusion:** Python and Jupyter Notebook were installed successfully, and a simple Python program was executed to display a welcome message and perform basic arithmetic operations.
 
 ---
@@ -103,6 +112,14 @@ pandas Version:  3.0.1
 matplotLib Version :  3.10.0
 sklearn Version :  1.8.0
 ```
+
+**MCQs**
+
+1. C
+2. C
+3. B
+4. C
+5. A
 
 **Conclusion:** The required Python libraries (NumPy, Pandas, Matplotlib, and scikit-learn) were successfully imported and their installed versions were displayed.
 
@@ -172,6 +189,14 @@ memory usage: 1.1 KB
 None
 ```
 
+**MCQs**
+
+1. B
+2. C
+3. B
+4. C
+5. C
+
 **Conclusion:** The CSV dataset was successfully loaded using Pandas, and the first five rows, last five rows, and basic information of the dataset were displayed.
 
 ---
@@ -225,6 +250,12 @@ plt.show()
 ![](/mldnn-lm/mldnn-lm-04-02.png)
 
 ![](/mldnn-lm/mldnn-lm-04-03.png)
+
+**MCQs**
+
+1. C
+2. C
+3. B
 
 **Conclusion:** The dataset was successfully visualized using Matplotlib by plotting a bar chart, line chart, and histogram.
 
@@ -304,6 +335,12 @@ print("Predicted marks for 6 hours:", prediction)
 ```
 
 ![](/mldnn-lm/mldnn-lm-05.png)
+
+**MCQs**
+
+1. B
+2. C
+3. B
 
 **Conclusion:** Simple Linear Regression was successfully implemented using scikit-learn to predict marks based on study hours.
 
@@ -399,6 +436,12 @@ plt.show()
 
 ![](/mldnn-lm/mldnn-lm-06-03.png)
 
+**MCQs**
+
+1. B
+2. D
+3. B
+
 **Conclusion:** Polynomial Regression was implemented and compared with Linear Regression. Polynomial Regression provided a better fit for the dataset when the relationship between variables was non-linear.
 
 ---
@@ -484,6 +527,12 @@ Classification Report:
 weighted avg       0.83      0.67      0.67         3
 ```
 
+**MCQs**
+
+1. C
+2. C
+3. C
+
 **Conclusion:** Logistic Regression was successfully implemented for a binary classification problem and the model performance was evaluated using accuracy, confusion matrix, and classification report.
 
 ---
@@ -555,6 +604,12 @@ K = 9 Accuracy = 1.0
 Predicted class: [0]
 ```
 
+**MCQs**
+
+1. B
+2. C
+3. D
+
 **Conclusion:** The K-Nearest Neighbors algorithm was implemented successfully. The model was trained with different values of **K**, and the accuracy scores were compared to analyze how the value of K affects classification performance.
 
 ---
@@ -624,6 +679,12 @@ Precision: 1.0
 Recall: 1.0
 F1 Score: 1.0
 ```
+
+**MCQs**
+
+1. C
+2. B
+3. C
 
 **Conclusion:** The classification model was successfully evaluated using Accuracy, Precision, Recall, and F1-Score metrics.
 
@@ -697,4 +758,240 @@ AUC Score: 1.0
 
 ![](/mldnn-lm/mldnn-lm-10.png)
 
+**MCQs**
+
+1. B
+2. A
+3. C
+
 **Conclusion:** The ROC curve was successfully plotted and the AUC score was calculated to evaluate the performance of the binary classification model.
+
+---
+
+## Practical 11
+
+**Aim:** Apply K-Means clustering on a dataset and visualize the formed cluster
+
+**Code/Steps:**
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import make_blobs
+from sklearn.cluster import KMeans
+
+X, y = make_blobs(
+    n_samples=300,
+    n_features=2,
+    centers=3,
+    cluster_std=1.0,
+    random_state=42
+)
+
+kMeans = KMeans(
+    n_clusters=3,
+    random_state=42,
+    n_init=10
+)
+
+kMeans.fit(X)
+
+labels = kMeans.predict(X)
+centroids = kMeans.cluster_centers_
+
+plt.figure()
+
+plt.scatter(X[:, 0], X[:, 1], c=labels)
+plt.scatter(centroids[:, 0], centroids[:, 1], marker='x', s=200)
+
+plt.title("KMeans Clustering")
+plt.xlabel("Feature 1")
+plt.ylabel("Feature 2")
+
+plt.show()
+```
+
+**Output:**
+
+**MCQs**
+
+1. B
+2. A
+3. B
+
+**Conclusion:** In this practical we applied K-mens clustering to group data into different clusters, the algorithm separated the clusters using visualization.
+
+---
+
+## Practical 12
+
+**Aim:** Perform hierarchical clustering on a dataset and plot the dendogram
+
+**Code/Steps:**
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import make_blobs
+from scipy.cluster.hierarchy import dendrogram, linkage
+from sklearn.cluster import AgglomerativeClustering
+
+X, y = make_blobs(
+    n_samples=200,
+    n_features=2,
+    centers=3,
+    cluster_std=1.0,
+    random_state=42
+)
+
+linked = linkage(X, method="ward")
+
+plt.figure()
+dendrogram(linked)
+plt.title("Hierarchical Clustering Dendrogram")
+plt.xlabel("Data points")
+plt.ylabel("Euclidean Distance")
+plt.show()
+
+model = AgglomerativeClustering(n_clusters=3, linkage="ward")
+
+labels = model.fit_predict(X)
+
+plt.figure()
+plt.scatter(X[:, 0], X[:, 1], c=labels)
+plt.title("Hierarchical Clustering Result")
+plt.xlabel("Feature 1")
+plt.ylabel("Feature 2")
+plt.show()
+```
+
+**Output:**
+
+**MCQs**
+
+1. B
+2. B
+3. B
+4. B
+
+**Conclusion:** In this practical we performed hierarchical clustering and plotted the dendogram. The dendogram helped visualize how data points are grouped step-by-step based on similarity.
+
+---
+
+## Practical 13
+
+**Aim:** Apply principal Component Analysis for dimensionality reduction on a dataset
+
+**Code/Steps:**
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+pca = PCA(n_components=2)
+X_pca = pca.fit_transform(X_scaled)
+
+print("Explained variance ratio:", pca.explained_variance_ratio_)
+print("Total variance retained:", pca.explained_variance_ratio_.sum())
+
+plt.figure()
+plt.scatter(X_pca[:, 0], X_pca[:, 1], c=y)
+plt.xlabel("Principal Component 1")
+plt.ylabel("Principal Component 2")
+plt.title("PCA Dimensionality Reduction (Iris Dataset)")
+plt.show()
+```
+
+**Output:**
+
+**MCQs**
+
+1. B
+2. D
+3. C
+   4.C
+
+**Conclusion:** In this practical we applied PCA to reduce the dataset dimensions while retaining maximum variance. The transformed data was visualized using a scatter plot to understand the reduced features clearl.
+
+---
+
+## Practical 14
+
+**Aim:** Implement a simple Perceptron model or basic Neural Network using scikit-learn or Keras and demonstrate training and prediction
+
+**Code/Steps:**
+
+```python
+import numpy as np
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import accuracy_score, classification_report
+from sklearn.linear_model import Perceptron
+
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+y_binary = (y == 0).astype(int)
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y_binary,
+    test_size=0.3,
+    random_state=42,
+    stratify=y_binary
+)
+
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
+model = Perceptron(max_iter=1000, tol=1e-3, random_state=42)
+
+model.fit(X_train_scaled, y_train)
+
+y_pred = model.predict(X_test_scaled)
+
+accuracy = accuracy_score(y_test, y_pred)
+
+print("Accuracy:", round(accuracy, 2))
+print("\nClassification Report:\n")
+print(classification_report(y_test, y_pred))
+```
+
+**Output:**
+
+```bash
+Classification Report:
+
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00        30
+           1       1.00      1.00      1.00        15
+
+    accuracy                           1.00        45
+   macro avg       1.00      1.00      1.00        45
+weighted avg       1.00      1.00      1.00        45
+
+Run completed in 11473.5ms
+```
+
+**MCQs**
+
+1. B
+2. C
+3. C
+
+**Conclusion:** In this practical we implemented a simple perception model, trained it on dataset and made predictions. The model performace was evaluated very accuracy.
+
+---
