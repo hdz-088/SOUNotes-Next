@@ -8,7 +8,7 @@ accent: "#2d3a64"
 link:
 ---
 
-## Output PDF: [Link](https://drive.google.com/file/d/1gaIG8za_SxbCeTD7qAJNqay8RigUDlzd/view?usp=sharing)
+## Output PDF: [Link](https://drive.google.com/file/d/1XvnO2xKbGB_giQJxbRMc3iapjA5vFaOw/view?usp=sharing)
 
 ## Practical 01
 

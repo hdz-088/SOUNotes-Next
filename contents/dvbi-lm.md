@@ -8,7 +8,7 @@ accent: "#ea9500"
 link:
 ---
 
-## Output PDF: [Link](https://drive.google.com/file/d/1TgAnY7AwfsBlzlVJh_wsqIJZ2RInpB28/view?usp=sharing)
+## Output PDF: [Link](https://drive.google.com/file/d/1BiFaNI3CWz4qloXXDwgGBMJcQHZ0SP40/view?usp=sharing)
 
 ## Practical 01
 
@@ -333,3 +333,148 @@ Step 7: Analyze the Dashboard
 **Conclusion**
 
 - A dashboard was successfully created using multiple visuals such as a clustered column chart, pie chart, and map to analyze sales data effectively.
+
+---
+
+## Practical 08
+
+**Aim:** Use DAX to create calculated columns (e.g., Customer Segmentation: High/Medium/Low value).
+
+**Steps:**
+
+Step 1: Load Dataset
+
+- Open Microsoft Power BI Desktop → Click Get Data → Excel → Select Sales_Data.xlsx → Choose the required sheet and click Load.
+
+Step 2: Create a Calculated Column using DAX
+
+- Go to the Modeling tab and click New Column.
+- In the formula bar, enter a DAX expression to classify customers based on Total_Sales values.
+
+Step 3: Enter the DAX Formula
+
+- Type the following formula and press Enter to create the segmentation column.
+
+```spreadsheet
+Customer_Segment =
+IF(Sales_Data[Total_Sales] >= 10000, "High Value",
+IF(Sales_Data[Total_Sales] >= 5000, "Medium Value",
+"Low Value"))
+```
+
+Step 4: Verify the Calculated Column
+
+- Switch to table View and check the new column Customer_Segment.
+- Ensure each row is categorized as High Value, Medium Value, or Low Value based on sales.
+
+Step 5: Create a Visualization for Customer Segmentation
+
+- Go to Report View and select Clustered Column Chart from the Visualizations pane.
+- Drag Customer_Segment to Axis and Total_Sales to Values to display sales contribution of each segment.
+
+Step 6: Format and Analyze the Visual
+
+- Turn on the chart title and rename it Customer Segmentation by Sales.
+- Adjust labels or colors if needed and observe how sales are distributed among High, Medium, and Low value customers.
+
+**Conclusion**
+
+- A calculated column was created using DAX to segment customers into High, Medium, and Low value groups, enabling better analysis through visualization.
+
+---
+
+## Practical 09
+
+**Aim:** Implement Time Intelligence DAX functions (YoY growth, MTD, QTD).
+
+**Steps:**
+
+Step 1: Load Dataset
+
+- Open Microsoft Power BI Desktop → Click Get Data → Excel → Select Sales_Data.xlsx → Choose the required sheet and click Load.
+
+Step 2: Create a Total Sales Measure
+
+- Go to the Modeling tab and click New Measure.
+- In the formula bar, create a measure to calculate total sales using the Total_Sales column.
+
+```spreadsheet
+Total Sales = SUM(Sales_Data[Total_Sales])
+```
+
+Step 3: Create MTD, QTD, and YTD Measures
+
+- In the Modeling tab, create three new measures to calculate sales performance for different time periods using Order_Date.
+
+```spreadsheet
+Sales MTD = TOTALMTD([Total Sales], Sales_Data[Order_Date])
+Sales QTD = TOTALQTD([Total Sales], Sales_Data[Order_Date])
+Sales YTD = TOTALYTD([Total Sales], Sales_Data[Order_Date])
+```
+
+Step 4: Prepare the Date Hierarchy
+
+- Go to Report View and ensure the Order_Date field is available with its date hierarchy.
+- Use the Year level from the Order_Date hierarchy for time-based analysis.
+
+Step 5: Create a Visualization for Time Analysis
+
+- Insert a Stacked Bar Chart from the Visualizations pane.
+- Drag Order_Date (Year) to the Y-axis and add Sales MTD, Sales QTD, and Sales YTD to the Values field.
+
+Step 6: Format and Analyze the Chart
+
+- Turn on data labels and rename the chart title to Time Intelligence Sales Analysis (MTD, QTD, YTD).
+- Observe how MTD, QTD, and YTD values compare across different years.
+
+**Conclusion**
+
+- Time intelligence functions were implemented using DAX to calculate MTD, QTD, and YTD sales, enabling comparison of sales performance across years.
+
+---
+
+## Practical 10
+
+**Aim:** Apply conditional formatting, themes, and company branding in dashboards.
+
+**Steps:**
+
+Step 1: Load Dataset
+
+- Open Microsoft Power BI Desktop → Click Get Data → Excel → Select Sales_Data.xlsx → Choose the required sheet and click Load.
+
+Step 2: Create Cards
+
+- In Report View, select the Card visual from the Visualizations pane.
+- Drag Total_Sales to the card to display Total Sales.
+- Create additional cards for Profit and Average Order Value to display key performance indicators.
+
+Step 3: Add a Slicer for Filtering
+
+- Select the Slicer visual from the Visualizations pane.
+- Drag the State field into the slicer so users can filter the dashboard by state.
+
+Step 4: Create Visual Charts
+
+- Insert a Stacked Bar Chart to show Time Intelligence Sales Analysis (MTD, QTD, YTD) by Year.
+- Insert a Pie Chart and drag Year to Legend and Total_Sales to Values to display yearly sales distribution.
+
+Step 5: Create a Table with Conditional Formatting
+
+- Insert a Table visual and add Category and Total_Sales fields.
+- Open the Format pane → Specific column → select Total_Sales → click the fx button next to Background color.
+- Choose Color scale so higher sales values appear darker.
+
+Step 6: Apply Theme and Branding
+
+- Go to the View tab and select a theme to apply consistent colors.
+- Insert a company logo using Insert → Image and add a Text box with the title "Sales Performance Dashboard".
+
+Step 7: Arrange and Finalize the Dashboard
+
+- Align cards, slicer, charts, and table neatly on the report page.
+- Ensure the theme, branding, and conditional formatting make the dashboard clear and visually appealing.
+
+**Conclusion**
+
+- Conditional formatting, themes, and company branding were successfully applied to create an interactive and visually appealing Power BI dashboard.
