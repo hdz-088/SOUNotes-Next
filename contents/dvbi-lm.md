@@ -51,6 +51,13 @@ Step 8: Apply Changes
 
 - Click Close & Apply to load the cleaned data into report view.
 
+**MCQs**
+
+1. B
+2. C
+3. C
+4. C
+
 **Conclusion**
 
 - Data was successfully imported and cleaned by removing duplicates and handling missing values, making it ready for analysis and visualization.
@@ -97,6 +104,12 @@ Step 6: Verify Relationship
 
 - Ensure the relationship line appears between tables in Model View.
 - Use fields from both tables in a visual to confirm proper data interaction.
+
+**MCQs**
+
+1. B
+2. A
+3. D
 
 **Conclusion**
 
@@ -147,6 +160,12 @@ Step 6: Use Measures in Visuals
 - Drag Total Sales, Profit, and Average Order Value into the visual.
 - Analyze the sales performance.
 
+**MCQs**
+
+1. C
+2. C
+3. C
+
 **Conclusion**
 
 - Sales analysis measures were successfully created using Sales_Data, enabling evaluation of total revenue, profit, and average order value.
@@ -194,6 +213,12 @@ Step 5: Format and Arrange Visuals
 - Use the Format pane to adjust titles, colors, and data labels.
 - Resize and align all visuals neatly on the report page.
 
+**MCQs**
+
+1. C
+2. C
+3. B
+
 **Conclusion**
 
 - Bar chart, line chart, and pie chart were successfully created using Sales_Data to analyze category-wise sales, monthly trends, and brand-wise sales distribution.
@@ -236,6 +261,12 @@ Step 5: Analyze the Map
 
 - Larger bubbles represent higher sales.
 - Hover over regions to see detailed sales values.
+
+**MCQs**
+
+1. C
+2. C
+3. B
 
 **Conclusion**
 
@@ -285,6 +316,12 @@ Step 7: Test Interactivity
 
 - Select different states from the slicer and observe how the Stacked Bar Chart dynamically updates.
 
+**MCQs**
+
+1. C
+2. B
+3. C
+
 **Conclusion**
 
 - Slicers and Top N filters were successfully used to create an interactive report that allows users to analyze category-wise sales for the top performing states.
@@ -329,6 +366,12 @@ Step 6: Format the Visuals
 Step 7: Analyze the Dashboard
 
 - Observe how the visuals display category-wise sales, quarterly distribution, and regional sales performance.
+
+**MCQs**
+
+1. B
+2. C
+3. A
 
 **Conclusion**
 
@@ -376,6 +419,12 @@ Step 6: Format and Analyze the Visual
 
 - Turn on the chart title and rename it Customer Segmentation by Sales.
 - Adjust labels or colors if needed and observe how sales are distributed among High, Medium, and Low value customers.
+
+**MCQs**
+
+1. B
+2. B
+3. C
 
 **Conclusion**
 
@@ -427,6 +476,12 @@ Step 6: Format and Analyze the Chart
 - Turn on data labels and rename the chart title to Time Intelligence Sales Analysis (MTD, QTD, YTD).
 - Observe how MTD, QTD, and YTD values compare across different years.
 
+**MCQs**
+
+1. B
+2. A
+3. B
+
 **Conclusion**
 
 - Time intelligence functions were implemented using DAX to calculate MTD, QTD, and YTD sales, enabling comparison of sales performance across years.
@@ -475,6 +530,14 @@ Step 7: Arrange and Finalize the Dashboard
 - Align cards, slicer, charts, and table neatly on the report page.
 - Ensure the theme, branding, and conditional formatting make the dashboard clear and visually appealing.
 
+**MCQs**
+
+1. C
+2. B
+3. C
+
 **Conclusion**
 
 - Conditional formatting, themes, and company branding were successfully applied to create an interactive and visually appealing Power BI dashboard.
+
+---
