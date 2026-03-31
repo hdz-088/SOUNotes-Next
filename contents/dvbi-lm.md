@@ -541,3 +541,261 @@ Step 7: Arrange and Finalize the Dashboard
 - Conditional formatting, themes, and company branding were successfully applied to create an interactive and visually appealing Power BI dashboard.
 
 ---
+
+## Practical 11
+
+**Aim:** Connect Power BI to SQL Database and merge with Excel/CSV data.
+
+**Steps:**
+
+Step 1: Open Power BI
+
+- Open Microsoft Power BI Desktop → Click Home tab.
+
+Step 2: Connect to SQL Database
+
+- Click Get Data → Select SQL Server.
+- Enter Server name and Database name.
+- Select Import mode → Click OK.
+- Choose the required table → Click Transform Data.
+
+Step 3: Load Excel/CSV Data
+
+- Click Get Data → Select Excel or Text/CSV.
+- Browse and select Sales_Data.xlsx (or CSV file) → Click Open.
+- Select the required sheet/table → Click Transform Data.
+
+Step 4: Open Power Query Editor
+
+- Ensure both SQL table and Excel/CSV data are visible in Power Query Editor.
+
+Step 5: Merge Data
+
+- Click Home tab → Click Merge Queries.
+- Select Excel/CSV table as primary table.
+- Select SQL table as secondary table.
+- Select common column (e.g., Category or Product_ID) in both tables.
+- Select Join Kind as Inner → Click OK.
+
+Step 6: Expand Merged Data
+
+- Click the expand icon in the merged column.
+- Select required fields from SQL table → Click OK.
+
+Step 7: Apply Changes
+
+- Click Close & Apply to load merged data into Power BI.
+
+Step 8: Verify Data
+
+- Go to Data View or Report View.
+- Check that merged columns appear correctly.
+
+**Output**
+
+- Data from Excel/CSV and secondary dataset was successfully loaded into Power BI.
+- Merge Queries operation was performed using a common column (Category).
+- Data from both sources was combined into a single unified table.
+- Merged columns were expanded and verified in Power Query Editor.
+- Final dataset was successfully displayed in Report View for analysis.
+
+**MCQs**
+
+1. C
+2. C
+3. B
+
+**Conclusion**
+
+- Power BI was successfully connected to a SQL database, and data was merged with Excel/CSV data to create a unified dataset for analysis.
+
+---
+
+## Practical 12
+
+**Aim:** Apply Grouping and Binning in Power BI to categorize products and segment customers by sales ranges.
+
+**Steps:**
+
+Step 1: Load Dataset
+
+- Open Microsoft Power BI Desktop → Click Get Data → Excel → Select Sales_Data.xlsx → Choose the required sheet → Click Load.
+
+Step 2: Create Product Grouping
+
+- Go to Report View.
+- In the Fields pane, right-click on Category → Click New Group.
+- In the Groups window, select CPU, Graphic Card, and MotherBoard → Click Group → Rename to Core Components.
+- Select Keyboard, Mouse, and Monitor → Click Group → Rename to Peripherals.
+- Select HDD, Cabinet, and Computer Case → Click Group → Rename to Storage/Accessories.
+- Click OK.
+
+Step 3: Verify Product Groups
+
+- Drag the newly created grouped field into a Table visual.
+- Check that products are correctly categorized.
+
+Step 4: Create Bins for Sales Segmentation
+
+- In the Fields pane, right-click on Total_Sales → Click New Group.
+- Select Bin → Set bin size to 5000 → Click OK.
+
+Step 5: Verify Bins
+
+- Drag Total_Sales (bins) into a Table visual.
+- Confirm that sales values are divided into ranges.
+
+Step 6: Create Visualization
+
+- Insert a Clustered Column Chart in Report View.
+- Drag Total_Sales (bins) to Axis.
+- Drag Total_Sales to Values.
+- Drag Category (Groups) to Legend.
+
+Step 7: Format and Analyze
+
+- Rename the chart title to "Sales Segmentation using Bins and Groups".
+- Turn on Data Labels.
+- Analyze the distribution of sales across bins and product groups.
+
+**MCQs**
+
+1. C
+2. C
+3. C
+
+**Conclusion**
+
+- Grouping and binning were successfully applied to categorize products and segment customers based on sales ranges, enabling better analysis and insights.
+
+---
+
+## Practical 13
+
+**Aim:** Create calculated tables and apply advanced DAX filtering techniques for analytical insights.
+
+**Steps:**
+
+Step 1: Load Dataset
+
+- Open Microsoft Power BI Desktop → Click Get Data → Excel → Select Sales_Data.xlsx → Choose the required sheet → Click Load.
+
+Step 2: Create a Calculated Table (Data Model)
+
+- Go to Modeling tab → Click New Table.
+- Enter the DAX formula:
+
+```spreadsheet
+Sales_Analysis =
+ADDCOLUMNS(
+    Sales_Data,
+    "Sales Category",
+    IF(Sales_Data[Total_Sales] > 10000, "High Sales", "Low Sales")
+)
+```
+
+- Press Enter.
+
+Step 3: Verify Table in Data View
+
+- Go to Data View.
+- Select Sales_Analysis table.
+- Confirm new column "Sales Category" is created.
+
+Step 4: Apply Advanced Filtering using DAX
+
+- Go to Modeling → Click New Measure.
+- Enter the formula:
+
+```spreadsheet
+High Sales Total =
+CALCULATE(
+    SUM(Sales_Analysis[Total_Sales]),
+    Sales_Analysis[Sales Category] = "High Sales"
+)
+```
+
+- Press Enter.
+
+Step 5: Create Visualization
+
+- Go to Report View.
+- Insert a Clustered Bar Chart.
+- Drag Category to Y-axis.
+- Drag Total_Sales to X-axis.
+- Drag Sales Category to Legend.
+
+Step 6: Add Filter-Based Insight
+
+- Insert a Card visual.
+- Drag High Sales Total measure to display filtered sales.
+
+Step 7: Format and Analyze
+
+- Rename chart title to "Sales Analysis using DAX Filtering".
+- Turn on Data Labels.
+- Observe differences between High Sales and Low Sales categories.
+- Analyze which categories contribute most to high sales.
+
+**MCQs**
+
+1. C
+2. B
+3. B
+
+**Conclusion**
+
+- A calculated table was created in the data model and advanced DAX filtering was applied to generate meaningful analytical insights, visualized using a clustered bar chart.
+
+---
+
+## Practical 14
+
+**Aim:** Publish Power BI reports to Power BI Service and configure an interactive report for data analysis.
+
+**Steps:**
+
+Step 1: Save the Report
+
+- Open Microsoft Power BI Desktop → Click File → Save As → Save the report with an appropriate name.
+
+Step 2: Sign in to Power BI
+
+- Click Sign In (top right corner) → Enter your Microsoft account credentials → Sign in.
+
+Step 3: Publish the Report
+
+- Click Home tab → Click Publish.
+- Select My Workspace → Click Select.
+- Wait for the message "Publish successful".
+
+Step 4: Open Power BI Service
+
+- Go to https://app.powerbi.com → Sign in → Open My Workspace.
+
+Step 5: Open the Published Report
+
+- In My Workspace, click on the published report.
+
+Step 6: Configure Report
+
+- Use slicers and filters available in the report.
+- Interact with visuals to explore data.
+- Ensure all visuals respond correctly.
+
+Step 7: Test Interactivity
+
+- Click on charts and slicers.
+- Verify that filtering and cross-highlighting work properly.
+
+**MCQs**
+
+1. B
+2. C
+3. B
+
+**Conclusion**
+
+- The Power BI report was successfully published and configured as an interactive report for effective data analysis and sharing.
+
+---
