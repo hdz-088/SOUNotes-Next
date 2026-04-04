@@ -8,586 +8,324 @@ accent: "#0070d2"
 link:
 ---
 
-## What is SEO?
+## Search Engine Optimization (SEO)
 
-- SEO stands for Search Engine Optimization
-- It is a systematic process of improving a website so that it appears naturally (organically) in search engine results when users search for something.
-- SEO is NOT: Advertising, One-time work, Magic ranking trick.
+- SEO stands for Search Engine Optimization.
+- It is the process of improving a website to increase its visibility in organic (non-paid) search engine results.
+- The main objective of SEO is to attract more relevant traffic by ranking higher on search engines like Google.
 
-## Simple Student Example
+### On-Page SEO
 
-- When you search on Google: “best hostel near college”
-- You trust results on:
-  - Page 1
-  - Top 5 links
-- You rarely go to:
-  - Page 2
-  - Page 3
-- SEO helps websites reach page 1
+On-Page SEO refers to all the optimization techniques that are implemented within the website to improve its search engine ranking and user experience.
 
-## Why SEO Exists?
+**1. Keyword Optimization**
 
-## From User Side:
+- Keyword optimization involves researching and strategically placing relevant keywords in the website content so that search engines can understand the topic of the page.
+- Example: Using the keyword “best digital marketing course” naturally in the title, headings, and content.
 
-**Users want:**
+**2. Title Tag Optimization**
 
-- Fast answers
-- Trustworthy websites
-- Relevant results
+- The title tag is the main heading that appears in search engine results, and it should clearly describe the content of the page while including the primary keyword.
+- Example: “Best Laptops Under 50000 – Latest Models with Reviews”.
 
-## From Google Side:
+**3. Meta Description Writing**
 
-**Google wants:**
+- A meta description is a short summary of the webpage that encourages users to click on the link by clearly explaining the benefit of the content.
+- Example: “Compare top laptops with price, features, and expert reviews. Find the best deal today.”
 
-- Happy users
-- Correct answers
-- Quality websites
+**4. Content Optimization**
 
-SEO is alignment between user needs and Google rules.
+- Content optimization means creating high-quality, informative, and structured content that answers user queries in detail and keeps the information updated.
+- Example: A detailed blog post explaining laptop features with tables, images, and FAQs.
 
-## Real-Time Example
+**5. URL Optimization**
 
-- Search: “How to apply for PAN card online”
-- Top websites:
-  - Government site
-  - Trusted blogs
-- Why?
-  - Accurate information
-  - Structured content
-  - High trust
+- URL optimization involves creating short, simple, and keyword-rich URLs that are easy for both users and search engines to understand.
+- Example: www.website.com/seo-techniques instead of www.website.com/page?id=12345.
 
-## How Search Engines Work
+**6. Image Optimization**
 
-**STEP 1: Crawling**
+- Image optimization includes adding descriptive file names and ALT text so that search engines can understand what the image represents.
+- Example: ALT text: “gaming laptop under 60000”.
 
-- Google uses bots (spiders)
-- How bots find pages:
-  - Through links
-  - Through sitemap
-  - Through URL submission
-- If a page:
-  - Has no links
-  - Is blocked
-- Google may never see it
+### Off-Page SEO
 
-**STEP 2: Indexing**
+Off-Page SEO refers to activities performed outside the website to improve its authority, credibility, and ranking in search engines.
 
-- After crawling, Google:
-  - Reads text
-  - Reads images
-  - Understands topic
-  - Stores page in database
-- Example:
-  - If your page talks about laptops
-  - Google stores it under “Technology → Laptops”
+**1. Backlinks**
 
-**STEP 3: Ranking**
+- Backlinks are links from other websites that direct users to your website, and they act as a signal of trust and authority.
+- Example: A popular education blog linking to your digital marketing course page.
 
-Google decides position using 200+ factors, including:
+**2. Social Media Promotion**
 
-- Keyword relevance
-- Content depth
-- Page speed
-- Mobile friendliness
-- Backlinks
-- User behavior
+- Sharing website content on social media platforms helps increase traffic and brand visibility.
+- Example: Promoting a blog article on Instagram and LinkedIn to attract more visitors.
 
-## Types of SEO
+**3. Online Reviews**
 
-**On-Page SEO**
+- Positive customer reviews improve brand credibility and influence search engine ranking for local businesses.
+- Example: A restaurant receiving high ratings on Google Reviews.
 
-- Everything done inside website:
-  - Content
-  - Keywords
-  - Headings
-  - Images
+**4. Brand Mentions**
 
-**Off-Page SEO**
+- When other websites or platforms mention your brand name, it increases online visibility and trust.
+- Example: A news article mentioning your company’s services.
 
-- Everything done outside website:
-  - Backlinks
-  - Mentions
-  - Reviews
+## Difference Between On-Page SEO and Off-Page SEO
 
-**Technical SEO**
+| Basis           | On-Page SEO                                                                                             | Off-Page SEO                                                                          |
+| --------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Meaning         | Optimization techniques applied within the website to improve ranking and user experience.              | Optimization activities performed outside the website to improve authority and trust. |
+| Focus           | Focuses on content, keywords, structure, and technical elements of the website.                         | Focuses on backlinks, brand reputation, and external signals.                         |
+| Control         | Fully controlled by the website owner.                                                                  | Not fully controlled, depends on external platforms and users.                        |
+| Main Techniques | Keyword optimization, title tags, meta description, URL structure, content quality, image optimization. | Backlinks, social media sharing, online reviews, brand mentions.                      |
+| Purpose         | Helps search engines understand website content clearly.                                                | Helps search engines determine website popularity and credibility.                    |
+| Example         | Writing optimized blog content with proper headings and keywords.                                       | Getting a backlink from a popular website or blog.                                    |
 
-- Website performance:
-  - Speed
-  - Mobile
-  - Security
+## Search Engine Marketing (SEM)
 
-## Real Industry SEO Flow
+- Search Engine Marketing (SEM) is a paid digital marketing technique used to increase the visibility of a website on search engine result pages (SERPs) by displaying advertisements.
+- Businesses pay search engines like Google to show their ads when users search for specific keywords.
+- It is mainly used for instant traffic and quick results.
 
-**Example: Education Website**
+**Why SEM is Used**
 
-1. Identify what students search (“digital marketing course syllabus”)
-2. Create detailed page
-3. Optimize content
-4. Promote content
-5. Track ranking
+- New websites do not rank quickly through SEO
+- Businesses want instant traffic and sales
+- High competition keywords are difficult to rank organically
+- Useful for time-based promotions
 
-SEO is continuous improvement
+## Pay-Per-Click (PPC)
 
-## Student Activity
+- PPC is a model of online advertising where advertisers pay only when a user clicks on their ad.
+- No click = No cost
+- It is cost-effective and performance-based
 
-**Google Observation Task**
+**Working of PPC Campaigns**
 
-- Students search one keyword
-- Identify:
-  - Ads
-  - Organic results
-  - Why top result is ranking
+**1. Business Goal Identification**
 
-## ON-PAGE SEO TECHNIQUES
+- Business decides the objective such as website traffic, sales, leads, or app downloads.
 
-## Keyword Research
+**2. Keyword Selection**
 
-**What is Keyword Research?**
+- Advertiser selects keywords that users search on Google.
+- Ads appear when users search those keywords.
 
-- It is the process of identifying:
-- What users search
-- How frequently
-- With what intention
+**3. Keyword Match Types**
 
-**Types of Keywords**
+- Broad match → wide reach
+- Phrase match → moderate control
+- Exact match → high control
+- Helps target the right audience and avoid unwanted clicks
 
-- Informational – “What is SEO”
-- Navigational – “Facebook login”
-- Transactional – “Buy laptop online”
+**4. Ad Copy Creation**
+
+- Ad includes headline, description, URL, and call-to-action (CTA).
+- Attractive ads increase click rate.
+
+**5. Landing Page**
+
+- User is directed to a landing page after clicking the ad.
+- Page should be fast, relevant, and mobile-friendly.
+
+**6. Budget and Bidding**
+
+- Advertiser sets daily budget and cost per click (CPC).
+- Helps control total spending.
+
+**Quality Score Concept**
+
+- Google gives a quality score based on:
+  - Keyword relevance
+  - Ad quality
+  - Landing page experience
+- Higher score → Lower cost and better ad position
 
 **Real-Time Example**
 
-- Keyword: “best phone under 20000”
-- User intent:
-  - Comparison
-  - Buying decision
+- Search: “buy running shoes online”
+- Top results marked as “Sponsored” are SEM ads
+- When user clicks → advertiser pays
+- When no click → no cost
 
-## How to Do Keyword Research
+## Social Media Marketing Strategies & User Engagement Techniques
 
-1. Think like user
-2. Use Google suggestions
-3. Use tools
-4. Analyze competition
+- Social Media Marketing refers to the use of social media platforms to promote products, services, or brands.
+- It helps businesses connect with customers, increase brand awareness, and drive sales.
 
-**Example Comparison:**
+### Social Media Marketing Strategies
 
-- Phone List : Best Smartphones Under 20000 in India (2026)
+**1. Creating Strong Online Presence**
 
-## Title Tag Optimization
+- Businesses create profiles on platforms like Instagram, Facebook, and YouTube.
+- Maintaining consistent branding, profile design, and regular activity helps build trust and visibility among users.
 
-**What is Title Tag?**
+**2. Content Marketing**
 
-- Main heading shown on Google
-- First impression for users
+- Businesses share valuable content such as images, videos, reels, blogs, and stories.
+- High-quality and informative content attracts users and keeps them engaged for a longer time.
 
-**Rules**
+**3. Influencer Marketing**
 
-- Max 60 characters
-- Keyword at beginning
-- Clear meaning
+- Businesses collaborate with influencers who have a large number of followers.
+- Influencers promote products in a relatable way, which increases trust and reaches a wider audience.
 
-## Meta Description
+**4. Paid Advertising**
 
-**Purpose**
+- Companies run paid ads on social media platforms to target specific users.
+- Ads can be customized based on age, location, interests, and behavior, increasing effectiveness.
 
-- Not ranking factor
-- Click-through factor
+**5. Data-Driven Marketing**
 
-**Real-Time Example:**
+- Businesses use analytics tools to track performance and understand customer behavior.
+- This helps in improving strategies and making better marketing decisions.
 
-- User sees 2 results: One explains clearly → user clicks
+### User Engagement Techniques
 
-**Writing Process**
+**1. Interactive Content**
 
-1. Understand user need
-2. Highlight benefit
-3. Add CTA
+- Businesses use polls, quizzes, contests, and live sessions to actively involve users.
+- This type of content encourages participation and makes users feel connected with the brand.
 
-## URL Optimization
+**2. Regular Communication**
 
-- Why clean URLs help
-- User trust
-- Easy sharing
+- Responding to comments, messages, and customer queries helps build strong relationships.
+- Quick and helpful replies increase customer satisfaction and trust.
 
-**Content Optimization**
+**3. Personalized Content**
 
-- What Google Likes:
-- Detailed answers
-- Structured content
-- Updated info
+- Businesses show content based on user preferences, interests, and past behavior.
+- Personalized recommendations make users feel valued and improve engagement.
 
-**Content Structure**
+**4. Consistent Posting**
 
-- Introduction
-- Subtopics
-- Examples
-- Summary
+- Posting content regularly keeps the audience updated and engaged with the brand.
+- It also helps maintain visibility in users’ feeds and strengthens brand recall.
 
-**Image SEO**
+**5. Use of Hashtags and Trends**
 
-- Google can’t see images
-- ALT text helps Google understand
+- Businesses use relevant and trending hashtags to make their content more discoverable.
+- Following current trends helps brands stay relevant and reach a larger audience.
 
-**Real-Time Example:**
+**6. Customer Feedback and Reviews**
 
-- Laptop review blog with : Table, Images, FAQs.
+- Encouraging customers to share their experiences through reviews and ratings builds credibility.
+- Positive feedback influences new customers and helps in improving products and services.
 
-## Search Engine Marketing (SEM) & Pay-Pre-Click (PPC)
+## Content Marketing
 
-## Meaning of Search Engine Marketing (SEM)
+- Content Marketing is a strategy of creating and sharing valuable, relevant, and consistent content to attract and engage a target audience.
+- It focuses on providing useful information rather than directly promoting products.
 
-- Search Engine Marketing (SEM) is a paid digital marketing technique used to increase the visibility of a website on search engine result pages (SERPs) by displaying advertisements.
-- In SEM, businesses pay search engines, mainly Google, to show their ads when users search for specific keywords. SEM is mainly used when businesses want immediate results, unlike SEO which takes time.
-- SEM is widely used by:
-  - E-commerce companies
-  - Service providers
-  - New startups
-  - Educational institutes
+### Importance
 
-## Why SEM is Required in Digital Marketing
+**1. Attracts Target Audience**
 
-**SEM is required because:**
+- High-quality content helps attract users who are actively searching for information.
+- It brings relevant traffic to websites and digital platforms.
 
-- New websites do not rank immediately on Google through SEO
-- Businesses want instant traffic and sales
-- Competitive keywords are difficult to rank organically
-- Time-based offers need quick visibility
-- For example, during festival sales or admission seasons, companies cannot wait for SEO results. They use SEM to appear instantly on Google.
+**2. Builds Brand Awareness**
 
-## Difference Between SEO and SEM
+- Regular content posting increases visibility of the brand.
+- It helps users recognize and remember the brand over time.
 
-- SEO focuses on organic (free) ranking, whereas SEM focuses on paid ranking.
-- SEO takes time but gives long-term results.
-- SEM gives instant visibility but stops once the budget is over.
-- In real business practice, companies use SEO + SEM together for better digital presence.
+**3. Improves Customer Engagement**
 
-## What is Pay-Per-Click (PPC)?
+- Informative and interesting content keeps users engaged.
+- It encourages likes, shares, comments, and interactions.
 
-- In real business practice, companies use SEO + SEM together for better digital presence.
-- In PPC, advertisers pay only when a user clicks on their ad, not when the ad is shown
-- This makes PPC cost-effective because:
-  - No click means no cost
-  - Advertisers can control budget
-  - Performance is measurable
+**4. Supports SEO (Search Engine Optimization)**
 
-## Real-Time Example of SEM & PPC
+- Good content improves website ranking on search engines.
+- Use of keywords and relevant topics helps in better visibility.
 
-- When a user searches: “buy running shoes online”
-- The top results marked as Sponsored are SEM ads.
-- If the user clicks on one ad, the advertiser pays Google a certain amount.
-- If the user does not click, no money is charged.
-- This is the real-time working of PPC.
+**5. Builds Trust and Credibility**
 
-## Google Ads Platform Overview
+- Providing valuable information builds trust among customers.
+- Customers are more likely to buy from brands they trust.
 
-Google Ads is Google’s advertising 21 platform used for SEM. Using Google Ads, businesses can:
+**6. Generates Leads and Conversions**
 
-- Create advertisements
-- Select keywords
-- Set budgets
-- Target specific audiences
-- Track ad performance
+- Content guides users through the buying process.
+- It helps convert visitors into customers through blogs, videos, and posts.
 
-Google Ads allows advertisers to show ads on:
+**7. Cost-Effective Marketing**
 
-- Google Search results
-- YouTube
-- Partner websites
+- Content marketing is cheaper compared to paid advertising.
+- It provides long-term benefits and continuous traffic.
 
-For SEM, Search Ads are most important.
+**8. Supports Other Marketing Strategies**
 
-## Complete SEM Implementation Flow
+- Content is used in social media marketing, email marketing, and SEO.
+- It strengthens overall digital marketing campaigns.
 
-**Step 1: Business Goal Identification**
+## Web Analytics
 
-- First, the advertiser decides the goal: Website traffic, Sales, Leads, App downloads
-- **Example:** An online shoe store wants more sales.
+- Web Analytics is the process of collecting, measuring, analyzing, and reporting website data.
+- It helps businesses understand how users interact with their website and digital campaigns.
 
-**Step 2: Keyword Selection**
+### Role of Web Analytics in Campaign Performance
 
-- Keywords are words or phrases that users type into Google.
-- **Example:** buy sports shoes online, running shoes for men
+**1. Tracking Website Traffic**
 
-Correct keyword selection is important because ads appear only when keywords match user searches.
+- Web analytics helps track the number of visitors coming to a website.
+- It shows traffic sources such as search engines, social media, or direct visits.
 
-**Step 3: Keyword Match Types**
+**2. Understanding User Behavior**
 
-- Google allows different keyword match types to control who sees ads: Broad match (wide reach), Phrase match (moderate control), Exact match (high control)
-- This helps advertisers avoid unnecessary clicks.
+- It analyzes how users navigate the website, which pages they visit, and how much time they spend.
+- This helps identify user interests and improve website experience.
 
-**Step 4: Ad Copy Creation**
+**3. Measuring Campaign Effectiveness**
 
-- An ad consists of: Headline, Description, Display URL, Call-to-Action (CTA)
-- **Example:**
-  - Headline: Buy Sports Shoes Online
-  - Description: Flat 30% Discount I Free Delivery
-  - CT A: Shop Now
-  - Good ad copy increases clicks.
+- Businesses can evaluate which marketing campaigns are performing well.
+- It helps identify successful channels and areas that need improvement.
 
-**Step 5: Landing Page Design**
+**4. Conversion Tracking**
 
-- A landing page is the page where users land after clicking the ad.
-- A good landing page should:
-  - Match the ad content
-  - Load fast
-  - Be mobile friendly
-  - Have clear action (Buy / Register Enquire)
-- Poor landing pages increase cost and reduce results.
+- Web analytics tracks actions such as purchases, sign-ups, or downloads.
+- It helps measure how many users complete desired goals.
 
-**Step 6: Budget and Bidding**
+**5. Data-Driven Decision Making**
 
-- Advertisers decide:
-  - Daily budget
-  - Maximum cost per click (CPC)
-- **Example:**
-  -  ₹500 per day budget
-  -  ₹10 per click -> 50 clicks per day
-  - This helps control spending.
+- Provides accurate data for improving marketing strategies.
+- Businesses can optimize campaigns based on real performance.
 
-## Quality Score Concept
+## Google Analytics
 
-Quality Score is a rating given by Google based on:
+- Google Analytics is a free web analytics tool provided by Google.
+- It helps track and analyze website traffic and user behavior in detail.
 
-- Keyword relevance
-- Ad relevance
-- Landing page experience
+### Role of Google Analytics in Campaign Performance
 
-A high Quality Score:
+**1. Real-Time Data Tracking**
 
-- Reduces cost per click
-- Improves ad position
+- Shows live data of users currently active on the website.
+- Helps monitor ongoing campaigns instantly.
 
-This means better ads pay less money.
+**2. Audience Analysis**
 
-## Performance Measurement in SEM
+- Provides information about user demographics, location, and interests.
+- Helps in targeting the right audience.
 
-**SEM performance is measured using:**
+**3. Traffic Source Analysis**
 
-- Impressions (how many times ad is shown)
-- Clicks (how many users clicked)
-- CTR (click-through rate)
-- CPC (cost per click)
-- Conversions (sales or leads)
+- Identifies where visitors are coming from such as organic search, paid ads, or social media.
+- Helps evaluate the effectiveness of different channels.
 
-These metrics help businesses decide whether the campaign is successful or not.
+**4. Behavior Analysis**
 
-## Common Mistakes in SEM
+- Tracks user actions like page views, bounce rate, and session duration.
+- Helps improve content and website performance.
 
-Students should understand that wrong SEM practices cause money loss:
+**5. Conversion and Goal Tracking**
 
-- Selecting wrong keywords
-- Ignoring negative keywords
-- Poor landing pages
-- No performance tracking
+- Measures specific goals such as purchases or registrations.
+- Helps calculate return on investment (ROI) of campaigns.
 
-SEM requires continuous monitoring and optimization.
+**6. Campaign Performance Evaluation**
 
-## Difference Between SEO & SEM
-
-![](/dmbs/2dmbs01.jpg)
-
-## SOCIAL MEDIA MARKETING PLATFORMS
-
-**Meaning of Social Media Marketing (SMM)**
-
-- Social Media Marketing is the process of using social media platforms to promote a brand, product, or service and to build a relationship with customers.
-- Unlike traditional marketing, social media marketing allows two-way communication, where customers can respond, comment, share, and interact with brands.
-
-**Social media marketing focuses on:**
-
-- Creating content
-- Sharing content
-- Engaging users
-- Building brand presence
-
-## Why Social Media Platforms are Important for Businesses
-
-People spend a large amount of time daily on social media platforms. Businesses use these platforms because:
-
-- Customers are already active there
-- Brand communication becomes easier
-- Marketing cost is lower than traditional media
-- Feedback is immediate
-- For example, a local café can promote offers on Instagram instead of spending money on newspapers.
-
-## Major Social Media Marketing Platforms and Their Use
-
-**Facebook**
-
-Facebook is useful for:
-
-- Business pages
-- Community building
-- Paid advertisements
-- Lead generation
-- Real-time example: Local coaching institutes run Facebook lead ads to collect student enquiry forms.
-
-**Instagram**
-
-Instagram focuses on:
-
-- Visual content
-- Reels and stories
-- Influencer marketing
-- Real-time example: Fashion brands promote
-- new collections through Instagram reels.
-
-**LinkedIn**
-
-LinkedIn is mainly used for:
-
-- Professional networking
-- B2B marketing
-- Job and recruitment marketing
-- Real-time example: IT companies promote corporate services on LinkedIn.
-
-**YouTube**
-
-YouTube is a video-based platform used for:
-
-- Brand storytelling
-- Tutorials
-- Product reviews
-- Real-time example: Educational channels upload lecture videos to attract students.
-
-## How to Implement Social Media Marketing Real-Time
-
-- Identify target audience
-- Select suitable platform
-- Create business profile
-- Plan content type
-- Post consistently
-- Monitor performance
-
-## Social Media Strategies & Engagement
-
-**Meaning of Social Media Strategy**
-
-- A social media strategy is a planned approach to:
-- What to post
-- When to post
-- Where to post
-- How to engage users
-- Without strategy, social media marketing becomes random and ineffective.
-
-## Types of Social Media Content
-
-Businesses use different content types:
-
-- Educational (tips, tutorials)
-- Promotional (offers, ads)
-- Entertaining (memes, reels)
-- Interactive (polls, quizzes)
-- Real-time example: Instagram polls increase audience interaction.
-
-**Engagement and Its Importance**
-
-- Engagement refers to how users interact with content: Likes, Comments, Shares, Saves.
-- Higher engagement means: Better visibility, Strong brand connection, Improved algorithm reach.
-
-**Hashtag Strategy**
-
-- Hashtags help content reach a wider audience.
-- Types: Trending hashtags, Niche hashtags, Brand hashtags
-- Example: #DigitalMarketing #StudentLife #SEO
-
-## Social Media Strategy Implementation Flow
-
-- Set goals (reach, engagement, leads)
-- Create content calendar
-- Decide posting frequency
-- Engage with audience
-- Analyze engagement metrics
-
-## CONTENT MARKETING
-
-**Meaning of Content Marketing**
-
-- Content marketing is the process of creating and sharing valuable content to attract, engage, and convert customers instead of directly selling products.
-- Content builds: Trust, Authority, Long-term relationship
-
-**Types of Content**
-
-- Blogs
-- Videos
-- Infographics
-- Podcasts
-- Case studies
-- Real-time example: Educational blogs attract students searching for career guidance
-
-## Content Marketing Funnel
-
-**Content marketing works in stages:**
-
-1. Awareness — Inform users
-2. Consideration — Compare solutions
-3. Conversion — Take action
-
-- Example: Blog → Video → Course registration
-
-## How to Implement Content Marketing
-
-- Identify target audience
-- Identify user problems
-- Create helpful content
-- Optimize content with SEO
-- Promote content on social media
-
-## Measuring Content Performance
-
-**Content success is measured by:**
-
-- Page views
-- Time spent
-- Shares
-- Conversions
-
-## Benefits of email Marketing for Affiliates
-
-![](/dmbs/2dmbs02.webp)
-
-## Email Marketing, Affiliate marketing & Web Analytics
-
-## PART A: EMAIL MARKETING
-
-**Meaning of Email Marketing**
-
-- Email marketing is sending emails to customers to: Inform, Promote, Retain customers
-- **Emails are used for:** Offers, Updates, Follow-ups
-- **Real-time example:** Amazon sends order confirmation and discount emails.
-
-**Email Marketing Implementation Flow**
-
-1. Collect email IDs
-2. Segment audience
-3. Create email content
-4. Send campaign
-5. Track results
-
-## PART B: AFFILIATE MARKETING
-
-**Meaning of Affiliate Marketing**
-
-- Affiliate marketing is a model where a person earns commission by promoting someone else’s product.
-- Example: YouTuber promotes Amazon products → earns commission per sale.
-
-**Affiliate Marketing Flow**
-
-1. Join affiliate program
-2. Select product
-3. Promote using content
-4. Earn commission
-
-## PART C: WEB ANALYTICS
-
-**Meaning of Web Analytics**
-
-- Web analytics is the process of measuring and analyzing website data to improve marketing decisions.
-- Google Analytics Metrics: Users, Sessions, Bounce rate, Conversion rate.
-
-**Importance of Analytics**
-Analytics helps businesses:
-
-- Understand user behavior
-- Improve weak pages
-- Increase conversions
+- Tracks performance of digital marketing campaigns using metrics like clicks, conversions, and engagement.
+- Helps in optimizing future campaigns.

@@ -8,7 +8,7 @@ accent: "#ea9500"
 link:
 ---
 
-## Output PDF: [Link](https://drive.google.com/file/d/1BiFaNI3CWz4qloXXDwgGBMJcQHZ0SP40/view?usp=sharing)
+## Output PDF: [Link](https://drive.google.com/file/d/1gARu8QsnvwBVcD1LiwaQMUBmenqpLA8F/view?usp=sharing)
 
 ## Practical 01
 

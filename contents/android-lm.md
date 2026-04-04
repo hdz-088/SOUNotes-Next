@@ -1,6 +1,6 @@
 ---
 header: AAD-LM
-title: android-lm
+title: Android Lab Manual
 slug: android-lm
 semester: 6
 image: /aad.jpg
