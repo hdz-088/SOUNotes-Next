@@ -8,11 +8,9 @@ accent: "#FF4341"
 link:
 ---
 
-# Practical 1
+## Practical 1
 
 **Aim:** Write a simple "Hello World" java program, compilation, debugging, executing using java compiler and interpreter.
-
-**Java Code:**
 
 ```java
 public class HelloWorld {
@@ -32,7 +30,7 @@ Hello, World!
 
 ---
 
-# Practical 2
+## Practical 2
 
 **Aim:** Write a program using the arithmetic operators to perform algebraic operations on two numbers `(+,-,*,/,%)`.
 
@@ -77,11 +75,9 @@ Modulo (a `%` b) = 2
 
 ---
 
-# Practical 3
+## Practical 3
 
 **Aim:** Write a java program to print the value of `x^n`. Input: x=5, n=3 Output: 125
-
-**Java Code:**
 
 ```java
 import java.util.Scanner;
@@ -120,11 +116,9 @@ Output: 125
 
 ---
 
-# Practical 4
+## Practical 4
 
 **Aim:** Write a program in Java to find a minimum of three numbers using a conditional operator.
-
-**Java Code:**
 
 ```java
 import java.util.Scanner;
@@ -164,11 +158,9 @@ Minimum number is: 7
 
 ---
 
-# Practical 5
+## Practical 5
 
 **Aim:** Write a program to print even numbers up to 10 using a while loop.
-
-**Java Code:**
 
 ```java
 public class EvenNumbers {
@@ -196,11 +188,9 @@ public class EvenNumbers {
 
 ---
 
-# Practical 6
+## Practical 6
 
 **Aim:** Write a Program to print Prime numbers between 1 to 100.
-
-**Java Code:**
 
 ```java
 public class PrimeNumbers {
@@ -233,11 +223,9 @@ Prime numbers between 1 and 100:
 
 ---
 
-# Practical 7
+## Practical 7
 
 **Aim:** Write a JAVA program to sort the elements of an array in ascending order.
-
-**Java Code:**
 
 ```java
 import java.util.Scanner;
@@ -291,11 +279,9 @@ Array in ascending order:
 
 ---
 
-# Practical 8
+## Practical 8
 
 **Aim:** Write a program in Java to multiply two matrixes. Declare a class Matrix where 2D array is declared as instance variable and array should be initialized, within class.
-
-**Java Code:**
 
 ```java
 class Matrix {
@@ -345,7 +331,7 @@ Result:
 
 ---
 
-# Practical 9
+## Practical 9
 
 **Aim:** Write a java program to check Armstrong number. Input: 153 Output: Armstrong number Input: 22 Output: not Armstrong number.
 
@@ -398,11 +384,9 @@ Not Armstrong number
 
 ---
 
-# Practical 10
+## Practical 10
 
 **Aim:** Write programs in Java to use the Wrapper class of each primitive data type.
-
-**Java Code:**
 
 ```java
 class test {
