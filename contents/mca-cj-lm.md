@@ -26,6 +26,14 @@ public class HelloWorld {
 Hello, World!
 ```
 
+**MCQs**
+
+1. B
+2. A
+3. B
+4. B
+5. B
+
 **Conclusion:** In this practical, we learned how to write, compile, and execute a basic Java program using the Java compiler (`javac`) and interpreter (`java`). We gained an understanding of the structure of a Java application, including the main method entry point and basic console output commands.
 
 ---
@@ -71,6 +79,14 @@ Division (a `/` b) = 3
 Modulo (a `%` b) = 2
 ```
 
+**MCQs**
+
+1. B
+2. C
+3. B
+4. B
+5. B
+
 **Conclusion:** In this practical, we successfully implemented basic arithmetic operators (`+`, `-`, `*`, `/`, `%`) in Java to perform algebraic operations on user-provided inputs. We understood how integer division computes quotients while the modulo operator evaluates the remainder.
 
 ---
@@ -111,6 +127,14 @@ Input x: 5
 Input n: 3
 Output: 125
 ```
+
+**MCQs**
+
+1. A
+2. B
+3. A
+4. B
+5. B
 
 **Conclusion:** In this practical, we demonstrated power calculation `(x^n)` in Java using iterative control structures (`for` loop). We learned how to accumulate multiplicative results across iterations to compute exponential values efficiently.
 
@@ -154,6 +178,14 @@ Enter third number: 12
 Minimum number is: 7
 ```
 
+**MCQs**
+
+1. A
+2. B
+3. B
+4. A
+5. B
+
 **Conclusion:** In this practical, we explored the usage of nested ternary (conditional) operators (`?:`) to find the minimum of three numbers. We understood how concise conditional expressions simplify decision-making logic without relying on verbose `if-else` blocks.
 
 ---
@@ -183,6 +215,14 @@ public class EvenNumbers {
 8
 10
 ```
+
+**MCQs**
+
+1. A
+2. A
+3. A
+4. B
+5. A
 
 **Conclusion:** In this practical, we learned how to utilize the `while` loop construct in Java to iterate and print even numbers sequentially up to 10. We understood loop initialization, condition evaluation, and increment operations.
 
@@ -218,6 +258,14 @@ public class PrimeNumbers {
 Prime numbers between 1 and 100:
 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
 ```
+
+**MCQs**
+
+1. C
+2. B
+3. A
+4. B
+5. B
 
 **Conclusion:** In this practical, we implemented nested loop logic and mathematical checks to identify prime numbers between 1 and 100. We learned how to optimize prime testing using `Math.sqrt()` and boolean flags.
 
@@ -275,6 +323,14 @@ Array in ascending order:
 15 25 25 35 36
 ```
 
+**MCQs**
+
+1. C
+2. A
+3. C
+4. C
+5. A
+
 **Conclusion:** In this practical, we implemented the Bubble Sort algorithm in Java to arrange array elements in ascending order. We gained practical knowledge of array traversal, index comparisons, and value swapping techniques.
 
 ---
@@ -326,6 +382,14 @@ Result:
 19 22
 43 50
 ```
+
+**MCQs**
+
+1. C
+2. B
+3. B
+4. C
+5. A
 
 **Conclusion:** In this practical, we developed an object-oriented Java program to perform 2D matrix multiplication. We learned object modeling, encapsulation of 2D arrays within classes, constructor initialization, and multi-dimensional loop indexing.
 
@@ -379,6 +443,14 @@ Armstrong number
 Enter a number: 22
 Not Armstrong number
 ```
+
+**MCQs**
+
+1. C
+2. B
+3. A
+4. B
+5. A
 
 **Conclusion:** In this practical, we created a program to verify whether a given integer is an Armstrong number. We understood digit extraction using modulus (`%`) and division (`/`) operators alongside power calculations with `Math.pow()`.
 
@@ -434,5 +506,13 @@ Double: 60.5
 Character: A
 Boolean: true
 ```
+
+**MCQs**
+
+1. B
+2. B
+3. B
+4. A
+5. A
 
 **Conclusion:** In this practical, we demonstrated the use of Wrapper classes for all primitive data types in Java and understood how primitive values can be represented as objects.

@@ -92,6 +92,14 @@ DROP TABLE clients;
 | DEPT_ID     | NUMBER(4)     | Yes      | Foreign Key     |
 | EMAIL       | VARCHAR2(100) | Yes      | —               |
 
+**MCQs**
+
+1. A
+2. B
+3. A
+4. A
+5. B
+
 **Conclusion:** DDL commands (CREATE, ALTER, TRUNCATE, and DROP) were successfully implemented to define, alter, truncate, and remove table structures in Oracle XE.
 
 ---
@@ -149,6 +157,14 @@ DELETE FROM employees WHERE emp_id = 110;
 | 107    | David      | Taylor    | 21-SEP-26 | 52000.00 | 30      | dtaylor@company.com     |
 | 108    | Laura      | Anderson  | 21-SEP-26 | 58000.00 | 20      | landerson@company.com   |
 | 109    | James      | Thomas    | 21-SEP-26 | 79200.00 | 10      | jthomas@company.com     |
+
+**MCQs**
+
+1. A
+2. B
+3. B
+4. B
+5. A
 
 **Conclusion:** DML statements (INSERT, UPDATE, DELETE) were successfully demonstrated using various methods to manage row-level data in Oracle XE.
 
@@ -282,6 +298,14 @@ WHERE email IS NOT NULL;
 | 108    | Laura      | Anderson  | landerson@company.com  |
 | 109    | James      | Thomas    | jthomas@company.com    |
 
+**MCQs**
+
+1. B
+2. B
+3. A
+4. B
+5. B
+
 **Conclusion:** The SELECT statement combined with comparison, logical, pattern matching (LIKE), set membership (IN), range (BETWEEN), and NULL test operators was successfully verified.
 
 ---
@@ -343,6 +367,14 @@ FROM dual;
 | MAX_DATE               | 23-MAR-27           |
 | CONVERTED_TIME         | 23-SEP-26           |
 
+**MCQs**
+
+1. B
+2. B
+3. A
+4. A
+5. B
+
 **Conclusion:** Built-in Oracle SQL date functions were successfully implemented to perform date manipulations, calculations, and conversions.
 
 ---
@@ -401,6 +433,14 @@ FROM DUAL;
 | TRUNC(125.678, 2)  | 125.67 |
 | TRUNC(125.678, 0)  | 125    |
 
+**MCQs**
+
+1. A
+2. B
+3. A
+4. B
+5. A
+
 **Conclusion:** Oracle SQL numeric functions were tested and validated for performing mathematical calculations and precision handling.
 
 ---
@@ -455,6 +495,14 @@ FROM DUAL;
 | ---------- | --------------------- | ------------- | ------: |
 | Silver     | Welcome to Oracle SQL | ABCDE Hello   |      15 |
 
+**MCQs**
+
+1. A
+2. A
+3. B
+4. B
+5. B
+
 **Conclusion:** Character and string manipulation functions in Oracle SQL were successfully executed and formatted.
 
 ---
@@ -505,6 +553,14 @@ GROUP BY dept_id;
 |      30 |          2 |               0 |               0 |           100000 |
 |      20 |          3 |               0 |          178000 |                0 |
 |      10 |          4 |          277200 |               0 |                0 |
+
+**MCQs**
+
+1. B
+2. B
+3. B
+4. A
+5. B
 
 **Conclusion:** SQL group (aggregate) functions along with the DECODE function were successfully used to aggregate and summarize dataset records.
 
@@ -578,5 +634,13 @@ ORDER BY average_salary DESC;
 | :------ | :------------- |
 | 10      | 69300          |
 | 20      | 59333.33       |
+
+**MCQs**
+
+1. A
+2. B
+3. B
+4. B
+5. B
 
 **Conclusion:** The GROUP BY, HAVING, and ORDER BY clauses were successfully implemented to group, filter, and sort the SQL query results.
