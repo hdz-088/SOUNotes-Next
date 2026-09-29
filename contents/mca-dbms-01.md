@@ -1,6 +1,6 @@
 ---
 header: DBMS-01
-title: DBMS 01 Introduction
+title: DBMS01-Introduction
 slug: mca-dbms-01
 semester: 7
 image: /rdbms.png

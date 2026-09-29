@@ -8,7 +8,7 @@ accent: "#FF4341"
 link:
 ---
 
-# CORE JAVA (CAM5001C)
+## CORE JAVA (CAM5001C)
 
 ## UNIT-01: INTRODUCTION TO JAVA (25%)
 
