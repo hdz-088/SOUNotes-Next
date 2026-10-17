@@ -644,3 +644,824 @@ ORDER BY average_salary DESC;
 5. B
 
 **Conclusion:** The GROUP BY, HAVING, and ORDER BY clauses were successfully implemented to group, filter, and sort the SQL query results.
+
+---
+
+## Practical 09
+
+**Aim:** Implement SQL queries using Set Operators like UNION, UNION ALL, INTERSECT, MINUS etc.
+
+**Description:** To understand and apply SQL set operators to combine, intersect, or find the difference between the result sets of two or more SELECT queries.
+
+**Code:**
+
+```sql
+-- 1. UNION (Combines and eliminates duplicate rows)
+SELECT emp_name FROM tech_team
+UNION
+SELECT emp_name FROM management_team;
+
+-- 2. UNION ALL (Combines including duplicate rows)
+SELECT emp_name FROM tech_team
+UNION ALL
+SELECT emp_name FROM management_team;
+
+-- 3. INTERSECT (Returns common rows in both queries)
+SELECT emp_name FROM tech_team
+INTERSECT
+SELECT emp_name FROM management_team;
+
+-- 4. MINUS (Returns rows in first query but not in second query)
+SELECT emp_name FROM tech_team
+MINUS
+SELECT emp_name FROM management_team;
+```
+
+**Output:**
+
+UNION Result (Unique list):
+
+| EMP_NAME |
+| -------- |
+| Alice    |
+| Bob      |
+| Charlie  |
+| David    |
+| Emma     |
+| Frank    |
+
+INTERSECT Result (Common names):
+
+| EMP_NAME |
+| -------- |
+| Charlie  |
+| David    |
+
+MINUS Result (Tech team only):
+
+| EMP_NAME |
+| -------- |
+| Alice    |
+| Bob      |
+
+**MCQs**
+
+1. A
+2. B
+3. B
+4. B
+5. A
+
+**Conclusion:** Set operators (UNION, UNION ALL, INTERSECT, MINUS) were successfully used to evaluate relationships between multiple query result sets.
+
+---
+
+## Practical 10
+
+**Aim:** Execute SQL queries for implementation of Inner Join and Cross Join.
+
+**Description:** To understand and implement the INNER JOIN to combine rows from two or more tables based on a related column, and the CROSS JOIN to produce the Cartesian product of two tables.
+
+**Code:**
+
+```sql
+-- 1. INNER JOIN (Retrieves records with matching values in both tables)
+SELECT
+    e.emp_id,
+    e.first_name || ' ' || e.last_name AS employee_name,
+    e.salary,
+    d.dept_name,
+    d.location
+FROM employees e
+INNER JOIN departments d ON e.dept_id = d.dept_id;
+
+-- 2. CROSS JOIN (Generates Cartesian product of two tables)
+SELECT
+    d.dept_name,
+    p.proj_name
+FROM departments d
+CROSS JOIN projects p;
+```
+
+**Output:**
+
+INNER JOIN Result:
+
+| EMP_ID | EMPLOYEE_NAME  | SALARY   | DEPT_NAME | LOCATION |
+| ------ | -------------- | -------- | --------- | -------- |
+| 101    | John Doe       | 66000.00 | IT        | New York |
+| 102    | Jane Smith     | 60500.00 | IT        | New York |
+| 103    | Robert Johnson | 70000.00 | HR        | Chicago  |
+| 104    | Emily Davis    | 50000.00 | HR        | Chicago  |
+| 105    | Michael Brown  | 48000.00 | Finance   | Boston   |
+
+CROSS JOIN Result (Cartesian Product):
+
+| DEPT_NAME | PROJ_NAME       |
+| --------- | --------------- |
+| IT        | Cloud Migration |
+| IT        | ERP Upgrade     |
+| HR        | Cloud Migration |
+| HR        | ERP Upgrade     |
+| Finance   | Cloud Migration |
+| Finance   | ERP Upgrade     |
+
+**MCQs**
+
+1. B
+2. B
+3. B
+4. B
+5. B
+
+**Conclusion:** Inner Join and Cross Join queries were successfully executed to combine related rows and calculate Cartesian products.
+
+---
+
+## Practical 11
+
+**Aim:** Execute SQL queries for implementation of Outer Join and Cross Join.
+
+**Description:** To understand and implement LEFT, RIGHT, and FULL OUTER JOINs to retrieve matching and non-matching rows between tables, along with the CROSS JOIN for Cartesian products.
+
+**Code:**
+
+```sql
+-- 1. LEFT OUTER JOIN (Returns all rows from left table and matched rows from right)
+SELECT
+    e.emp_id,
+    e.first_name,
+    d.dept_id,
+    d.dept_name
+FROM employees e
+LEFT OUTER JOIN departments d ON e.dept_id = d.dept_id;
+
+-- 2. RIGHT OUTER JOIN (Returns all rows from right table and matched rows from left)
+SELECT
+    e.emp_id,
+    e.first_name,
+    d.dept_id,
+    d.dept_name
+FROM employees e
+RIGHT OUTER JOIN departments d ON e.dept_id = d.dept_id;
+
+-- 3. FULL OUTER JOIN (Returns all rows when there is a match in left or right table)
+SELECT
+    e.emp_id,
+    e.first_name,
+    d.dept_id,
+    d.dept_name
+FROM employees e
+FULL OUTER JOIN departments d ON e.dept_id = d.dept_id;
+
+-- 4. CROSS JOIN (Cartesian product)
+SELECT
+    e.first_name,
+    d.dept_name
+FROM (SELECT first_name FROM employees WHERE ROWNUM <= 2) e
+CROSS JOIN departments d;
+```
+
+**Output:**
+
+LEFT OUTER JOIN Result:
+
+| EMP_ID | FIRST_NAME | DEPT_ID | DEPT_NAME |
+| ------ | ---------- | ------- | --------- |
+| 101    | John       | 10      | IT        |
+| 103    | Robert     | 20      | HR        |
+| 105    | Michael    | 30      | Finance   |
+
+FULL OUTER JOIN Result:
+
+| EMP_ID | FIRST_NAME | DEPT_ID | DEPT_NAME |
+| ------ | ---------- | ------- | --------- |
+| 101    | John       | 10      | IT        |
+| 102    | Jane       | 10      | IT        |
+| 103    | Robert     | 20      | HR        |
+| NULL   | NULL       | 40      | Marketing |
+
+**MCQs**
+
+1. B
+2. B
+3. B
+4. B
+5. B
+
+**Conclusion:** Outer joins (LEFT, RIGHT, FULL) and Cross joins were successfully implemented to query matched and unmatched database records.
+
+---
+
+## Practical 12
+
+**Aim:** Implementation of Views.
+
+**Description:** To understand and implement views in Oracle SQL as virtual tables derived from one or more base tables, including creating, querying, and updating data through views.
+
+**Code:**
+
+```sql
+-- 1. Creating a Simple View
+CREATE VIEW high_salary_emps AS
+SELECT emp_id, first_name, last_name, salary, dept_id
+FROM employees
+WHERE salary >= 60000;
+
+-- 2. Creating a Complex View using Join
+CREATE VIEW emp_department_summary AS
+SELECT
+    e.emp_id,
+    e.first_name || ' ' || e.last_name AS full_name,
+    e.salary,
+    d.dept_name,
+    d.location
+FROM employees e
+JOIN departments d ON e.dept_id = d.dept_id;
+
+-- 3. Querying Views
+SELECT * FROM high_salary_emps;
+SELECT * FROM emp_department_summary WHERE location = 'New York';
+
+-- 4. Dropping a View
+DROP VIEW high_salary_emps;
+```
+
+**Output:**
+
+```text
+View HIGH_SALARY_EMPS created.
+View EMP_DEPARTMENT_SUMMARY created.
+View HIGH_SALARY_EMPS dropped.
+```
+
+Data Output from `emp_department_summary` View:
+
+| EMP_ID | FULL_NAME    | SALARY   | DEPT_NAME | LOCATION |
+| ------ | ------------ | -------- | --------- | -------- |
+| 101    | John Doe     | 66000.00 | IT        | New York |
+| 102    | Jane Smith   | 60500.00 | IT        | New York |
+| 106    | Sarah Wilson | 71500.00 | IT        | New York |
+
+**MCQs**
+
+1. B
+2. B
+3. B
+4. A
+5. B
+
+**Conclusion:** Database views were successfully created, queried, and dropped, demonstrating their functionality as virtual tables.
+
+---
+
+## Practical 13
+
+**Aim:** Write a basic PL/SQL program to find whether a given number is even or odd using IF-THEN-ELSE.
+
+**Description:** To understand the basic structure of a PL/SQL block and implement conditional logic using IF-THEN-ELSE to determine whether a given number is even or odd.
+
+**Code:**
+
+```sql
+DECLARE
+    num NUMBER := 24;
+BEGIN
+    IF MOD(num, 2) = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('The number ' || num || ' is Even.');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('The number ' || num || ' is Odd.');
+    END IF;
+END;
+```
+
+**Output:**
+
+```text
+The number 24 is Even.
+```
+
+**MCQs**
+
+1. A
+2. B
+3. A
+4. B
+5. A
+
+**Conclusion:** A basic PL/SQL block using IF-THEN-ELSE logic was successfully implemented to identify even and odd numbers.
+
+---
+
+## Practical 14
+
+**Aim:** Write a basic PL/SQL program to find whether a given number is prime or not.
+
+**Description:** To implement a PL/SQL program using loops and conditional logic to determine whether a given number is a prime number by checking its divisibility.
+
+**Code:**
+
+```sql
+DECLARE
+    num NUMBER := 17;
+    i NUMBER := 2;
+    flag NUMBER := 1;
+BEGIN
+    FOR i IN 2..num/2 LOOP
+    IF MOD(num, i) = 0 THEN
+        flag := 0;
+        EXIT;
+    END IF;
+    IF flag = 1 THEN
+        DBMS_OUTPUT.PUT_LINE('The number ' || num || ' is Prime.');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('The number ' || num || ' is NOT Prime.');
+    END IF;
+END;
+```
+
+**Output:**
+
+```text
+The number 17 is Prime.
+```
+
+**MCQs**
+
+1. A
+2. B
+3. B
+4. C
+5. B
+
+**Conclusion:** A PL/SQL program combining WHILE loops and conditional constructs was successfully created to verify prime numbers.
+
+---
+
+## Practical 15
+
+**Aim:** Write a basic PL/SQL program to check whether a given number is divisible by 5 using IF-THEN-ELSE.
+
+**Description:** To implement conditional logic in PL/SQL using the modulus operator to check whether a given number is exactly divisible by 5.
+
+**Code:**
+
+```sql
+DECLARE
+    num NUMBER := 45;
+BEGIN
+    IF MOD(num, 5) = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('The number ' || num || ' is divisible by 5.');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('The number ' || num || ' is NOT divisible by 5.');
+    END IF;
+END;
+```
+
+**Output:**
+
+```text
+The number 45 is divisible by 5.
+```
+
+**MCQs**
+
+1. B
+2. A
+3. A
+4. B
+5. A
+
+**Conclusion:** Conditional evaluation using IF-THEN-ELSE and MOD operator was successfully implemented in PL/SQL.
+
+---
+
+## Practical 16
+
+**Aim:** Write a basic PL/SQL program using FOR loop to print numbers from 1 to 10.
+
+**Description:** To understand and implement the numeric FOR loop construct in PL/SQL to iterate through a defined range and print numbers sequentially.
+
+**Code:**
+
+```sql
+DECLARE
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Printing numbers from 1 to 10:');
+    FOR counter IN 1..10 LOOP
+        DBMS_OUTPUT.PUT_LINE('Number: ' || counter);
+    END LOOP;
+END;
+```
+
+**Output:**
+
+```text
+Printing numbers from 1 to 10:
+Number: 1
+Number: 2
+Number: 3
+Number: 4
+Number: 5
+Number: 6
+Number: 7
+Number: 8
+Number: 9
+Number: 10
+```
+
+**MCQs**
+
+1. B
+2. B
+3. B
+4. B
+5. B
+
+**Conclusion:** The numeric FOR loop construct was successfully executed in PL/SQL to generate sequential integer outputs.
+
+---
+
+## Practical 17
+
+**Aim:** Write a basic PL/SQL program using FOR loop to print even number series up to 50.
+
+**Description:** To implement a PL/SQL FOR loop combined with conditional logic or step increments to print the series of even numbers up to 50.
+
+**Code:**
+
+```sql
+-- Using Conditional Logic
+DECLARE
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Even numbers series up to 50:');
+    FOR num IN 1..50 LOOP
+        IF MOD(num, 2) = 0 THEN
+            DBMS_OUTPUT.PUT_LINE(num);
+        END IF;
+    END LOOP;
+END;
+```
+
+**Output:**
+
+```text
+Even numbers series up to 50:
+2
+4
+6
+8
+.
+.
+.
+46
+48
+50
+```
+
+**MCQs**
+
+1. A
+2. B
+3. B
+4. A
+5. B
+
+**Conclusion:** A PL/SQL numeric FOR loop with an embedded conditional filter was successfully used to output even numbers up to 50.
+
+---
+
+## Practical 18
+
+**Aim:** Write a basic PL/SQL program using FOR loop to print the multiplication table of a given number.
+
+**Description:** To implement a PL/SQL FOR loop to compute and display the multiplication table (1 to 10) of a given input number.
+
+**Code:**
+
+```sql
+DECLARE
+    num NUMBER := 7;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Multiplication Table of ' || num || ':');
+    FOR i IN 1..10 LOOP
+        DBMS_OUTPUT.PUT_LINE(num || ' x ' || i || ' = ' || (num * i));
+    END LOOP;
+END;
+```
+
+**Output:**
+
+```text
+PL/SQL procedure successfully completed.
+
+Multiplication Table of 7:
+7 x 1 = 7
+7 x 2 = 14
+7 x 3 = 21
+7 x 4 = 28
+7 x 5 = 35
+7 x 6 = 42
+7 x 7 = 49
+7 x 8 = 56
+7 x 9 = 63
+7 x 10 = 70
+```
+
+**MCQs**
+
+1. B
+2. B
+3. B
+4. A
+5. A
+
+**Conclusion:** A PL/SQL FOR loop was successfully executed to construct and display the multiplication table for a specified number.
+
+---
+
+## Practical 19
+
+**Aim:** Write a basic PL/SQL program using WHILE loop to print odd number series up to 50.
+
+**Description:** To understand and implement the WHILE loop construct in PL/SQL to generate and display the series of odd numbers up to 50.
+
+**Code:**
+
+```sql
+DECLARE
+    num NUMBER := 1;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Odd Numbers Series up to 50:');
+    WHILE num <= 50 LOOP
+        DBMS_OUTPUT.PUT_LINE(num);
+        num := num + 2;
+    END LOOP;
+END;
+```
+
+**Output:**
+
+```text
+Odd Numbers Series up to 50:
+1
+3
+5
+7
+.
+.
+.
+43
+45
+47
+49
+```
+
+**MCQs**
+
+1. A
+2. A
+3. A
+4. B
+5. B
+
+**Conclusion:** The WHILE loop structure was successfully implemented in PL/SQL to calculate and output odd numbers up to 50.
+
+---
+
+## Practical 20
+
+**Aim:** Write a basic PL/SQL program using WHILE loop to print the sum of numbers from 1 to 100.
+
+**Description:** To implement a WHILE loop in PL/SQL to accumulate and calculate the sum of numbers from 1 to 100 using a running total variable.
+
+**Code:**
+
+```sql
+DECLARE
+    i NUMBER := 1;
+    total NUMBER := 0;
+BEGIN
+    WHILE i <= 100 LOOP
+        total := total + i;
+        i := i + 1;
+    END LOOP;
+    DBMS_OUTPUT.PUT_LINE('The sum of numbers from 1 to 100 is: ' || total);
+END;
+```
+
+**Output:**
+
+```text
+The sum of numbers from 1 to 100 is: 5050
+```
+
+**MCQs**
+
+1. B
+2. B
+3. A
+4. B
+5. A
+
+**Conclusion:** Accumulation of values from 1 to 100 using a WHILE loop in PL/SQL was successfully executed.
+
+---
+
+## Practical 21
+
+**Aim:** Write a basic PL/SQL program using WHILE loop to print the Fibonacci series (0, 1, 1, 2, 3, 5, 8, 13...).
+
+**Description:** To implement a WHILE loop in PL/SQL to generate and display the Fibonacci series, where each number is the sum of the two preceding numbers.
+
+**Code:**
+
+```sql
+DECLARE
+    first_term NUMBER := 0;
+    second_term NUMBER := 1;
+    next_term NUMBER;
+    term_count NUMBER := 1;
+    total_terms NUMBER := 10;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Fibonacci Series up to ' || total_terms || ' terms:');
+    WHILE term_count <= total_terms LOOP
+        DBMS_OUTPUT.PUT_LINE(first_term);
+        next_term := first_term + second_term;
+        first_term := second_term;
+        second_term := next_term;
+        term_count := term_count + 1;
+    END LOOP;
+END;
+```
+
+**Output:**
+
+```text
+Fibonacci Series up to 10 terms:
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+```
+
+**MCQs**
+
+1. B
+2. B
+3. B
+4. A
+5. A
+
+**Conclusion:** A WHILE loop construct in PL/SQL was successfully designed to compute and display the Fibonacci sequence.
+
+---
+
+## Practical 22
+
+**Aim:** Write a PL/SQL program to implement implicit and explicit cursors.
+
+**Description:** To understand the concept of cursors in PL/SQL, including implicit cursors automatically created for DML/SELECT INTO statements, and explicit cursors declared and controlled explicitly for processing multi-row query results.
+
+**Code:**
+
+```sql
+-- Part 1: Implicit Cursor Example
+DECLARE
+    v_rows_affected NUMBER;
+BEGIN
+    UPDATE employees
+    SET salary = salary * 1.05
+    WHERE dept_id = 10;
+
+    IF SQL%FOUND THEN
+        v_rows_affected := SQL%ROWCOUNT;
+        DBMS_OUTPUT.PUT_LINE('Implicit Cursor: Successfully updated ' || v_rows_affected || ' rows.');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Implicit Cursor: No rows were updated.');
+    END IF;
+END;
+
+-- Part 2: Explicit Cursor Example
+DECLARE
+    CURSOR emp_cursor IS
+        SELECT emp_id, first_name, last_name, salary FROM employees WHERE dept_id = 10;
+
+    v_emp_id employees.emp_id%TYPE;
+    v_first_name employees.first_name%TYPE;
+    v_last_name employees.last_name%TYPE;
+    v_salary employees.salary%TYPE;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('--- Explicit Cursor Processing ---');
+    OPEN emp_cursor;
+    LOOP
+        FETCH emp_cursor INTO v_emp_id, v_first_name, v_last_name, v_salary;
+        EXIT WHEN emp_cursor%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE('ID: ' || v_emp_id || ' | Name: ' || v_first_name || ' ' || v_last_name || ' | Salary: $' || v_salary);
+    END LOOP;
+    CLOSE emp_cursor;
+END;
+```
+
+**Output:**
+
+```text
+Implicit Cursor: Successfully updated 4 rows.
+
+--- Explicit Cursor Processing ---
+ID: 101 | Name: John Doe | Salary: $69300
+ID: 102 | Name: Jane Smith | Salary: $63525
+ID: 106 | Name: Sarah Wilson | Salary: $75075
+ID: 109 | Name: James Thomas | Salary: $83160
+```
+
+**MCQs**
+
+1. B
+2. C
+3. B
+4. A
+5. A
+
+**Conclusion:** Both implicit cursors (SQL%FOUND, SQL%ROWCOUNT) and explicit cursors (OPEN, FETCH, CLOSE loop) were successfully implemented to manage database rows in PL/SQL.
+
+---
+
+## Practical 23
+
+**Aim:** Write PL/SQL programs based on Exception Handling (Predefined and User-defined Exceptions).
+
+**Description:** To understand and implement exception handling in PL/SQL using predefined exceptions such as NO_DATA_FOUND and ZERO_DIVIDE, as well as user-defined exceptions raised explicitly using RAISE.
+
+**Code:**
+
+```sql
+-- 1. Predefined Exception: ZERO_DIVIDE
+DECLARE
+    num_a NUMBER := 100;
+    num_b NUMBER := 0;
+    result NUMBER;
+BEGIN
+    result := num_a / num_b;
+    DBMS_OUTPUT.PUT_LINE('Result: ' || result);
+EXCEPTION
+    WHEN ZERO_DIVIDE THEN
+        DBMS_OUTPUT.PUT_LINE('Predefined Exception Caught: Division by zero is undefined.');
+END;
+
+-- 2. Predefined Exception: NO_DATA_FOUND
+DECLARE
+    v_emp_name employees.first_name%TYPE;
+BEGIN
+    SELECT first_name INTO v_emp_name FROM employees WHERE emp_id = 999;
+    DBMS_OUTPUT.PUT_LINE('Employee Name: ' || v_emp_name);
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('Predefined Exception Caught: No employee found with ID 999.');
+END;
+
+-- 3. User-Defined Exception
+DECLARE
+    account_balance NUMBER := 500;
+    withdraw_amount NUMBER := 1000;
+    insufficient_funds EXCEPTION;
+BEGIN
+    IF withdraw_amount > account_balance THEN
+        RAISE insufficient_funds;
+    ELSE
+        account_balance := account_balance - withdraw_amount;
+        DBMS_OUTPUT.PUT_LINE('Withdrawal successful.');
+    END IF;
+EXCEPTION
+    WHEN insufficient_funds THEN
+        DBMS_OUTPUT.PUT_LINE('User-Defined Exception Caught: Insufficient funds in account balance.');
+END;
+```
+
+**Output:**
+
+```text
+Predefined Exception Caught: Division by zero is undefined.
+
+Predefined Exception Caught: No employee found with ID 999.
+
+User-Defined Exception Caught: Insufficient funds in account balance.
+```
+
+**MCQs**
+
+1. A
+2. B
+3. A
+4. B
+5. A
+
+**Conclusion:** System predefined exceptions (ZERO_DIVIDE, NO_DATA_FOUND) and user-defined custom exceptions were successfully handled in PL/SQL.
+
+---
