@@ -1642,7 +1642,7 @@ In this practical, we implemented multiple inheritance in Java using the `Exam` 
 
 ---
 
-# Practical 26
+## Practical 26
 
 **Aim:** Write a Java Program for Multithreading.
 
@@ -1707,7 +1707,7 @@ In this practical, we implemented multithreading in Java by extending the `Threa
 
 ---
 
-# Practical 27
+## Practical 27
 
 **Aim:** Write a java program to implement Generic class Number_1 for both data type int and float in java.
 
@@ -1765,7 +1765,7 @@ In this practical, we created a generic class (`Number_1<T extends Number>`) acc
 
 ---
 
-# Practical 28
+## Practical 28
 
 **Aim:** Write a Java program to implement a generic class that stores multiple elements of any data type using a Collection Framework (ArrayList). The program should allow adding elements, sorting them using Comparable, and then displaying them. Demonstrate the program with both String and Integer data types.
 
@@ -1850,7 +1850,7 @@ In this practical, we utilized the Java Collection Framework's `ArrayList` withi
 
 ---
 
-# Practical 29
+## Practical 29
 
 **Aim:** Write a program for Java Generics class for Sorting operations: 1. Sorting a list according to natural ordering of elements 2. Reversing sort order 3. Sorting a list whose elements of a custom type 4. Sorting a list using a Comparator.
 
@@ -1941,7 +1941,7 @@ In this practical, we implemented various sorting operations using Java Generics
 
 ---
 
-# Practical 30
+## Practical 30
 
 **Aim:** Write a Java program to demonstrate the use of Date and Calendar classes to extract the current date, year, month, and day. Format the date using the Formatter class with varargs .
 
