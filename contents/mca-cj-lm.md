@@ -1639,3 +1639,368 @@ Average: 48 | Division: No division
 
 **Conclusion:**
 In this practical, we implemented multiple inheritance in Java using the `Exam` and `Classify` interfaces within a `Result` class. We understood how interfaces define behavioral contracts for evaluating pass status and division classifications.
+
+---
+
+# Practical 26
+
+**Aim:** Write a Java Program for Multithreading.
+
+**Java Code:**
+
+```java
+class NumberPrinter extends Thread {
+    @Override
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(Thread.currentThread().getName() + " - Count: " + i);
+            try {
+                Thread.sleep(500); // Sleep for 500 milliseconds
+            } catch (InterruptedException e) {
+                System.out.println("Thread interrupted!");
+            }
+        }
+    }
+}
+
+public class MultithreadingDemo {
+    public static void main(String[] args) {
+        NumberPrinter thread1 = new NumberPrinter();
+        NumberPrinter thread2 = new NumberPrinter();
+
+        thread1.setName("Thread-Alpha");
+        thread2.setName("Thread-Beta");
+
+        System.out.println("Starting Concurrent Threads...");
+        thread1.start(); // Starts execution of thread1
+        thread2.start(); // Starts execution of thread2
+    }
+}
+```
+
+**Output:**
+
+```sh
+Starting Concurrent Threads...
+Thread-Alpha - Count: 1
+Thread-Beta - Count: 1
+Thread-Alpha - Count: 2
+Thread-Beta - Count: 2
+Thread-Alpha - Count: 3
+Thread-Beta - Count: 3
+Thread-Alpha - Count: 4
+Thread-Beta - Count: 4
+Thread-Alpha - Count: 5
+Thread-Beta - Count: 5
+```
+
+**MCQs**
+
+1. B
+2. B
+3. B
+4. B
+5. B
+
+**Conclusion:**
+In this practical, we implemented multithreading in Java by extending the `Thread` class and overriding the `run()` method. We observed concurrent thread execution and managed thread timing using `Thread.sleep()`.
+
+---
+
+# Practical 27
+
+**Aim:** Write a java program to implement Generic class Number_1 for both data type int and float in java.
+
+**Java Code:**
+
+```java
+class Number_1<T extends Number> {
+    private T num;
+
+    public Number_1(T num) {
+        this.num = num;
+    }
+
+    public double getSquare() {
+        return num.doubleValue() * num.doubleValue();
+    }
+
+    public void display() {
+        System.out.println("Value: " + num + " | Square: " + getSquare());
+    }
+}
+
+public class GenericNumberDemo {
+    public static void main(String[] args) {
+        // Integer instantiation
+        Number_1<Integer> intObj = new Number_1<>(5);
+        System.out.print("Integer Generic: ");
+        intObj.display();
+
+        // Float instantiation
+        Number_1<Float> floatObj = new Number_1<>(4.5f);
+        System.out.print("Float Generic: ");
+        floatObj.display();
+    }
+}
+```
+
+**Output:**
+
+```sh
+Integer Generic: Value: 5 | Square: 25.0
+Float Generic: Value: 4.5 | Square: 20.25
+```
+
+**MCQs**
+
+1. A
+2. A
+3. A
+4. A
+5. B
+
+**Conclusion:**
+In this practical, we created a generic class (`Number_1<T extends Number>`) accepting both integer and floating-point data types. We learned how bounded type parameters deliver type-safe mathematical calculations across different numeric types.
+
+---
+
+# Practical 28
+
+**Aim:** Write a Java program to implement a generic class that stores multiple elements of any data type using a Collection Framework (ArrayList). The program should allow adding elements, sorting them using Comparable, and then displaying them. Demonstrate the program with both String and Integer data types.
+
+**Java Code:**
+
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+class GenericContainer<T extends Comparable<T>> {
+    private List<T> list = new ArrayList<>();
+
+    public void addElement(T element) {
+        list.add(element);
+    }
+
+    public void sortElements() {
+        Collections.sort(list); // Uses Comparable natural ordering
+    }
+
+    public void display() {
+        System.out.println(list);
+    }
+}
+
+public class GenericArrayListDemo {
+    public static void main(String[] args) {
+        // Integer List
+        GenericContainer<Integer> intContainer = new GenericContainer<>();
+        intContainer.addElement(42);
+        intContainer.addElement(15);
+        intContainer.addElement(89);
+        intContainer.addElement(7);
+
+        System.out.println("Integer Container before sorting:");
+        intContainer.display();
+        intContainer.sortElements();
+        System.out.println("Integer Container after sorting:");
+        intContainer.display();
+
+        // String List
+        GenericContainer<String> stringContainer = new GenericContainer<>();
+        stringContainer.addElement("Banana");
+        stringContainer.addElement("Apple");
+        stringContainer.addElement("Mango");
+        stringContainer.addElement("Cherry");
+
+        System.out.println("\nString Container before sorting:");
+        stringContainer.display();
+        stringContainer.sortElements();
+        System.out.println("String Container after sorting:");
+        stringContainer.display();
+    }
+}
+```
+
+**Output:**
+
+```sh
+Integer Container before sorting:
+[42, 15, 89, 7]
+Integer Container after sorting:
+[7, 15, 42, 89]
+
+String Container before sorting:
+[Banana, Apple, Mango, Cherry]
+String Container after sorting:
+[Apple, Banana, Cherry, Mango]
+```
+
+**MCQs**
+
+1. A
+2. A
+3. B
+4. B
+5. A
+
+**Conclusion:**
+In this practical, we utilized the Java Collection Framework's `ArrayList` within a generic class bounded by `Comparable<T>`. We demonstrated adding, storing, and sorting both `Integer` and `String` elements using `Collections.sort()`.
+
+---
+
+# Practical 29
+
+**Aim:** Write a program for Java Generics class for Sorting operations: 1. Sorting a list according to natural ordering of elements 2. Reversing sort order 3. Sorting a list whose elements of a custom type 4. Sorting a list using a Comparator.
+
+**Java Code:**
+
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+// Custom Class implementing Comparable
+class StudentItem implements Comparable<StudentItem> {
+    String name;
+    int marks;
+
+    public StudentItem(String name, int marks) {
+        this.name = name;
+        this.marks = marks;
+    }
+
+    @Override
+    public int compareTo(StudentItem other) {
+        return Integer.compare(this.marks, other.marks); // Ascending by marks
+    }
+
+    @Override
+    public String toString() {
+        return name + " (" + marks + ")";
+    }
+}
+
+public class SortingGenericsDemo {
+    public static void main(String[] args) {
+        List<String> fruits = new ArrayList<>();
+        fruits.add("Orange");
+        fruits.add("Apple");
+        fruits.add("Banana");
+
+        // 1. Natural Ordering
+        Collections.sort(fruits);
+        System.out.println("1. Natural Order: " + fruits);
+
+        // 2. Reverse Order
+        Collections.sort(fruits, Collections.reverseOrder());
+        System.out.println("2. Reverse Order: " + fruits);
+
+        // 3. Custom Type Sorting (Comparable)
+        List<StudentItem> students = new ArrayList<>();
+        students.add(new StudentItem("Bob", 85));
+        students.add(new StudentItem("Alice", 92));
+        students.add(new StudentItem("Charlie", 78));
+
+        Collections.sort(students);
+        System.out.println("3. Custom Type Sorted by Marks (Comparable): " + students);
+
+        // 4. Comparator Sorting (Sort by Name)
+        Collections.sort(students, new Comparator<StudentItem>() {
+            @Override
+            public int compare(StudentItem s1, StudentItem s2) {
+                return s1.name.compareTo(s2.name);
+            }
+        });
+        System.out.println("4. Custom Type Sorted by Name (Comparator): " + students);
+    }
+}
+```
+
+**Output:**
+
+```sh
+1. Natural Order: [Apple, Banana, Orange]
+2. Reverse Order: [Orange, Banana, Apple]
+3. Custom Type Sorted by Marks (Comparable): [Charlie (78), Bob (85), Alice (92)]
+4. Custom Type Sorted by Name (Comparator): [Alice (92), Bob (85), Charlie (78)]
+```
+
+**MCQs**
+
+1. A
+2. A
+3. A
+4. A
+5. A
+
+**Conclusion:**
+In this practical, we implemented various sorting operations using Java Generics, `Comparable`, and `Comparator` interfaces. We learned how to sort collections in natural order, reverse order, and according to custom class criteria.
+
+---
+
+# Practical 30
+
+**Aim:** Write a Java program to demonstrate the use of Date and Calendar classes to extract the current date, year, month, and day. Format the date using the Formatter class with varargs .
+
+**Java Code:**
+
+```java
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Formatter;
+
+public class DateCalendarDemo {
+    public static void formatDateString(String formatPattern, Object... args) {
+        Formatter formatter = new Formatter();
+        formatter.format(formatPattern, args);
+        System.out.println("Formatted Date Output: " + formatter);
+        formatter.close();
+    }
+
+    public static void main(String[] args) {
+        // Date class
+        Date currentDate = new Date();
+        System.out.println("Current Date (Date Class): " + currentDate);
+
+        // Calendar class
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH) + 1; // Month is 0-indexed
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+
+        System.out.println("Extracted Year: " + year);
+        System.out.println("Extracted Month: " + month);
+        System.out.println("Extracted Day: " + day);
+        System.out.println("Extracted Day of Week: " + dayOfWeek);
+
+        // Formatter with varargs
+        formatDateString("Today's Date: %02d/%02d/%04d", day, month, year);
+    }
+}
+```
+
+**Output:**
+
+```sh
+Current Date (Date Class): Sat Sep 19 17:45:00 IST 2026
+Extracted Year: 2026
+Extracted Month: 9
+Extracted Day: 19
+Extracted Day of Week: 7
+Formatted Date Output: Today's Date: 19/09/2026
+```
+
+**MCQs**
+
+1. A
+2. A
+3. A
+4. A
+5. A
+
+**Conclusion:**
+In this practical, we worked with Java's `Date` and `Calendar` classes to extract date components such as year, month, and day. We also formatted date outputs using the `Formatter` class with variable arguments (`varargs`).
