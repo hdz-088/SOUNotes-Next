@@ -937,7 +937,7 @@ END;
 
 **Output:**
 
-```text
+```sh
 The number 24 is Even.
 ```
 
@@ -982,7 +982,7 @@ END;
 
 **Output:**
 
-```text
+```sh
 The number 17 is Prime.
 ```
 
@@ -1020,7 +1020,7 @@ END;
 
 **Output:**
 
-```text
+```sh
 The number 45 is divisible by 5.
 ```
 
@@ -1056,7 +1056,7 @@ END;
 
 **Output:**
 
-```text
+```sh
 Printing numbers from 1 to 10:
 Number: 1
 Number: 2
@@ -1105,7 +1105,7 @@ END;
 
 **Output:**
 
-```text
+```sh
 Even numbers series up to 50:
 2
 4
@@ -1152,9 +1152,7 @@ END;
 
 **Output:**
 
-```text
-PL/SQL procedure successfully completed.
-
+```sh
 Multiplication Table of 7:
 7 x 1 = 7
 7 x 2 = 14
@@ -1202,7 +1200,7 @@ END;
 
 **Output:**
 
-```text
+```sh
 Odd Numbers Series up to 50:
 1
 3
@@ -1252,7 +1250,7 @@ END;
 
 **Output:**
 
-```text
+```sh
 The sum of numbers from 1 to 100 is: 5050
 ```
 
@@ -1297,7 +1295,7 @@ END;
 
 **Output:**
 
-```text
+```sh
 Fibonacci Series up to 10 terms:
 0
 1
@@ -1371,7 +1369,7 @@ END;
 
 **Output:**
 
-```text
+```sh
 Implicit Cursor: Successfully updated 4 rows.
 
 --- Explicit Cursor Processing ---
@@ -1446,7 +1444,7 @@ END;
 
 **Output:**
 
-```text
+```sh
 Predefined Exception Caught: Division by zero is undefined.
 
 Predefined Exception Caught: No employee found with ID 999.
